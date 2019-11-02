@@ -1,0 +1,2 @@
+* Another page
+- But this time with `org-mode`.
