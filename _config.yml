@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 title: Projects and Research
 description: Mostly CS and Math
-author_profile: false
+author_profile: true
 author:
   name: "Your Name"
   avatar: "/assets/images/bio-photo.jpg"
