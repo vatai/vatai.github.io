@@ -7,4 +7,4 @@ Emil VATAI, ワタイエ　ミール
 
 ## Links and contacts
 - [Old webpage](http://compalg.inf.elte.hu/~vatai/)
-- Twitter: https://twitter.com/vatai
+- Twitter: [@vatai](https://twitter.com/vatai)
