@@ -7,12 +7,11 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon
 
 title: Projects and Research
 name: "Emil VATAI"
+bio: "Emil's bio"
 description: Mostly CS and Math
 
 titles_from_headings:
   enabled: false
-  # strip_title: false
-  # collections: false
 
 # defaults:
 #   # _posts
