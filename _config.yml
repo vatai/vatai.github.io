@@ -68,6 +68,8 @@ bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
+author_profile: true
+
 # Social Sharing
 twitter:
   username               : vatai
