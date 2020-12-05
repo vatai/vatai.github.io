@@ -5,6 +5,9 @@ plugins:
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
+titles_from_headings:
+  enabled: false
+
 title: Projects and Research
 bio: "Emil's bio"
 description: Mostly CS and Math
@@ -15,9 +18,11 @@ author:
   bio      : "My awesome biography constrained to a sentence or two goes here."
   location : "Tokyo, Japan"
 
-titles_from_headings:
-  enabled: false
-
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mmistakes"
 # defaults:
 #   # _posts
 #   - scope:
