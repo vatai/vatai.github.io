@@ -70,12 +70,12 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : &twitter_user vatai
+  username               : "vatai"
 facebook:
-  username               :
+  username               : "emil.vatai"
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/lime.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -101,19 +101,19 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
+      url: &mail_url "mailto:emil.vatai@gmail.com"
+    - label: "Old Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: &compalg_url "https://compalg.inf.elte.hu/~vatai/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/vatai"
+      url: &twitter_url "https://twitter.com/vatai"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: &github_url "https://github.com/vatai/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -123,13 +123,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: https://twitter.com/vatai
+      url: *twitter_url
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: *github_url
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -189,6 +189,7 @@ incremental: false
 
 # Markdown Processing
 kramdown:
+  math_engine: mathjax
   input: GFM
   hard_wrap: false
   auto_ids: true
