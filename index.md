@@ -1,7 +1,6 @@
 ---
 author_profile: true
-titles_from_headings:
-  enabled: false
+title: About me
 ---
 
 # Affiliations
