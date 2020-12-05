@@ -3,7 +3,7 @@ plugins:
   - jekyll-remote-theme
 # remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin: "default"
 
 titles_from_headings:
   enabled: false
@@ -18,9 +18,10 @@ author:
   avatar: "/assets/images/bio-photo.jpg"
   bio: "My awesome biography constrained to a sentence or two goes here."
   location: "Tokyo, Japan"
-    # - label: "Made Mistakes"
-    #   icon: "fas fa-fw fa-link"
-    #   url: "https://mademistakes.com"
+  links:
+  - label: "Made Mistakes"
+    icon: "fas fa-fw fa-link"
+    url: "https://mademistakes.com"
 
 footer:
   links:
