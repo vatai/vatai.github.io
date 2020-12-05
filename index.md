@@ -1,7 +1,3 @@
-layout: page
-title: "PAGE TITLE"
-permalink: /bla
-
 # Affiliations
 - Postdoctoral Researcher at [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/), [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html)
 - Postdoctoral Researcher at [The University of Tokyo](https://www.u-tokyo.ac.jp/en/), [Graduate School of Information Science and Technology](https://www.i.u-tokyo.ac.jp/index_e.shtml), [Suda laboratory](http://olab.is.s.u-tokyo.ac.jp/~reiji/)
