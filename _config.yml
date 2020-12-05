@@ -2,5 +2,16 @@ plugins:
   - jekyll-remote-theme
 # theme: jekyll-theme-
 theme: minimal-mistakes-jekyll
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
 title: Projects and Research
 description: Mostly CS and Math
