@@ -1,18 +1,9 @@
+title: Projects and Research
+description: Mostly CS and Math
+
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
-remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      read_time: true
-      comments: true
-      share: true
-      related: true
-title: Projects and Research
-description: Mostly CS and Math
