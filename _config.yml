@@ -12,7 +12,6 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-author_profile           : true
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -69,6 +68,7 @@ bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
+author_profile           : true
 # Social Sharing
 twitter:
   username               : vatai
