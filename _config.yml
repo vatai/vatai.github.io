@@ -104,7 +104,7 @@ author:
       url: &mail_url "mailto:emil.vatai@gmail.com"
     - label: "Old Website"
       icon: "fas fa-fw fa-link"
-      url: &compalg_url "https://compalg.inf.elte.hu/~vatai/"
+      url: &compalg_url "http://compalg.inf.elte.hu/~vatai/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: &twitter_url "https://twitter.com/vatai"
