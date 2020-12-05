@@ -3,14 +3,14 @@ plugins:
   - jekyll-remote-theme
 # remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 title: Projects and Research
 name: "Emil VATAI"
 description: Mostly CS and Math
 
 titles_from_headings:
-  enabled:     false
+  enabled: false
   # strip_title: false
   # collections: false
 
