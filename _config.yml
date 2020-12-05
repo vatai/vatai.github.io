@@ -92,8 +92,6 @@ analytics:
 
 
 # Site Author
-layout: single
-author_profile: true
 author:
   name             : "Emil VATAI"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
