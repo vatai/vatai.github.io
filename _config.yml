@@ -11,7 +11,6 @@ titles_from_headings:
 author_profile: true
 
 title: Projects and Research
-bio: "Emil's bio"
 description: Mostly CS and Math
 
 author:
@@ -28,11 +27,3 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/vatai"
-
-# defaults:
-#   # _posts
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       author_profile: true
