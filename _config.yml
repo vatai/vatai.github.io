@@ -101,7 +101,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: &mail_url "mailto:emil.vatai@gmail.com"
+      # url: &mail_url "mailto:emil.vatai@gmail.com"
     - label: "Old Website"
       icon: "fas fa-fw fa-link"
       url: &compalg_url "http://compalg.inf.elte.hu/~vatai/"
