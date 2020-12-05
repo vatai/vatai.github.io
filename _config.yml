@@ -2,6 +2,7 @@ plugins:
   - jekyll-remote-theme
 # theme: jekyll-theme-
 theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 defaults:
   # _posts
   - scope:
