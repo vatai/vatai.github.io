@@ -7,3 +7,9 @@ plugins:
 # remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+author:
+  name     : "Emil VATAI"
+  avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "My awesome biography constrained to a sentence or two goes here."
+  location : "Tokyo, Japan"
