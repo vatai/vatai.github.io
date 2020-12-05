@@ -14,10 +14,10 @@ title: Projects and Research
 description: Mostly CS and Math
 
 author:
-  name     : "Emil VATAI"
-  avatar   : "/assets/images/bio-photo.jpg"
-  bio      : "My awesome biography constrained to a sentence or two goes here."
-  location : "Tokyo, Japan"
+  name: "Emil VATAI"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "My awesome biography constrained to a sentence or two goes here."
+  location: "Tokyo, Japan"
     - label: "Made Mistakes"
       icon: "fas fa-fw fa-link"
       url: "https://mademistakes.com"
