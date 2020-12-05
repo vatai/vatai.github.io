@@ -11,8 +11,8 @@ description: Mostly CS and Math
 
 titles_from_headings:
   enabled:     false
-  strip_title: false
-  collections: false
+  # strip_title: false
+  # collections: false
 
 # defaults:
 #   # _posts
