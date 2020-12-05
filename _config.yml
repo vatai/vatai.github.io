@@ -8,6 +8,7 @@ minimal_mistakes_skin: "default"
 titles_from_headings:
   enabled: false
 
+breadcrumbs: true
 author_profile: true
 
 title: "Projects and Research"
