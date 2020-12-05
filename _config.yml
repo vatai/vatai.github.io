@@ -3,7 +3,7 @@ plugins:
   - jekyll-remote-theme
 # remote_theme: "mmistakes/minimal-mistakes@4.21.0"
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "default"
 
 titles_from_headings:
   enabled: false
@@ -30,3 +30,11 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/vatai"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
