@@ -6,9 +6,14 @@ remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 title: Projects and Research
-name: "Emil VATAI"
 bio: "Emil's bio"
 description: Mostly CS and Math
+
+author:
+  name: "Emil VATAI"
+  avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "My awesome biography constrained to a sentence or two goes here."
+  location : "Somewhere, USA"
 
 titles_from_headings:
   enabled: false
