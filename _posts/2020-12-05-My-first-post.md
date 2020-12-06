@@ -9,8 +9,8 @@ It is basically just a test
 
 ## Let's test some math
 With dollar signs for variable $a$.  And then with backslash
-parenthesis for \(b\).
+parenthesis for \\(b\\).
 
-\\[\sum_{k=0}^\infty \frac(-1){x^{2k+1}}{(2k+1)!}\\]
+\\[\sum_{k=0}^\infty (-1)\frac{x^{2k+1}}{(2k+1)!}\\]
 
 And with a formula above this.
