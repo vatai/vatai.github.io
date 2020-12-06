@@ -1,5 +1,5 @@
 ---
-title: ToDo
+title: Categories
 layout: single
 permalink: /categories/
 ---
