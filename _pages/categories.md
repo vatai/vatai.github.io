@@ -1,6 +1,6 @@
 ---
 title: ToDo
-layout: page
+layout: single
 permalink: /categories/
 ---
 {% for category in site.categories %}
