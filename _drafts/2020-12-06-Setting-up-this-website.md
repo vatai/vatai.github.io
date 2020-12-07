@@ -57,3 +57,4 @@ TODO
 - Not sure about `Gemfile`.
 - `jekyll serve --drafts --incremental --livereload` localhost, not https, port: 4000
 - Categories
+- Ruby, bundler and github pages
