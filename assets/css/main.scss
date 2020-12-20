@@ -33,3 +33,8 @@ $header-font-family : $sans-serif-narrow;
 // @import "minimal-mistakes/skins/neon"; // skin
 @import "minimal-mistakes"; // main partials
 
+.sidebar .author__name {
+    font-family: $serif;
+    font-weight: normal;
+    font-variant: small-caps;
+}

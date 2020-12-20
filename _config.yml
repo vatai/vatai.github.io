@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Emil VATAI"
   avatar           : "./assets/images/Vatai_Emil_sqr.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Postdoctoral researcher at Riken RCCS"
+  bio              : "Math, HPC, DL/ML/AI, Judo"
   location         : "Tokyo, Japan"
   email            : emil.vatai@gmail.com
   links:

@@ -1,7 +1,7 @@
 ---
-title: Categories
+title: Categories (old)
 layout: single
-permalink: /categories/
+permalink: /categories-old/
 ---
 {% for category in site.categories %}
 # {{ category[0] }}
