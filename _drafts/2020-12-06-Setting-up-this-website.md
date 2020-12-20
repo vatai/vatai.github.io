@@ -4,39 +4,76 @@ date: 2020-12-06 12:32:00 -0000
 categories: tutorial
 ---
 
-- TODO: Add links where possible.
-
 ## TL;DR:
-Describe how to set up a website/microblog like this one, which is
-basically a Jekyll website, using the Minimal-mistakes theme.
+Describe how to set up a website/statically generated microblog like
+this one, which is essentially
+- a [Jekyll website](https://jekyllrb.com/), 
+- using the [Minimal-mistakes
+  theme](https://mmistakes.github.io/minimal-mistakes/),
+- hosted on [GitHub pages](https://pages.github.com/).
 
 
 ## Introduction
-Github pages (simple HTML) with Jekyll is super simple to set up, but
+Github pages (HTML only) with Jekyll is super simple to set up, but
 the themes and the basic built-in stuff is relatively limited and
 Minimal-mistakes is a good theme to add a bunch of extra stuff to your
 website/microblog/whatever you want to call it.
 
 ### Jekyll
-As I understand it, **Jekyll** is like a build system, whitch "put's
-it all together" and generates the static `.html` pages, so Jekyll's
-documentation is what you should most probably be reading.
+**Jekyll** is _like_ a build system, which "put's it all together" and
+generates the static `.html` pages, so **Jekyll's documentation is
+what you should most probably be reading**.
 
 ### Liquid
 Liquid is the template language, which ties the data from the Jekyll
-to the webpages, see the category setup as an example.  Liquid is
-applied independently to both `.md` and `.html` files.  See LINK TO
-JEKYLL docs about rendering.
+to the webpages.  Liquid is applied independently to both `.md` and
+`.html` files.  It is nicely explained in the
+[docs](https://jekyllrb.com/docs/rendering-process/).
 
-## Jekyll basics
-Lessons I've learned about Jekyll, which I feel stupid I missed.
-
-### Minimal mistakes
 ### Configuration file
-The main configuration file is `_config.yml`.
-### Front matter
-Front matter is (to the best of my knowledge) a Jekyll concept and looks something like this:
+Probably the most important thing about Jekyll is the `_config.yml`.
+A lot of things can be controlled from there.
+
+I am not sure if a `Gemfile` should be uploaded in your GitHub pages
+repo.  Since Jekyll is a Ruby app, it might be needed, but I am
+definitely not sure about it.  It might only be needed if you want to
+use plugins.
+
+### Previewing the website locally
+You can "build" (i.e. generate) your site locally following the
+instructions in the Jekyll [docs](https://jekyllrb.com/docs/).
+
+I use these command line options when writing posts and fiddling with
+the website (livereload is the good stuff).
+
+```shell
+jekyll serve --drafts --incremental --livereload
 ```
+
+## Minimal-mistakes
+To get the Minimal-mistakes theme running with your GitHub pages, just
+copy the
+[`_config.yml`](https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml)
+(link to
+[raw](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/_config.yml)
+file) from the Minimal-mistakes GitHub repo to your GitHub pages repo,
+and make sure you uncomment `remote_theme :
+"mmistakes/minimal-mistakes"`.  This `_config.yml` file is in sync
+with the Minimal-mistakes
+[docs](https://mmistakes.github.io/minimal-mistakes/docs/configuration/)
+and it is a good idea to go trough it quickly.
+
+Alternatively, you could fork the Minimal-mistakes
+[repo](https://github.com/mmistakes/minimal-mistakes) and add your
+contents with `theme : "mmistakes/minimal-mistakes"` (instead of
+`remote_theme`) in `_config.yml`.
+
+### Front matter
+I somehow missed this and it caused a lot of problems: Front matter is
+a way to add metadata and/or commands to Jekyll how to render the
+page. Front matter looks like this:
+
+```md
 ---
 title: "How to set up a website like this"
 categories: tutorial
@@ -52,9 +89,7 @@ It has to
 
 Front matter applies to `.md` files (maybe to `.html` files as well - need to check).
 
-TODO
+Some things I've already set up in this page but did not describe here are:
 - Mathjax
-- Not sure about `Gemfile`.
-- `jekyll serve --drafts --incremental --livereload` localhost, not https, port: 4000
-- Categories
-- Ruby, bundler and github pages
+- Style sheets
+- Categories (partially solved)
