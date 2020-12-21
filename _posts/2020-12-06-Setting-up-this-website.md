@@ -1,6 +1,6 @@
 ---
 title: "How to set up a website like this"
-date: 2020-12-06 12:32:00 -0000
+date: 2020-12-06 21:32:00 +0900
 categories: tutorial
 ---
 
@@ -90,6 +90,6 @@ It has to
 Front matter applies to `.md` files (maybe to `.html` files as well - need to check).
 
 Some things I've already set up in this page but did not describe here are:
-- Mathjax
+- MathJax
 - Style sheets
 - Categories (partially solved)
