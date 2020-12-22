@@ -25,10 +25,10 @@ generates the static `.html` pages, so **Jekyll's documentation is
 what you should most probably be reading**.
 
 ### Liquid
-Liquid is the template language, which ties the data from the Jekyll
-to the webpages.  Liquid is applied independently to both `.md` and
-`.html` files.  It is nicely explained in the
-[docs](https://jekyllrb.com/docs/rendering-process/).
+[Liquid](https://shopify.github.io/liquid/) is the template language,
+which ties the data from the Jekyll to the webpages.  Liquid is
+applied independently to both `.md` and `.html` files.  It is nicely
+explained in the [docs](https://jekyllrb.com/docs/rendering-process/).
 
 ### Configuration file
 Probably the most important thing about Jekyll is the `_config.yml`.
