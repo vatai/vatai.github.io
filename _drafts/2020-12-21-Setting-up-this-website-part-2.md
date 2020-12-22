@@ -15,8 +15,9 @@ To set up MathJax for
 [Jekyll](https://jekyllrb.com/)/[Minimal-mistakes
 theme](https://mmistakes.github.io/minimal-mistakes/), you need two
 things:
-1. Include/link your website like you'd do in when working (and
-   optionally configure MathJax markup such as `$` or `\(`, `\)`)
+1. Include/link MathJax to your website like you'd do in when working
+   with "regular `html`" (and optionally configure MathJax markup such
+   as `$` or `\(`, `\)`)
 2. Make sure that the markdown parser used by Jekyll knows about
    MathJax.
 
@@ -48,12 +49,13 @@ Jekyll.
 
 In addition, we can make it a configurable option, if we want to load
 MathJax on each of our pages using the Liquid template language, since
-`_includes/head/custom.html` also passes trough it.
+`_includes/head/custom.html` also passes trough it (more one this
+below).
 
 ### kramdown
-[kramdown](https://kramdown.gettalong.org/) is the markdown parser,
-and it is explicitly set for Minimal-mistakes in the `_config.yml`
-like this:
+[kramdown](https://kramdown.gettalong.org/) is the default markdown
+parser for Jekyll, and it is also explicitly set in the
+Minimal-mistakes `_config.yml` like this:
 
 ```yaml
 markdown: kramdown
@@ -87,24 +89,22 @@ code can be wrapped inside a Liquid `if` statement like this:
 ```
 
 This way, the MathJax loading code is generating only when the
-`usemathjax` variable is set for the page processed.  You can set this
-variable in the front matter of each page like this:
+`usemathjax` variable is set for a page.  You can set this variable in
+the front matter of each page like this:
 
 ```md
 ---
-title: "My first post"
-date: 2020-12-05 23:04:00 -0000
-categories: Jekyll test
+...
 usemathjax: true
+...
 ---
 ```
 
 ## Stylesheets
-Stylesheets are configured similar to MathJax or the `_config.yml`,
-by adding the right file in the right place.  In this case, the
-`/assets/css/main.scss` file needs to be created, based on the same
-file in the Minimal-mistakes repo.  Nice explanation can be found in
-the Minimal-mistakes
+Stylesheets are configured similar to how MathJax was added to
+`<head>`.  In this case, the `/assets/css/main.scss` file needs to be
+created, based on the same file in the Minimal-mistakes repo.  Nice
+explanation can be found in the Minimal-mistakes
 [docs](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/).
 
 ## Categories
@@ -141,9 +141,13 @@ author_profile: true
 ---
 ```
 
+This should create the `/categories` and `/tags` pages on your website.
+
 ## Masthead i.e. links on the top
 The links (and the large icon) on top of the page, including the title
-(with the link that takes you to the root/home) is called the masthead.  It can be filled by adding entries to `/_data/navigation.yml` such as this:
+(with the link that takes you to the root/home) is called the
+masthead.  It can be filled by adding entries to
+`/_data/navigation.yml` such as this:
 
 ```yml
 main:
