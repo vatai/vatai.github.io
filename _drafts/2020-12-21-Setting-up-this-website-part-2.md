@@ -7,7 +7,7 @@ categories: tutorial
 ## TL;DR:
 Some things I've already set up and promised to write about:
 - MathJax
-- Style sheets
+- Stylesheets
 - Categories (now fully solved)
 
 ## MathJax
@@ -99,8 +99,8 @@ usemathjax: true
 ---
 ```
 
-## Style sheets
-Style sheets are configured similar to MathJax or the `_config.yml`,
+## Stylesheets
+Stylesheets are configured similar to MathJax or the `_config.yml`,
 by adding the right file in the right place.  In this case, the
 `/assets/css/main.scss` file needs to be created, based on the same
 file in the Minimal-mistakes repo.  Nice explanation can be found in
