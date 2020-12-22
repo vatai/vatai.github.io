@@ -50,7 +50,57 @@ In addition, we can make it a configurable option, if we want to load
 MathJax on each of our pages using the Liquid template language, since
 `_includes/head/custom.html` also passes trough it.
 
-### Kramdown
+### kramdown
+[kramdown](https://kramdown.gettalong.org/) is the markdown parser,
+and it is explicitly set for Minimal-mistakes in the `_config.yml`
+like this:
+
+```yaml
+markdown: kramdown
+```
+
+Since we want to use MathJax in conjunction with markdown, kramdown
+has to be made aware of it, which can be achieved like this in
+`_config.yml`:
+
+```yaml
+kramdown:
+  math_engine: mathjax
+```
+
+### Load MathJax for certain pages
+To relieve the pressure on MathJax CDN servers, the MathJax loading
+code can be wrapped inside a Liquid `if` statement like this:
+
+```html
+{% raw %}
+{% if page.usemathjax %}
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+<script type="text/x-mathjax-config">
+...
+</script>
+{% endif %}
+{% endraw %}
+```
+
+This way, the MathJax loading code is generating only when the
+`usemathjax` variable is set for the page processed.  You can set this
+variable in the front matter of each page like this:
+
+```md
+---
+title: "My first post"
+date: 2020-12-05 23:04:00 -0000
+categories: Jekyll test
+usemathjax: true
+---
+```
+
+
+
 ## Style sheets
 ## Categories
 ## Next up
