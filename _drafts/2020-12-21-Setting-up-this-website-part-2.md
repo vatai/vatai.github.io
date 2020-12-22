@@ -101,6 +101,7 @@ usemathjax: true
 
 ## Style sheets
 ## Categories
+## Masthead
 ## Next up
 - Fonts
 - All page settings
