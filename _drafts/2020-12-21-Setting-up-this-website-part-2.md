@@ -99,8 +99,6 @@ usemathjax: true
 ---
 ```
 
-
-
 ## Style sheets
 ## Categories
 ## Next up
