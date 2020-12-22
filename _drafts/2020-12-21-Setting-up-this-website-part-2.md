@@ -100,8 +100,57 @@ usemathjax: true
 ```
 
 ## Style sheets
+Style sheets are configured similar to MathJax or the `_config.yml`,
+by adding the right file in the right place.  In this case, the
+`/assets/css/main.scss` file needs to be created, based on the same
+file in the Minimal-mistakes repo.  Nice explanation can be found in
+the Minimal-mistakes
+[docs](https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/).
+
 ## Categories
-## Masthead
-## Next up
-- Fonts
-- All page settings
+You can write a `.md` file which iterates trough the categories using
+Liquid, or you can use a plugin like
+`[jekyll-archives](https://github.com/jekyll/jekyll-archives)` to
+generate these pages automatically.  If you copied the `_config.yml`
+from Minimal-mistakes, most of the settings should be there (it might
+be commented, just search for `archive`).
+
+Don't forget to create the following `category-archive.md` and
+`tag-archive.md`.
+
+`/_pages/category-archive.md` with contents:
+
+```md
+---
+title: "Posts by Category"
+layout: categories
+permalink: /categories/
+author_profile: true
+---
+```
+
+`/_pages/tag-archive.md` with contents:
+
+
+```md
+---
+title: "Posts by Tag"
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+```
+
+## Masthead i.e. links on the top
+The links (and the large icon) on top of the page, including the title
+(with the link that takes you to the root/home) is called the masthead.  It can be filled by adding entries to `/_data/navigation.yml` such as this:
+
+```yml
+main:
+  - title: "About me"
+    url: /aboutme
+```
+
+More details in the Minimal-mistakes
+[docs](https://mmistakes.github.io/minimal-mistakes/docs/navigation/).
+
