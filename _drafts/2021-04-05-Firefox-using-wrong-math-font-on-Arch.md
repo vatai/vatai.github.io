@@ -7,9 +7,9 @@ categories: Arch math
 # The problem
 
 # The solution
+  `sudo pacman -S otf-latinmodern-math`
 
 # The verification
-
 - bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1208776
 - test page: https://mdn.mozillademos.org/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test$samples/MathML_Torture_Test?revision=1506691
 - reporting: https://wiki.archlinux.org/index.php/Bug_reporting_guidelines
