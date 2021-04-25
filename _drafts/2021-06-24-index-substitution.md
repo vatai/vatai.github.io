@@ -4,6 +4,12 @@ date: 2021-04-24 22:45:00 +0900
 categories: math
 usemathjax: true
 ---
+# The rule
+
+$$\sum_{R(i)} \sum_{S(i,j)} a_{i,j} = \sum_{S'(i)} \sum_{R'(i,j)} a_{i,j}$$
+
+where $S'(j) = R(i) \land \exists j S(i, j)$ and $R'(i,j) = R(i) \land
+S(i, j)$.  E.g. $R(i) = 1 \le i \le n$ and $S(i,j) = 1 \le j \le i$, then $S'(i) = 1 \le i \le n$ and $R'(i, j) = i \le j \le n$.
 
 # The easy problem
 
