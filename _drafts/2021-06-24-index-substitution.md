@@ -36,6 +36,6 @@ $$\begin{align}
 &+ \frac{1}{4} \sum_{i=0}^{n} \sum_{k=0}^{n} a_i^2 a_k + \frac{1}{4} \sum_{i=0}^{n} a_i^3
 \end{align}$$
 
-Then by the solution is $\frac{1}{4} S_1^3 + \frac{1}{2} S_1 S_2 +
+Then by the solution is $\frac{1}{4} S_1^3 + \frac{1}{2} S_1^2 S_2 +
 \frac{1}{4} S_3$ where $S_r = \sum_{i=0}^n a_i^r$, but it should be:
-$\frac{1}{6} S_1^3 + \frac{1}{2} S_1 S_2 + \frac{1}{3} S_3$.
+$\frac{1}{6} S_1^3 + \frac{1}{2} S_1^2 S_2 + \frac{1}{3} S_3$.
