@@ -8,8 +8,14 @@ usemathjax: true
 
 $$\sum_{R(i)} \sum_{S(i,j)} a_{i,j} = \sum_{S'(i)} \sum_{R'(i,j)} a_{i,j}$$
 
-where $S'(j) = R(i) \land \exists j S(i, j)$ and $R'(i,j) = R(i) \land
-S(i, j)$.  E.g. $R(i) = 1 \le i \le n$ and $S(i,j) = 1 \le j \le i$, then $S'(i) = 1 \le i \le n$ and $R'(i, j) = i \le j \le n$.
+where
+
+$$\begin{align}
+S'(j) &= R(i) \land \exists i S(i, j)\\
+R'(i,j) &= R(i) \land S(i, j)
+\end{align}$$
+
+E.g. if $R(i) = 1 \le i \le n$ and $S(i,j) = 1 \le j \le i$, then $S'(j) = 1 \le j \le n$ and $R'(i, j) = j \le i \le n$.
 
 # The easy problem
 
@@ -30,7 +36,7 @@ $$\begin{align}
 # The harder problem
 
 $$\begin{align}
-\sum_{i=0}^{n} \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k 
+\sum_{i=0}^{n} \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k
 =& \sum_{i=0}^{n} \sum_{j=i}^{n} \sum_{k=0}^{j} a_i a_j a_k \\
 =& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k + \sum_{j=i}^{n} \sum_{k=0}^{j} a_i a_j a_k \Bigr) \\
 =& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{n} \sum_{k=0}^{j} a_i a_j a_k + \sum_{k=0}^{i} a_i^2 a_k \Bigr) \\
@@ -45,3 +51,14 @@ $$\begin{align}
 Then by the solution is $\frac{1}{4} S_1^3 + \frac{1}{2} S_1^2 S_2 +
 \frac{1}{4} S_3$ where $S_r = \sum_{i=0}^n a_i^r$, but it should be:
 $\frac{1}{6} S_1^3 + \frac{1}{2} S_1^2 S_2 + \frac{1}{3} S_3$.
+
+
+$$\begin{align}
+\sum_{i=0}^{n} \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k
+=& \sum_{i=0}^{n} \sum_{j=i}^{n} \sum_{k=0}^{i} a_i a_j a_k \\
+=& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k + \sum_{j=i}^{n} \sum_{k=0}^{i} a_i a_j a_k \Bigr) \\
+=& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{i} \bigl( \sum_{k=0}^{i} a_i a_j a_k  - \sum_{k=j+1}^{i} a_i a_j a_k \bigr) + \sum_{j=i}^{n} \sum_{k=0}^{i} a_i a_j a_k \Bigr) \\
+=& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{i} \sum_{k=0}^{i} a_i a_j a_k  - \sum_{j=0}^{i} \sum_{k=j+1}^{i} a_i a_j a_k + \sum_{j=i}^{n} \sum_{k=0}^{i} a_i a_j a_k \Bigr) \\
+=& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{n} \sum_{k=0}^{i} a_i a_j a_k  - \sum_{j=0}^{i} \sum_{k=j+1}^{i} a_i a_j a_k + \sum_{k=0}^{i} a_i^{2} a_k \Bigr) \\
+=& \frac{1}{2} \sum_{i=0}^{n} \sum_{j=0}^{n} \sum_{k=0}^{i} a_i a_j a_k  - \frac{1}{2} \sum_{i=0}^{n} \sum_{j=0}^{i} \sum_{k=j+1}^{i} a_i a_j a_k + \frac{1}{2} \sum_{i=0}^{n} \sum_{k=0}^{i} a_i^{2} a_k \\
+\end{align}$$
