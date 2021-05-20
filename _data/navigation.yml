@@ -1,5 +1,5 @@
 main:
-  # - title: "Papers"
-  #   url: /papers
+  - title: "Papers"
+    url: /papers
   - title: "About me"
     url: /aboutme
