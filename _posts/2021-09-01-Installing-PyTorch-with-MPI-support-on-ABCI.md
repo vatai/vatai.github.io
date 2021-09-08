@@ -26,6 +26,6 @@ and build it:
     python3 setup.py develop --user
 
 This **overwrites** your current PyTorch installation, and you need to
-use `--upgrade --forece-reinsta` with `pip3` to install the original
+use `--upgrade --forece-reinstall` with `pip3` to install the original
 one.
 
