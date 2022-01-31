@@ -181,5 +181,54 @@ completely define $\theta$ (for a given $S$), so the goal is finding a
 $(\tau_S, \sigma_S, \alpha_S)$ triplet for each statement $S$.
 
 
+# More advanced dependency analysis
+
+## Depth
+
+Descriptions such as GDG and DDG can enable some optimisations.
+
+The **depth** of an edge is the position until which both instances at
+the start and the end of the edge share values, and after which the
+end instance has a larger value, that is $p_ e$ is the depth of edge
+$e$ iff $(\vec{i'}, \vec{i}) \in \mathscr{R} _ e$ and $i'_ k = i_ k$ for
+$1 \le k \le p_ e$ and $i'_ {p_ e} < i_ {p_ e}$ where $\vec{i'} =
+(i'_ 1, i'_ 2, \ldots)$ and $\vec{i} = (i_ 1, i_2, \ldots)$.
+
+In the example, both edges of the GDG have depth 1:
+- $\mathscr{R}_{1, 2} = \\{ \bigl( i', (i, j) \bigr) : i' = i \\}$
+- $\mathscr{R}_{2, 2} = \\{ \bigl( (i', j'), (i, j) : i' = i \land j'
+  < j \\}$ 
+
+In both cases the $i'=i$ part implies depth $p_e \ge 1$ and the rest
+ensures $p _e \le 1$.
+
+This can be used to infer, that we are allowed to execute the
+outermost loop in parallel.
+
+## Dependence direction vectors
+
+A more detailed description of the dependencies can be given using
+symbols such as $<, \le, =, *, \ldots$ combined in a **dependence
+direction vector** (the asterisk denotes a wildcard, meaning any
+relation).  Depth can be expressed with DDVs as: $(\overbrace{=,
+\ldots, =}^{p_e}, <, *, \ldots)$.
+
+## Uniform dependence
+
+The case where there is a constant difference between the instances of
+both ends of an edge, that is when $i' = i + d$ if $(i', i) \in
+\mathscr{R} _e$, the edge $e$ is said to have a **uniform
+dependence**.
+
+A more detailed analysis shows that the second edge of our example has
+such a uniform dependency.
+
+## Dataflow analysis
+
+A little more advanced (but still very much conservative) dataflow
+analysis can further restrict the polyhedrons $\mathscr{R} _{1, 2}$
+and $\mathscr{R} _{2, 2}$:
+- 
+
 # Future work
 I'm writing this in my attempt to understand
