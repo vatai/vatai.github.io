@@ -71,6 +71,8 @@ variable.  For example
 - `a[0] += b[1] * A[0][1];` for $\vec{i} = (i, j) = (0, 1)$ and
 - `a[2] += b[3] * A[2][3];` for $\vec{i} = (i, j) = (2, 3)$.
 
+# Describing dependencies
+
 ## Generalised Dependency Graph (GDG)
 
 ### Vertices/domains
@@ -118,6 +120,66 @@ poor), we'll discuss a simple data flow dependency later (which is
 still quite simple, but a slight improvement over the one above).
 
 ## Detailed Dependency Graph (DDG)
+
+The GDG is structured: the vertices in GDG are statements, and these
+statements represent multiple instances, but we actually care about
+the dependencies between the instances.  For this reason the Detailed
+Dependency Graph "flattens" the graph, and every vertex is an instance
+of a statement, and the edges are the dependencies between these
+instances.
+
+### Vertices
+$$\Omega = \cup_{S \in V} \{ (S, x) : x \in \mathscr{D}_S \}$$
+
+### Edges 
+$$\Gamma = \cup_{e \in E} \{ \bigl( (\sigma(e), x), (\delta(e), y)
+\bigr) : x \in \mathscr{D}_{\sigma(e)}, y \in \mathscr{D}_{\delta(e)},
+\langle x, y \rangle \in \mathscr{R}_e \}$$ where the statement
+$\sigma(e)$ is the start, statement $\delta(e)$ is the end of edge $e$
+(of the GDG).
+
+# Schedule
+
+The schedule is a map $\theta: \Omega \to \mathbb{R}_0^+$ from the set
+of instances to some non-negative value which is the "date" (or
+timestamp, or time) of the instance.
+
+## Generating code
+
+As mentioned above, generating code is a separate, and very much
+non-trivial problem.  But to get a better feeling how to interpret the
+schedule $\theta$ a simplified code generations is presented:
+
+Let $\mathtt{F}(t) = \\{ (S, \vec{i}) \in \Omega: \theta(S, \vec{i}) =
+t \\}$, i.e. the set of all instances of all statements which should
+be executed at time step $t$.  Let $\mathtt{L} = \max_{(S, \vec{i})
+\in \Omega} \theta(S, \vec{i})$.
+
+```C++
+for (t = 0; t <= L; t++) {
+  #pragma omp parallel
+  for (inst : F(t))
+    execute(inst);
+  barrier();
+}
+```
+
+Of course, actual code generation is a much harder task than this
+naive pseudo-code, but it can be handled separately, the objective of
+this now is how to obtain the optimal schedule.
+
+## There is (no) optimal schedule
+
+The paper cites Theorems which say that finding a schedule **of
+arbitrary form** is an undecidable problem. Because of this, we
+restrict ourselves to **affine schedules**, that is schedules of the
+form: $$\theta(S, \vec{i}) = \tau_S \vec{i} + \sigma_s \vec{n} +
+\alpha_s$$ for each statement $S$.  The vector $\vec{n}$ is the vector
+of parameters, for the example above the vector of length 1 containing
+$n$.  In this case the triplet $(\tau_S, \sigma_S, \alpha_S)$
+completely define $\theta$ (for a given $S$), so the goal is finding a
+$(\tau_S, \sigma_S, \alpha_S)$ triplet for each statement $S$.
+
 
 # Future work
 I'm writing this in my attempt to understand
