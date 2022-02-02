@@ -51,12 +51,12 @@ This post only addresses (the first half) of **Problem/step 3**.
 for (i = 0; i <= n; i++) {
 S1: a[i] = 0.0;
     for (j = 0; j <= n; j++)
-S2:   a[i] += b[j] * A[i][j];
+S2:   a[i] += b[j] * M[i][j];
 }
 ```
 
 The above code has to relevant **statements** which access the memory:
-`a[i] = 0.0;` labelled as $S_1$ and `a[i] += b[j] * A[i][j];` labelled
+`a[i] = 0.0;` labelled as $S_1$ and `a[i] += b[j] * M[i][j];` labelled
 as $S_2$.  Each of the two statements is executed multiple times, it
 has multiple **instances**, for example the instances of statement
 $S_1$ are:
@@ -68,8 +68,8 @@ we adopt the notation $\vec{i}$ for **vectors in the iteration
 space**, vectors with integer entries, such that the first element
 corresponds to the outermost and the last to the innermost loop
 variable.  For example
-- `a[0] += b[1] * A[0][1];` for $\vec{i} = (i, j) = (0, 1)$ and
-- `a[2] += b[3] * A[2][3];` for $\vec{i} = (i, j) = (2, 3)$.
+- `a[0] += b[1] * M[0][1];` for $\vec{i} = (i, j) = (0, 1)$ and
+- `a[2] += b[3] * M[2][3];` for $\vec{i} = (i, j) = (2, 3)$.
 
 # Describing dependencies
 
@@ -129,14 +129,19 @@ of a statement, and the edges are the dependencies between these
 instances.
 
 ### Vertices
-$$\Omega = \cup_{S \in V} \{ (S, x) : x \in \mathscr{D}_S \}$$
 
-### Edges 
-$$\Gamma = \cup_{e \in E} \{ \bigl( (\sigma(e), x), (\delta(e), y)
-\bigr) : x \in \mathscr{D}_{\sigma(e)}, y \in \mathscr{D}_{\delta(e)},
-\langle x, y \rangle \in \mathscr{R}_e \}$$ where the statement
-$\sigma(e)$ is the start, statement $\delta(e)$ is the end of edge $e$
-(of the GDG).
+$$ \Omega = \bigcup _{S \in V} \{ (S, \vec{i}) : \vec{i} \in \mathscr{D}
+_S \} $$
+
+### Edges
+
+$$\Gamma = \bigcup _{e \in E} \bigl\{ \bigl( (\sigma(e), \vec{i'}),
+(\delta(e), \vec{i}) \bigr) : \vec{i'} \in \mathscr{D} _{\sigma(e)},
+\vec{i} \in \mathscr{D} _{\delta(e)}, (\vec{i'}, \vec{i}) \in
+\mathscr{R}_e \bigr\}$$
+
+where the statement $\sigma(e)$ is the start, statement $\delta(e)$ is
+the end of edge $e$ (of the GDG).
 
 # Schedule
 
@@ -210,15 +215,24 @@ outermost loop in parallel.
 A more detailed description of the dependencies can be given using
 symbols such as $<, \le, =, *, \ldots$ combined in a **dependence
 direction vector** (the asterisk denotes a wildcard, meaning any
-relation).  Depth can be expressed with DDVs as: $(\overbrace{=,
-\ldots, =}^{p_e}, <, *, \ldots)$.
+relation).  Depth can be expressed with DDVs as 
+
+$$(\overbrace{=, \ldots, =}^{p_e}, <, *, \ldots)$$
 
 ## Uniform dependence
 
 The case where there is a constant difference between the instances of
 both ends of an edge, that is when $i' = i + d$ if $(i', i) \in
-\mathscr{R} _e$, the edge $e$ is said to have a **uniform
-dependence**.
+\mathscr{R}_ e$, the edge $e$ is said to have a **uniform
+dependence**.  In this case, instead of keeping track of $\mathscr{D}_
+{\sigma(e)}$, $\mathscr{D}_ {\delta(e)}$ and the set of $(\vec{i'},
+\vec{i})$ pairs, we can just keep track of a single set (polyhedron)
+of instances $\mathscr{P}_ e$ and a affine map $h_ e$ such that $y \in
+\mathscr{P}_ e \implies y \in \mathscr{D}_ {\delta(e)} \land h_e(y)
+\in \mathscr{D} _{\sigma(e)}$ and then
+
+$$(\vec{i'}, \vec{i}) \in \mathscr{R}_ e \iff \vec{i'} = h_ e(\vec{i})
+\land \vec{i} \in \mathscr{P}_e$$
 
 A more detailed analysis shows that the second edge of our example has
 such a uniform dependency.
@@ -227,8 +241,136 @@ such a uniform dependency.
 
 A little more advanced (but still very much conservative) dataflow
 analysis can further restrict the polyhedrons $\mathscr{R} _{1, 2}$
-and $\mathscr{R} _{2, 2}$:
-- 
+and $\mathscr{R} _{2, 2}$.  The analysis of the memory reads and
+writes tells us that only the entries of `a[i]` updated, they are
+updated independently for each index $i$, and making no assumptions
+about the `+` operation (such as associativity, which *could* be used
+for further optimisations), we observe that
+- `a[i]` is initialised in statement $S_ 1$ and only the first
+  iteration of the $j$ loop depends on it: $\bigl(i', (i, j) \bigr)
+  \in \mathscr{R}_ {1,2} \iff i' = i \land j = 0$ (I think there is a
+  typo in the paper saying $j = 1$?).  This is reduced as:
+
+  $$\mathscr{P}_ {e _1} = \mathscr{D}_2 \cap \{ (i, j) : j \le 0 \},
+  \quad h _{e _1}(i, j) = i$$
+
+- `a[i]` is updated with each iteration of $j$, so every iteration
+  (instance) of $j$ depends only on the previous iteration ($j - 1$),
+  and this only applies starting from the second iteration ($j \ge
+  1$): $\bigl( (i', j'), (i, j) \bigr) \in \mathscr{R} _{2,2} \iff i'
+  = i \land j' = j - 1 \land j \ge 1$ (Again, this might be a typo $j
+  \ge 2$ in the paper?)  This is reduced as:
+
+  $$\mathscr{P} _{e _2} = \mathscr{D} _2 \cap \{ (i, j) : j \ge 1 \},
+  \quad h _{e _2}(i, j) = (i, j - 1)$$
+
+We will continue with these reduced forms.
+
+# Formulating the integer linear program
+
+## Describing vertices/domains
+
+The $\mathscr{D}_ S$ domains (including the parameters, represented as
+$\vec{n}$) need to be rewritten in the form where given the parameters
+$\vec{n}$ the instance $\vec{i} is in domaind $\mathscr{D}_S$ iff:
+
+$$a_{S_k} \begin{pmatrix} \vec{i} \\ \vec{n} \end{pmatrix} + b_{S_k}
+\ge 0 \quad (\forall k=1, \ldots m_S)$$
+
+This way, the $(a_ {S_ k}, b_ {S_ k})$ pairs completely describe
+$\mathscr{D} _S$ (that is, you can use these vectors to represent them
+in a computer program).
+
+
+$$ \begin{align}
+\mathscr{D}_1 &= \{ i : 0 \le i \le n \} \\&= \{ i : 0 \le i \land 0 \le
+n - i \} \\
+\mathscr{D}_2 &= \{ (i, j) : 0 \le i, j \le n \} \\ &= \{ (i, j) : 0 \le
+i \land 0 \le n - i \land 0 \le j \land 0 \le n - j \}
+\end{align} $$
+
+In the example of $\mathscr{D} _1$ there are two inequalities, implying
+$m _1 = 2$:
+
+$$0 \le i = (1, 0) \begin{pmatrix} i \\ n \end{pmatrix} + 0$$
+
+implies $a _{S _1} = (1, 0)$ and $b _{S _1} = 0$ and 
+
+$$0 \le n - i = (-1, 1) \begin{pmatrix} i \\ n \end{pmatrix} + 0$$
+
+implies $a _{S _2} = (-1, 1)$ and $b _{S _2} = 0$.
+
+Domain $\mathscr{D} _2$ can be described with $m _2 = 4$ such
+equations.
+
+## Describing edges/dependencies
+
+The edges $\mathscr{R}_ e$ of the GDG is described by $(c_e, d_e)$
+such that:
+
+$$c_{e_k} \begin{pmatrix} \vec{i'} \\ \vec{i} \\ \vec{n}
+\end{pmatrix} + d_ {e_k} \ge 0 \quad (\forall k=1, \ldots m _e)$$
+
+or for a restricted schedule with the affine map $\vec{i'} =
+h_e(\vec{i})$ and the rewritten reduced domain $\mathscr{P} _e$:
+
+$$c_{e_k} \begin{pmatrix} \vec{i} \\ \vec{n} \end{pmatrix} + d_{e_k}
+\ge 0 \quad (\forall k=1, \ldots m_S)$$
+
+The reduced domains $\mathscr{P} _{e _1}$ and $\mathscr{P} _{ e _2}$
+can be described similarly as the other domains $\mathscr{D} _1$ and
+$\mathscr{D} _2$.
+
+## Describing schedules
+
+The schedule $\theta(S, \vec{i})$ is also going to be rewritten using
+a set of $\mu$ Farkas multipliers.  For each statement $S$ we assume
+that the schedule can be expressed as:
+
+$$ \theta(S, \vec{i}) \equiv \mu_{S_0} + \sum_{k=1}^{m_S} \mu_{S_k}
+\Bigl( a_{S_k} \begin{pmatrix} \vec{i} \\ n \end{pmatrix} + b_{S_k}
+\Bigr)$$
+
+This captures the information provided by the domains $\mathscr{D} _S$
+captured in the ($m _S$ number of) $(a _{S _k}, b _{S _k})$ pairs.  To
+combine this with the information from the dependencies/edges we will
+need the *delay* corresponding to the edges.
+
+## The delay
+
+We assume that if the instance $\vec{i}$ of a statement $S$ depends on
+the instance $\vec{i'}$ of the statement $S'$, then there is a
+**delay** $\Delta$ associated with that dependency/edge $e$.  This
+means that the date of $S, \vec{i}$ assigned by the schedule $\theta$
+is greater (by at least $1$) than the date of $S', \vec{i'}$:
+
+$$\Delta = \theta(S, \vec{i}) - \theta(S', \vec{i'}) - 1 \ge 0$$
+
+We assume that this delay can be rewritten with a different set of
+$\lambda$ Farkas multipliers (these will be just placeholders to
+express dependencies between inequalities across inequalities
+resulting from the dependencies/edges).
+
+
+$$\Delta \equiv \lambda_{e_0} + \sum_{k=1}^{m_e} \lambda_{e_k} \Bigl(
+c_{e_k} \begin{pmatrix} \vec{i} \\ n \end{pmatrix} + d_{e_k} \Bigr) $$
+
+## Putting it all together
+
+## Solving the ILP
+
+We will be solving the ILP for these $\mu _{S _k}$ variables (for each
+statement $S$), so that $\theta(S, \cdot)$
 
 # Future work
 I'm writing this in my attempt to understand
+
+```
+ @misc{vatai2022polytutor1,
+   title={sdfadfb},
+   url={vatai.github.io/some},
+   journal={vatai.github.io},
+   author={Vatai, Emil},
+   year={2022},
+   month={Feb}}
+```
