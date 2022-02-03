@@ -272,7 +272,7 @@ We will continue with these reduced forms.
 
 The $\mathscr{D}_ S$ domains (including the parameters, represented as
 $\vec{n}$) need to be rewritten in the form where given the parameters
-$\vec{n}$ the instance $\vec{i} is in domaind $\mathscr{D}_S$ iff:
+$\vec{n}$ the instance $\vec{i}$ is in domaind $\mathscr{D} _S$ iff:
 
 $$a_{S_k} \begin{pmatrix} \vec{i} \\ \vec{n} \end{pmatrix} + b_{S_k}
 \ge 0 \quad (\forall k=1, \ldots m_S)$$
@@ -294,7 +294,7 @@ $m _1 = 2$:
 
 $$0 \le i = (1, 0) \begin{pmatrix} i \\ n \end{pmatrix} + 0$$
 
-implies $a _{S _1} = (1, 0)$ and $b _{S _1} = 0$ and 
+implies $a _{S _1} = (1, 0)$ and $b _{S _1} = 0$ and
 
 $$0 \le n - i = (-1, 1) \begin{pmatrix} i \\ n \end{pmatrix} + 0$$
 
@@ -308,7 +308,7 @@ equations.
 The edges $\mathscr{R}_ e$ of the GDG is described by $(c_e, d_e)$
 such that:
 
-$$c_{e_k} \begin{pmatrix} \vec{i'} \\ \vec{i} \\ \vec{n}
+$$c _{e _k} \begin{pmatrix} \vec{i'} \\ \vec{i} \\ \vec{n}
 \end{pmatrix} + d_ {e_k} \ge 0 \quad (\forall k=1, \ldots m _e)$$
 
 or for a restricted schedule with the affine map $\vec{i'} =
@@ -355,12 +355,36 @@ resulting from the dependencies/edges).
 $$\Delta \equiv \lambda_{e_0} + \sum_{k=1}^{m_e} \lambda_{e_k} \Bigl(
 c_{e_k} \begin{pmatrix} \vec{i} \\ n \end{pmatrix} + d_{e_k} \Bigr) $$
 
-## Putting it all together
+# Putting it all together
 
-## Solving the ILP
+The $\equiv$ in the last equation was alluding to the next step where
+we combine the "$\theta$ equations" expressing the domains and the
+"$\Delta$ equations" expressing the dependencies.
 
-We will be solving the ILP for these $\mu _{S _k}$ variables (for each
-statement $S$), so that $\theta(S, \cdot)$
+$$\theta(S, \vec{i}) - \theta(S', \vec{i'}) - 1 \equiv \Delta \ge 0$$
+
+On the left side of $\equiv$ in the expression above we use two
+instances of the "$\theta$ equations" (with $a _S{ _k}$, $b _S{ _k}$
+and $\mu _S{ _k}$), on the right "$\Delta$ equations" (with $c _{e
+_k}$, $d _{e _k}$ and $\lambda _{e _k}$) and solve the ILP for the
+$\mu _{S _k}$ variables (for each statement $S$).
+
+
+Using the equations from above, the ILP for the example becomes
+
+$$\begin{align*}
+    &\mu_{2, 0} + \mu_{2, 1} i + \mu_{2, 2} (n - i) + \mu_{2, 3} j + \mu_{2, 4} (n - j) \\
+    -& (\mu_{1, 0} + \mu_{1, 1} i + \mu_{1, 2} (n - i)) - 1 \\
+    \equiv& \lambda_{1, 0} + \lambda_{1, 1} i + \lambda_{1, 2} (n - i) + \lambda_{1, 3} j + \lambda_{1, 4} (n - j) - \lambda_{1, 5} j \ge 0
+\end{align*}$$
+
+The first two lines of the ILP come the rewritten form of
+$\mathscr{D}_1$ and $\mathscr{D}_2$ in the [Describing
+vertices/domains](#describing-verticesdomains) section, plugged in the
+"$\Theta$ equation",  wile the third line is the result of taking $[data](#dataflow-analysis)
+
+## The ILP of the example
+
 
 # Future work
 I'm writing this in my attempt to understand
