@@ -369,22 +369,43 @@ and $\mu _S{ _k}$), on the right "$\Delta$ equations" (with $c _{e
 _k}$, $d _{e _k}$ and $\lambda _{e _k}$) and solve the ILP for the
 $\mu _{S _k}$ variables (for each statement $S$).
 
+## Edge $e_1 : 1 \to 2$
 
-Using the equations from above, the ILP for the example becomes
+For the first edge $e _1$ between statement $S_1$ to $S_2$ the
+equations from above give rise to the following
 
 $$\begin{align*}
-    &\mu_{2, 0} + \mu_{2, 1} i + \mu_{2, 2} (n - i) + \mu_{2, 3} j + \mu_{2, 4} (n - j) \\
-    -& (\mu_{1, 0} + \mu_{1, 1} i + \mu_{1, 2} (n - i)) - 1 \\
+    &\bigl[\mu_{2, 0} + \mu_{2, 1} i + \mu_{2, 2} (n - i) + \mu_{2, 3} j + \mu_{2, 4} (n - j) \bigr] \\
+    -& \bigl[\mu_{1, 0} + \mu_{1, 1} i + \mu_{1, 2} (n - i) \bigr] - 1 \\
     \equiv& \lambda_{1, 0} + \lambda_{1, 1} i + \lambda_{1, 2} (n - i) + \lambda_{1, 3} j + \lambda_{1, 4} (n - j) - \lambda_{1, 5} j \ge 0
 \end{align*}$$
 
-The first two lines of the ILP come the rewritten form of
-$\mathscr{D}_1$ and $\mathscr{D}_2$ in the [Describing
+The first and second line (except the $-1$ at the end of it) of the
+ILP come from the rewritten form of $\mathscr{D}_2$ and
+$\mathscr{D}_1$ from the [Describing
 vertices/domains](#describing-verticesdomains) section, plugged in the
-"$\Theta$ equation",  wile the third line is the result of taking $[data](#dataflow-analysis)
+"$\Theta$ equation", while the third line is the result of taking
+$\mathscr{P} _{e _1}$ [Dataflow analysis](#dataflow-analysis), which
+is $-j \ge 0$ and the inequalities from the $\mathscr{D} _2$ (hence
+the similarity to the first line).
 
-## The ILP of the example
+The previous equation is equivalent to the following system of
+equations by equating the coefficients of $i$, $j$, $n$ and the
+constant term.
 
+$$\begin{align}
+    \mu_{2, 0} - \mu_{1, 0} - 1 &= \lambda_{1, 0} &\text{const. terms}\\
+    \mu_{2, 1} - \mu_{2, 2} - \mu_{1, 1} + \mu_{1, 2} &= \lambda_{1, 1} - \lambda_{1, 2} &\text{$i$ terms}\\
+    \mu_{2, 3} - \mu_{2, 4} &= \lambda_{1, 3} - \lambda_{1, 4} - \lambda_{1, 5} &\text{$j$ terms}\\
+    \mu_{2, 2} + \mu_{2, 4} - \mu_{1, 2} &= \lambda_{1, 2} + \lambda_{1, 4} &\text{$n$ terms}
+\end{align}$$
+
+## Edge $e_2 : 2 \to 2$
+
+The second edge is a [uniform dependence](#uniform-dependence).  That
+means, that if we write the $\theta(S_2, \vec{i}) - \theta(S_1,
+h(\vec{i}))$ with the $\mu _{S _k}$ Farkas multipliers, most of the
+terms cancel each other out:
 
 # Future work
 I'm writing this in my attempt to understand
