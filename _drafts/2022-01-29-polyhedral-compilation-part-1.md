@@ -402,13 +402,96 @@ $$\begin{align}
 
 ## Edge $e_2 : 2 \to 2$
 
-The second edge is a [uniform dependence](#uniform-dependence).  That
-means, that if we write the $\theta(S_2, \vec{i}) - \theta(S_1,
-h(\vec{i}))$ with the $\mu _{S _k}$ Farkas multipliers, most of the
-terms cancel each other out:
+The second edge is a [uniform dependency](#uniform-dependence), the
+schedule for the start and end of the edge, $\theta(S _2, h(\vec{i}))$
+and $\theta(S _2, \vec{i})$ is nearly identical (difference
+highlighted in the formulae below). 
 
-# Future work
-I'm writing this in my attempt to understand
+$$\mu_{S_0} + \sum_{k=1}^{m_S} \mu_{S_k} \bigl( a_{S_k}
+(\begin{smallmatrix} {\color{magenta}{\vec{i}}} \\ n
+\end{smallmatrix}) + b_{S_k} \bigr) - \bigl[ \mu_{S_0} +
+\sum_{k=1}^{m_S} \mu_{S_k} \bigl( a_{S_k} (\begin{smallmatrix}
+\color{magenta}{h(\vec{i})} \\ n \end{smallmatrix}) + b_{S_k} \bigr)
+\bigr]$$
+
+This results to most of the terms
+cancelling each other out in the expression $\theta(S _2, \vec{i}) -
+\theta(S _1, h(\vec{i}))$ (written with the $\mu _{S _k}$ Farkas
+multipliers):
+
+$$\mu_{S_0} + \sum_{k=1}^{m_S} \mu_{S_k} \bigl( a_{S_k}
+\Bigl(\begin{smallmatrix} i \\ j \\ n \end{smallmatrix}\Bigr) +
+b_{S_k} \bigr) - \bigl[ \mu_{S_0} + \sum_{k=1}^{m_S} \mu_{S_k} \bigl(
+a_{S_k} \Bigl(\begin{smallmatrix} i \\ j \color{magenta}{-1} \\ n
+\end{smallmatrix}\Bigr) + b_{S_k} \bigr) \bigr]$$
+
+<!-- The remaining term is $$- \sum _{k=1}^{m _S}. -->
+<!-- \mu_{S_k} a_{S_k} \Bigl( \begin{smallmatrix} 0 \\ -1 \\ 0 -->
+<!-- \end{smallmatrix} \Bigr)$$ -->
+
+<!-- Concretely: $\theta(2, i, j) = \cdots -->
+<!-- \mu_{2, 3} j + \mu_{2, 4} (n - j)$ implies $\theta(2, y) - -->
+<!-- \theta(2, h(y)) = \theta(2, i, j) - \theta(2, i, j - 1) = \mu_{2, -->
+<!-- 3} - \mu_{2, 4}$ -->
+
+As a result, the loop edge on $S _2$ results in the following equation
+(not the lack of $\lambda _{S _k}$ multipliers).  
+
+$$\Delta = \theta(S _2, i, j) - \theta(S _2, i, j - 1) - 1 = \mu_{2, 3} - \mu_{2, 4} - 1 \ge 0$$
+
+## The calculations
+
+Collecting the and rearranging the inequalities for $e _1 : S _1 \to S
+_2$ and $e _2 : S _2 \to S _2$.
+
+$$\begin{align}
+    \lambda_{1, 0} =& \mu_{2, 0} - \mu_{1, 0} - 1 \ge 0 \\
+    \lambda_{1, 1} =& \mu_{2, 1} + \mu_{2, 4} - \mu_{1, 1} - \lambda_{1, 4} \ge 0 \\
+    \lambda_{1, 3} =& \mu_{2, 3} - \mu_{2, 4} - \lambda_{1, 4} - \lambda_{1, 5} \ge 0 \\
+    \lambda_{1, 2} =& \mu_{2, 2} + \mu_{2, 4} - \mu_{1, 2} - \lambda_{1, 4} \ge 0 \\
+    & \mu_{2, 3} - \mu_{2, 4} - 1 \ge 0
+\end{align}$$
+
+Simplifying it gives:
+
+$$\begin{align*}
+    \mu_{2, 0} - \mu_{1, 0} - 1 \ge& 0 \\
+    \mu_{2, 3} - \mu_{2, 4} - 1 \ge& 0 \\
+    \mu_{2, 3} + \mu_{2, 4} - \mu_{1, 1} \ge& 0 \\
+    \mu_{2, 2} + \mu_{2, 4} - \mu_{1, 2} \ge& 0
+\end{align*}$$
+
+All these manipulations can be performed by algorithms automatically.
+
+## One possible result
+
+One valid choice for the $\mu _{S _k}$ values is:
+
+- $\mu_{1, 0} = \mu_{2, 1} = \mu_{2, 2} = \mu_{2, 4} = \mu_{1, 1} = \mu_{1, 2} = 0$
+- $\mu_{2, 0} = \mu_{2, 3} = 1$
+- $\theta(1, i) = 0$
+- $\theta(2, i, j) = j + 1$
+
+## Generated code
+
+The resulting schedule is:
+- $\theta(S _1, i) = 0$
+- $\theta(S _2, i, j) = j + 1$
+
+Generating code from this is a separate task and will be disucussed in
+the next blog post, but the paper suggests something similar to:
+
+```C++
+#pragma omp parallel
+for (i = 0; i <= n; n++)
+  a[i] = 0.0;
+for (j = 0; j <= n; j++)
+  #pragma omp parallel
+  for (i = 0; i <= n; i++)
+    a[i] += b[j] * M[i][j];
+```
+
+## Citing this blog post
 
 ```
  @misc{vatai2022polytutor1,
