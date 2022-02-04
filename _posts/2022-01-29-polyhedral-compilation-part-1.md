@@ -490,7 +490,7 @@ for (j = 0; j <= n; j++)
     a[i] += b[j] * M[i][j];
 ```
 
-## Citing this blog post
+# Citing this blog post
 
 ```
 @misc{vatai2022polytutor1,
@@ -501,3 +501,9 @@ for (j = 0; j <= n; j++)
   month={Feb}
 }
 ```
+
+# Feedback
+
+Feedback is very much welcome.  I don't have a comment section set up,
+but you can raise an
+[issue](https://github.com/vatai/vatai.github.io/issues) on GitHub.
