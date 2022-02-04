@@ -1,6 +1,5 @@
 ---
 title: "Polyhedral compilation: part 1"
-date: 2022-01-29 09:26:00 +0900
 categories: math compsci polyhedral
 usemathjax: true
 ---
