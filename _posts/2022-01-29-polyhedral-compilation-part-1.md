@@ -494,11 +494,11 @@ for (j = 0; j <= n; j++)
 ## Citing this blog post
 
 ```
- @misc{vatai2022polytutor1,
-   title={sdfadfb},
-   url={vatai.github.io/some},
-   journal={vatai.github.io},
-   author={Vatai, Emil},
-   year={2022},
-   month={Feb}}
+@misc{vatai2022polytutor1,
+  title={Polyhedral compilation: part 1},
+  url={https://vatai.github.io/math/compsci/polyhedral/polyhedral-compilation-part-1/},
+  author={Vatai, Emil},
+  year={2022},
+  month={Feb}
+}
 ```
