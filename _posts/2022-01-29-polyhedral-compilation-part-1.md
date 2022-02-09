@@ -440,7 +440,7 @@ $$\Delta = \theta(S _2, i, j) - \theta(S _2, i, j - 1) - 1 = \mu_{2, 3} - \mu_{2
 
 ## The calculations
 
-Collecting the and rearranging the inequalities for $e _1 : S _1 \to S
+Collecting and rearranging the inequalities for $e _1 : S _1 \to S
 _2$ and $e _2 : S _2 \to S _2$.
 
 $$\begin{align}
