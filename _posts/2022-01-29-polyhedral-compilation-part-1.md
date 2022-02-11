@@ -54,11 +54,11 @@ S2:   a[i] += b[j] * M[i][j];
 }
 ```
 
-The above code has to relevant **statements** which access the memory:
-`a[i] = 0.0;` labelled as $S_1$ and `a[i] += b[j] * M[i][j];` labelled
-as $S_2$.  Each of the two statements is executed multiple times, it
-has multiple **instances**, for example the instances of statement
-$S_1$ are:
+The above code has two relevant **statements** which access the
+memory: `a[i] = 0.0;` labelled as $S_1$ and `a[i] += b[j] * M[i][j];`
+labelled as $S_2$.  Each of the two statements is executed multiple
+times, it has multiple **instances**, for example the instances of
+statement $S_1$ are:
 - `a[0] = 0.0;` for $i = 0$,
 - `a[1] = 0.0;` for $i = 1$ etc.
 
