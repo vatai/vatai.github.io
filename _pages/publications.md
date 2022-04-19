@@ -34,9 +34,10 @@ Emil Vatai, Utsav Singhal, and Reiji Suda; [Diamond matrix powers
 kernels](https://dl.acm.org/doi/10.1145/3368474.3368494), In
 Proceedings of the *International Conference on High Performance
 Computing in Asia-Pacific Region* (HPCAsia2020), Association for
-Computing Machinery, New York, NY, USA, 102–113.  Gábor Farkas, Gábor
-E. Gévay, Antal Járai, Emil Vatai; [The largest known Cunningham chain
-of length 3 of the first
+Computing Machinery, New York, NY, USA, 102–113.
+
+Gábor Farkas, Gábor E. Gévay, Antal Járai, Emil Vatai; [The largest
+known Cunningham chain of length 3 of the first
 kind](http://www.cs.ubbcluj.ro/~studia-m/2014-4/05-gevay-vatai-final.pdf),
 *Studia Univ. Babes-Bolyai Mathematica*, Volume 59, Number 4, 2014,
 457--462.
