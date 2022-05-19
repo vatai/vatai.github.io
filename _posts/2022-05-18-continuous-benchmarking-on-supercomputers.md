@@ -57,12 +57,12 @@ the GitHub settings page.
     # Extract the installer
     $ tar xzf ./actions-runner-linux-x64-2.291.1.tar.gz
 
-How to configure and run the self-hosted runner.  Again **don't use
-these instructions**, use the ones provided on the settings page,
-since the `--url` and the `--token` are dependent on the repo you want
-to add the runner to.  The `./config.sh` asks a few questions, but
-generally it is very simple and usually the default answers are
-acceptable.
+The second section describes how to configure and run the self-hosted
+runner.  Again **don't use these instructions**, use the ones provided
+on the settings page, since the `--url` and the `--token` are
+dependent on the repo you want to add the runner to.  The
+`./config.sh` asks a few questions, but generally it is very simple
+and usually the default answers are acceptable.
 
     # Create the runner and start the configuration experience
     $ ./config.sh --url https://github.com/<user>/<repo> --token <token>
