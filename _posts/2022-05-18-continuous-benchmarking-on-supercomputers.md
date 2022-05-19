@@ -62,7 +62,10 @@ runner.  Again **don't use these instructions**, use the ones provided
 on the settings page, since the `--url` and the `--token` are
 dependent on the repo you want to add the runner to.  The
 `./config.sh` asks a few questions, but generally it is very simple
-and usually the default answers are acceptable.
+and usually the default answers are acceptable.  The last command
+`./run.sh` is the runner itself, it connects to GitHub, and needs to
+be running to be able to accept workflows/jobs.  See [note](#security)
+about security.
 
     # Create the runner and start the configuration experience
     $ ./config.sh --url https://github.com/<user>/<repo> --token <token>
@@ -142,3 +145,11 @@ for that workflow, and clicking on a job brings up the steps of that
 job.  Clicking on a step expands it and displays the
 
 ![Observing actions](/assets/images/observing.png "Observing actions")
+
+
+# Security
+
+This is obviously a security issue.  The runner script `./run.sh`
+should be running all the time, connected to GitHub.com, waiting for
+jobs.  As stated on GitHub, this should be enabled only for
+**private** repositories.
