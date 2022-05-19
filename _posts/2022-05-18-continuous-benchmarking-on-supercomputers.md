@@ -12,8 +12,8 @@ al. describes the posibilities of *continuous benchmarking* (CB),
 however it doesn't give direct instructions how to implement it.
 Looking at the source code is always a possibility, but the `yaml`
 files there aren't really documented (which is no surprises since they
-are pretty self evident).  Still, I hope this post will help people
-who unfamiliar with *Continuous X* approaches (where X can be
+are pretty self documenting).  Still, I hope this post will help
+people who unfamiliar with *Continuous X* approaches (where X can be
 integration, development, benchmarking etc).
 
 # Overview
