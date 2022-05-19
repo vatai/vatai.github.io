@@ -60,7 +60,9 @@ the GitHub settings page.
 How to configure and run the self-hosted runner.  Again **don't use
 these instructions**, use the ones provided on the settings page,
 since the `--url` and the `--token` are dependent on the repo you want
-to add the runner to.
+to add the runner to.  The `./config.sh` asks a few questions, but
+generally it is very simple and usually the default answers are
+acceptable.
 
     # Create the runner and start the configuration experience
     $ ./config.sh --url https://github.com/<user>/<repo> --token <token>
@@ -126,3 +128,17 @@ second, third and fourth steps create a `build` directory, call
 `cmake` in that directory (using the `working-directory:`), and builds
 the app using `cmake --build`.  Finally, the last step, calls the
 command of the supercomputer scheduler to submit the `sub.sh` script.
+
+
+# Observing the actions
+
+The top bar of a GitHub repository has an "Actions" page.
+
+![Actions button](/assets/images/actions.png "Actions button")
+
+This page lists the workflows which were executed for the given
+repository.  Clicking on a workflow, brings up a list of jobs defined
+for that workflow, and clicking on a job brings up the steps of that
+job.  Clicking on a step expands it and displays the
+
+![Observing actions](/assets/images/observing.png "Observing actions")
