@@ -78,10 +78,13 @@ best of my knowledge, self-hosted runners can be added to GitHub users
 or GitHub organisations.
 
 
-## Yaml file
+## Yaml workflow file
 
-`<repo>/.github/workflows/build.yml`
+To automatically run commands, we need to create a `<name>.yml` file in the
+`<repo>/.github/workflows/` directory, for example with the following
+contents:
 
+    # .github/workflows/build-and-submit.yml
     name: Build and submit
     on: push
     jobs:
@@ -99,3 +102,27 @@ or GitHub organisations.
           run: cmake --build build --clean-first
         - name: Submit
           run: pjsub -g $(stat . -c %G) sub.sh
+
+Each `<name>.yml` file (which can have any name) describes a workflow,
+with its `name:` (which can be any string), and the event when it will
+be executed.  The example above will be exectuted `on: push`.
+
+Each workflow consists of one or more `jobs:`.  Multiple jobs are, by
+default, executed in parallel. In the example, for simplicity, there
+is only one job, with the custom identifier `build:` (this can be a
+different identifier e.g. `job1:`).  Each job has a `name:` (similarly
+to a workflow), and each job needs to specify where it is should run
+using the `runs-on:` value.  Without self-hosted runners, we can
+specify here a docker image (something like `ubuntu-20.04`), but in
+our case `[self-hosted,login-node]` specifies that the job should be
+executed on a `self-hosted` runner.  The `login-node` is custom label
+which can be added to the runner on GitHub.
+
+The main part of a job is the `steps:` field, which describes a list
+of steps which are executed sequentially.  The job in the example has
+5 steps.  The first step is an "external" step (like importing a
+library), which checks out the master branch of the repository.  The
+second, third and fourth steps create a `build` directory, call
+`cmake` in that directory (using the `working-directory:`), and builds
+the app using `cmake --build`.  Finally, the last step, calls the
+command of the supercomputer scheduler to submit the `sub.sh` script.
