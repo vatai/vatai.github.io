@@ -153,3 +153,8 @@ This is obviously a security issue.  The runner script `./run.sh`
 should be running all the time, connected to GitHub.com, waiting for
 jobs.  As stated on GitHub, this should be enabled only for
 **private** repositories.
+
+# Future work
+
+Next, I'd like to figure out how to write a workflow or a job which
+monitors when the submitted script finishes.
