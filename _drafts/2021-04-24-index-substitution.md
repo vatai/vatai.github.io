@@ -40,12 +40,12 @@ $$\begin{align}
 =& \sum_{i=0}^{n} \sum_{j=i}^{n} \sum_{k=0}^{j} a_i a_j a_k \\
 =& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{i} \sum_{k=0}^{j} a_i a_j a_k + \sum_{j=i}^{n} \sum_{k=0}^{j} a_i a_j a_k \Bigr) \\
 =& \frac{1}{2} \sum_{i=0}^{n} \Bigl( \sum_{j=0}^{n} \sum_{k=0}^{j} a_i a_j a_k + \sum_{k=0}^{i} a_i^2 a_k \Bigr) \\
-=& \frac{1}{2} \sum_{i=0}^{n} \sum_{j=0}^{n} \sum_{k=0}^{j} a_i a_j a_k \\
-&+ \frac{1}{2} \sum_{i=0}^{n} \sum_{k=0}^{i} a_i^2 a_k \\
-=& \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} \Bigl( \sum_{k=0}^{n} a_i a_j a_k + a_i a_j^2 \Bigr) \\
-&+ \frac{1}{4} \sum_{i=0}^{n} \Bigl( \sum_{k=0}^{n} a_i^2 a_k + a_i^3 \Bigr) \\
-=& \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} \sum_{k=0}^{n} a_i a_j a_k + \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} a_i a_j^2 \\
-&+ \frac{1}{4} \sum_{i=0}^{n} \sum_{k=0}^{n} a_i^2 a_k + \frac{1}{4} \sum_{i=0}^{n} a_i^3
+=& \frac{1}{2} \sum_{i=0}^{n} \sum_{j=0}^{n} \sum_{k=0}^{j} a_i a_j a_k 
++ \frac{1}{2} \sum_{i=0}^{n} \sum_{k=0}^{i} a_i^2 a_k \\
+=& \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} \Bigl( \sum_{k=0}^{n} a_i a_j a_k + a_i a_j^2 \Bigr)
++ \frac{1}{4} \sum_{i=0}^{n} \Bigl( \sum_{k=0}^{n} a_i^2 a_k + a_i^3 \Bigr) \\
+=& \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} \sum_{k=0}^{n} a_i a_j a_k + \frac{1}{4} \sum_{i=0}^{n} \sum_{j=0}^{n} a_i a_j^2
++ \frac{1}{4} \sum_{i=0}^{n} \sum_{k=0}^{n} a_i^2 a_k + \frac{1}{4} \sum_{i=0}^{n} a_i^3
 \end{align}$$
 
 Then by the solution is $\frac{1}{4} S_1^3 + \frac{1}{2} S_1^2 S_2 +
