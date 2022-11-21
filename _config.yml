@@ -110,7 +110,7 @@ author:
       url: &twitter_url "https://twitter.com/vatai"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
-      url: "https://mastodon.elte.hu/@vatai"
+      url: "https://mast.hpc.social/@vatai"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
