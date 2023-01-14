@@ -146,7 +146,7 @@ So with LLVM v10 compiling (also v9, these two are the ones tested), I
 was overwhelmed with joy that I can use the `--with-llvm-prefix=`
 option in the `./configure` script of Pluto. Or at least so I thought,
 now, after overcoming the undefined error messages, I was greeted with
-new "undefined reference" linker errors! 
+new "undefined reference" linker errors!
 
 Yeey! This is progress.  So now I had the right LLVM, all seemed to be
 right with the world but for some reason the linker was not seeing the
@@ -159,13 +159,35 @@ should be working!!!".
 
 ## A good setup
 
-script everything
+Things are not working and you've tried the obvious, which means
+tracking changes will be crucial.
 
-track changes with good commit messages
+**Script it!** Going back to bash history for commands with long list
+of options/flags or a long sequence of commands is error prone. Scrip
+everything. No need for smart scripts, which handle different
+parameters -- make sure in the end your build boils down to the
+execution of one or two script (without any complicated parameters).
 
-take notes
+**Track changes!** which translates into use `git` (and notes).  One
+approach which felt right in the end, was as follows:
 
-commit clean up changes
+- If you don't know what to do, starting from a commit try different
+  stuff (different parameters/settings), but after each change revert
+  back to the clean commit.
+- When you realise you're doing a bunch of changes or you have an idea
+  or a plan of a more complicated approach which needs multiple
+  changes, remember to [commit
+  oftern](https://sethrobertson.github.io/GitBestPractices/).
+  
+Don't forget always to [write good commit
+messages](https://cbea.ms/git-commit/#seven-rules): when trying out
+different stuff and making progress, make sure to mention the change
+in the commit message. Keep commits which clean up the code well
+marked and separate from attempts at modifying some flags/options.
+
+**Take notes!** When you're trying out different changes and going
+back to the same commit, take notes what was already tried out, and
+what error message it emitted.
 
 considering time -- incrementally
 - llvm release
