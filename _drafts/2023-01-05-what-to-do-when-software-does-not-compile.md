@@ -162,14 +162,16 @@ should be working!!!".
 Things are not working and you've tried the obvious, which means
 tracking changes will be crucial.
 
-**Script it!** Going back to bash history for commands with long list
-of options/flags or a long sequence of commands is error prone. Scrip
+### Script it!
+Going back to bash history for commands with long list of
+options/flags or a long sequence of commands is error prone. Scrip
 everything. No need for smart scripts, which handle different
 parameters -- make sure in the end your build boils down to the
 execution of one or two script (without any complicated parameters).
 
-**Track changes!** which translates into use `git` (and notes).  One
-approach which felt right in the end, was as follows:
+### Track changes!
+That is, use `git` (and notes).  One approach which felt right in the
+end, was as follows:
 
 - If you don't know what to do, starting from a commit try different
   stuff (different parameters/settings), but after each change revert
@@ -178,23 +180,48 @@ approach which felt right in the end, was as follows:
   or a plan of a more complicated approach which needs multiple
   changes, remember to [commit
   oftern](https://sethrobertson.github.io/GitBestPractices/).
-  
+
 Don't forget always to [write good commit
 messages](https://cbea.ms/git-commit/#seven-rules): when trying out
 different stuff and making progress, make sure to mention the change
 in the commit message. Keep commits which clean up the code well
 marked and separate from attempts at modifying some flags/options.
 
-**Take notes!** When you're trying out different changes and going
+### Take notes!
+When you're trying out different changes and going
 back to the same commit, take notes what was already tried out, and
 what error message it emitted.
 
-considering time -- incrementally
-- llvm release
+### Clean builds vs considering time!
+Compilation bigger software can take a non-negligible amount of time
+and one has to consider when to use "clean" and when to use
+"incremental" builds.
 
-don't do too many thins at once (forget to commit, edit script while
-bash is reading it, even more problematic on big hpc systems with
-schedulers)
+- A clean build (i.e. delete all previous files) takes a lot of time
+  but ensures nothing left from the previous build influences the new
+  builds.
+- An incremental build usually is much faster but leftovers of
+  previous builds may mess up the current build.
+
+For small and fast builds should always be clean builds, but for a
+large code base incremental builds are preferred, with the occasional
+clean build as verification that everything functions properly.
+
+### LLVM specific remarks
+
+- Build LLVM release with `-DCMAKE_BUILD_TYPE=Release`, since it is
+  much smaller and faster then debug.
+- If the build is failing then limit the number of link jobs using
+  `-DLLVM_PARALLEL_LINK_JOBS=4`.
+
+### Don't do too many thins at once!
+For example:
+
+- You'll forget to commit.
+- Editing a bash script while bash is reading it can cause strange
+  errors.
+- It is even more problematic on big HPC systems with schedulers, when
+  config files are read when the job gets scheduled.
 
 
 ## Know your tools
