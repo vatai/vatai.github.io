@@ -226,11 +226,57 @@ For example:
 
 ## Know your tools
 
-shell (hej programozas konyv)
+As described in the excellent book [The Pragmatic
+Programmer](https://pragprog.com/titles/tpp20/) you should really know
+your tools.  Probably the most important tool under your belt is
+you're shell and/or bash.  I write "and/or" because while I use `zsh`
+as my main shell, I still write shell scripts in (ba)sh.  It is very
+important to have a clear picture how different (instances) of shells
+interact, what is the difference between calling a script with
+`source` (same as if the script was typed into the current prompt,
+e.g. defined variables remain) or invoking it with bash or executing
+the script if it is set to be executable (in both of these cases a new
+`bash` child process is spawned and only `export`ed variables are
+visible to the child, also variables defined in the subprocess all
+disappear after the shell terminates).
+
+Something else I found more than once useful the `set_env` function
+below.  When you build a program with a custom `PREFIX` (for example
+under the home folder because the lack of `sudo` privilages), you can
+use `set_env` to expand the shell's `PATH`, `LD_LIBRARY_PATH`,
+`C_INCLUDE_PATH` and `CPLUS_INCLUDE_PATH` with the corresponding
+subfolders of the `PREFIX` path.
+
+```bash
+function set_env ()
+{
+  echo $1
+  if [ -d "$1/bin" ]; then
+    export PATH="$1/bin${PATH:+:${PATH}}"
+  fi
+  if [ -d "$1/bin64" ]; then
+    export PATH="$1/bin64${PATH:+:${PATH}}"
+  fi
+  if [ -d "$1/lib" ]; then
+    export LD_LIBRARY_PATH="$1/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+    export LIBRARY_PATH="$1/lib${LIBRARY_PATH:+:${LIBRARY_PATH}}"
+  fi
+  if [ -d "$1/lib64" ]; then
+    export LD_LIBRARY_PATH="$1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+    export LIBRARY_PATH="$1/lib64${LIBRARY_PATH:+:${LIBRARY_PATH}}"
+  fi
+  if [ -d "$1/include" ]; then
+    export C_INCLUDE_PATH="$1/include${C_INCLUDE_PATH:+:${C_INCLUDE_PATH}}"
+    export CPLUS_INCLUDE_PATH="$1/include${CPLUS_INCLUDE_PATH:+:${CPLUS_INCLUDE_PATH}}"
+  fi
+  if [ -d "$1/man" ]; then
+    export MAN_PATH="$1/man${MAN_PATH:+:${MAN_PATH}}"
+  fi
+}
+```
 
 - chain commands with: `||` and `&&`
 
-- set_env
 
 ag, kitty, git, nm, emacs (discovered column view), 
 
