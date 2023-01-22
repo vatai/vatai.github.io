@@ -214,7 +214,7 @@ clean build as verification that everything functions properly.
 - If the build is failing then limit the number of link jobs using
   `-DLLVM_PARALLEL_LINK_JOBS=4`.
 
-### Don't do too many thins at once!
+### Don't do too many things at once!
 For example:
 
 - You'll forget to commit.
@@ -275,22 +275,33 @@ function set_env ()
 }
 ```
 
-- chain commands with: `||` and `&&`
+Other things I tend to use often in shell scripts are the `&&` (for the usual don't that if this fails) and `||` (preceded by a test, e.g. create a directory if it is not there) operators to chain commands together, and the `pushd`, `popd` pair to change directories.  Also `set -e` and/or `set -x` (see [Good failures, and finally success](#good-failures-and-finally-success) below).
 
+Some other *tools* I've found useful:
 
-ag, kitty, git, nm, emacs (discovered column view), 
+- `git` obviously, but you need to know how to use it without major restrictions!
+- [`ag`](https://github.com/ggreer/the_silver_searcher) is *The Silver Searcher*.  A **very fast** `grep` like utility for code.
+- You should have a good *terminal*.  I've just recently gave up on the default Gnome terminal, and switched to [Kitty](https://sw.kovidgoyal.net/kitty/).
+- When we're talking compiling, [`nm`](https://linux.die.net/man/1/nm) is command I didn't know about.
+- And obviously you absolutely must have a great editor, and obviously it should be [Emacs](https://www.gnu.org/software/emacs/) because that is what [real programmers](https://xkcd.com/378/) use! (As a personal note, this is when I discovered [org-mode](https://orgmode.org/) [column-view](https://orgmode.org/manual/Column-View.html)).
 
 # Good failures, and finally success
 
-read the error message
+**tl;dr of the section**: The steps I did when I felt like I know what I'm doing.
 
-figure out what generated the error message
+## Read the error message
 
-reproduce the error message
+Sometimes, the most obvious things are the most important things! Read and understand the error message.  Possible figure out what causes it.  If you've figured it out, half of the problem is already solved!
 
-fix the error message
+## Figure out what generated the error message
 
-finalise the fix
+For `bash` use `bash -x` or `set -x`.  The later has the advantage that it can strategically be placed at a in the middle of the script, closer to the error message, saving you from going manually through pages of `bash` output.
+
+## Reproduce the error message
+
+## Fix the error message
+
+## Finalise the fix
 
 
 # Results
