@@ -295,7 +295,9 @@ Sometimes, the most obvious things are the most important things! Read and under
 
 ## Figure out what generated the error message
 
-For `bash` use `bash -x` or `set -x`.  The later has the advantage that it can strategically be placed at a in the middle of the script, closer to the error message, saving you from going manually through pages of `bash` output.
+For *bash* use `bash -x` or `set -x`.  The later has the advantage that it can strategically be placed at a in the middle of the script, closer to the error message, saving you from going manually through pages of `bash` output.
+
+For *Makefiles* `make <options> SHELL='sh -x'` should make hidden command echos visible. For AutoTools and CMake, sometimes `make <options> V=1` or `make <options> VERBOSE=1` may work.
 
 ## Reproduce the error message
 
