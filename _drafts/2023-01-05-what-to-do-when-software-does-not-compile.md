@@ -13,7 +13,7 @@ New year is here, and we're all full motivation including me, and that
 means I just can't help myself but to write a blog post. Yaay! Right?
 
 Well, not really. It way simpler than that: I finally managed to
-compile pluto and real work can actually begin... but this is the nice
+compile Pluto and real work can actually begin... but this is the nice
 way to kill time while I'm verifying if my compilation script really
 works.
 
@@ -297,7 +297,7 @@ Sometimes, the most obvious things are the most important things! Read and under
 
 For *bash* use `bash -x` or `set -x`.  The later has the advantage that it can strategically be placed at a in the middle of the script, closer to the error message, saving you from going manually through pages of `bash` output.
 
-For *Makefiles* `make <options> SHELL='sh -x'` should make hidden command echos visible. For AutoTools and CMake, sometimes `make <options> V=1` or `make <options> VERBOSE=1` may work.
+For *Makefiles* `make <options> SHELL='sh -x'` should make hidden command echos visible. For AutoTools and CMake, sometimes `make <options> V=1` or `make <options> VERBOSE=1` may work ([SX answer](https://stackoverflow.com/a/32010960/568735)).
 
 ## Reproduce the error message
 
