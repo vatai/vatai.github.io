@@ -4,6 +4,8 @@ layout: single
 permalink: /talks
 ---
 
+- 2023-06-26: [**PASC'23**](https://pasc23.pasc-conference.org/): [Generating optimal HPC code with ML](assets/talks/2023pasc.pdf)
+
 - 2022-09-28: [**14th
   JLESC**](https://publish.illinois.edu/14th-jlesc-workshop/):
   [Outlook on generating optimal HPC code with
