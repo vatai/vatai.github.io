@@ -10,7 +10,9 @@ Anshu Dubey, Youngjun Lee, Tom Klosterman, Emil Vatai; [A tool and a
 methodology to use macros for abstracting variations in code for
 different computational
 demands](https://www.sciencedirect.com/science/article/abs/pii/S0167739X23002649),
-Future Generation Computer Systems
+*Future Generation Computer Systems*, Received 28 February 2023,
+Revised 1 June 2023, Accepted 12 July 2023, Available online 18 July
+2023.
 
 Thao Truong Nguyen, François Trahay, Jens Domke, Aleksandr Drozd, Emil
 Vatai, Jianwei Liao, Mohamed Wahib, Balazs Gerofi; [Why globally
