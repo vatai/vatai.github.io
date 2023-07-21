@@ -6,6 +6,12 @@ permalink: /publications
 
 ## Papers
 
+Anshu Dubey, Youngjun Lee, Tom Klosterman, Emil Vatai; [A tool and a
+methodology to use macros for abstracting variations in code for
+different computational
+demands](https://www.sciencedirect.com/science/article/abs/pii/S0167739X23002649),
+Future Generation Computer Systems
+
 Thao Truong Nguyen, François Trahay, Jens Domke, Aleksandr Drozd, Emil
 Vatai, Jianwei Liao, Mohamed Wahib, Balazs Gerofi; [Why globally
 re-shuffle? Revisiting data shuffling in large scale deep
