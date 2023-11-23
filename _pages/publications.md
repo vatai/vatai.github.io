@@ -5,6 +5,14 @@ permalink: /publications
 ---
 
 ## Papers
+Jens Domke, Emil Vatai, Balazs Gerofi, Yuetsu Kodama, Mohamed Wahib,
+Artur Podobas, Sparsh Mittal, Miquel Pericàs, Lingqi Zhang, Peng Chen,
+Aleksandr Drozd, Satoshi Matsuoka; [At the Locus of Performance:
+Quantifying the Effects of Copious 3D-Stacked Cache on HPC
+Workloads](https://dl.acm.org/doi/pdf/10.1145/3629520), *ACM
+Transactions on Architecture and Code Optimization*, Received: 21
+December 2022, Revised: 5 October 2023, Accepted: 13 October 2023.,
+Published: 25 October 2023.
 
 Anshu Dubey, Youngjun Lee, Tom Klosterman, Emil Vatai; [A tool and a
 methodology to use macros for abstracting variations in code for
