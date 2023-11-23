@@ -73,6 +73,13 @@ Conference on Math and Computer Science MaCS 2010*, Komárno, Slovakia,
 
 ## Posters
 
+IEEE *Symposium on Low-Power and High-Speed Chips and Systems* (COOL
+Chips 26); Tokyo, April 19-21, 2023; "Quantifying the Effects of
+Copious 3D-Stacked Cache on HPC Workloads", Emil Vatai, Jens Domke,
+Balazs Gerofi, Yuetsu Kodama, Mohamed Wahib, Artur Podobas, Sparsh
+Mittal, Miquel Pericàs, Lingqi Zhang, Peng Chen, Aleksandr Drozd and
+Satoshi Matsuoka
+
 4th International *Symposium on Research and Education of
 Computational Science* (RECS); The Computational Science Alliance of
 the University of Tokyo, Tokyo, 2019 "Communication avoiding and
