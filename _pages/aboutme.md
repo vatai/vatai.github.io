@@ -6,6 +6,13 @@ permalink: /aboutme
 ---
 
 
+## Projects
+
+- Tadashi
+
+- RadicalPy
+
+
 ## Affiliations
 
 - Research scientist at [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/), [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html)
