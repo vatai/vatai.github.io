@@ -8,10 +8,8 @@ permalink: /aboutme
 
 ## Projects
 
-- Tadashi
-
-- RadicalPy
-
+- **Tadashi** project aims for the ambitious goal to generate the optimal (i.e. fastest possible) version of a program, using machine learning (ML), ensuring correctness (legality) of the transformations via the polyhedral model.
+- **RadicalPy** is an [open source](https://github.com/Spin-Chemistry-Labs/radicalpy/) Python library for simulation of radical pair interactions in spin-chemistry.
 
 ## Affiliations
 
