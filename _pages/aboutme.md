@@ -11,6 +11,11 @@ permalink: /aboutme
 - **Tadashi** project aims for the ambitious goal to generate the optimal (i.e. fastest possible) version of a program, using machine learning (ML), ensuring correctness (legality) of the transformations via the polyhedral model.
 - **RadicalPy** is an [open source](https://github.com/Spin-Chemistry-Labs/radicalpy/) Python library for simulation of radical pair interactions in spin-chemistry.
 
+### Other projects at [HPAIS team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html)
+
+- **Benchmarker**
+- **Langmo**
+
 ## Affiliations
 
 - Research scientist at [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/), [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html)
