@@ -5,8 +5,6 @@ permalink: /publications
 bibliography: assets/my_pub.bib
 ---
 
-{% bibliography %}
-
 ## Papers
 Jens Domke, Emil Vatai, Balazs Gerofi, Yuetsu Kodama, Mohamed Wahib,
 Artur Podobas, Sparsh Mittal, Miquel Pericàs, Lingqi Zhang, Peng Chen,
@@ -108,3 +106,8 @@ Science Eger, Hungary, May 20-22, 2016
 and Computer Science](http://ceur-ws.org/Vol-2046/) Eger, Hungary, May
 20-22, 2016
 
+## WIP bibtex integration
+
+{% cite dubey2023tool %}
+
+{% bibliography %}
