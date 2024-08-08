@@ -2,7 +2,7 @@
 title: Publications
 layout: single
 permalink: /publications
-bibliography: ../_site/assets/my_pub.bib
+bibliography: assets/my_pub.bib
 output: html_document
 ---
 
