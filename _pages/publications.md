@@ -3,7 +3,6 @@ title: Publications
 layout: single
 permalink: /publications
 bibliography: assets/my_pub.bib
-output: html_document
 ---
 
 [@dubey2023tool]
