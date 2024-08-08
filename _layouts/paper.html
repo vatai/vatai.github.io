@@ -1,14 +1,6 @@
 ---
 ---
 
-{% comment %}
-{{ reference }}
-
-{% if entry.abstract %}
-<p>{{ entry.abstract }}</p>
-{% endif %}
-{% endcomment %}
-
 <p>
   <span style="font-weight:bold">
     {{ entry.author }},
@@ -38,7 +30,7 @@
         Copy to clipboard
       </span>
       BibTex
-    </button> 
+    </button>
   </span>
   <pre id="{{ entry.key }}" style="display:none">{{ entry.bibtex }}</pre>
 </p>
