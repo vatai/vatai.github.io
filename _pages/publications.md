@@ -7,6 +7,8 @@ bibliography: assets/my_pub.bib
 
 [@dubey2023tool]
 
+{% bibliography %}
+
 @book{ruby,
   title     = {The Ruby Programming Language},
   author    = {Flanagan, David and Matsumoto, Yukihiro},
