@@ -5,16 +5,8 @@ permalink: /publications
 bibliography: assets/my_pub.bib
 ---
 
-[@dubey2023tool]
-
 {% bibliography %}
 
-@book{ruby,
-  title     = {The Ruby Programming Language},
-  author    = {Flanagan, David and Matsumoto, Yukihiro},
-  year      = {2008},
-  publisher = {O'Reilly Media}
-}
 ## Papers
 Jens Domke, Emil Vatai, Balazs Gerofi, Yuetsu Kodama, Mohamed Wahib,
 Artur Podobas, Sparsh Mittal, Miquel Pericàs, Lingqi Zhang, Peng Chen,
