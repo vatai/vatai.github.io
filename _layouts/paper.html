@@ -27,6 +27,9 @@
   {% else %}
   <span style="color:red">{{ reference }}</span>,
   {% endif %}
+  {% comment %}
+  https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+  {% endcomment %}
   <span class="tooltip">
     <button
       onclick="copyBibtex('{{ entry.key }}')"
