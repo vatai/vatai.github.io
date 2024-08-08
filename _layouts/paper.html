@@ -1,0 +1,17 @@
+---
+---
+{% comment %}
+{{ reference }}
+
+{% if entry.abstract %}
+<p>{{ entry.abstract }}</p>
+{% endif %}
+<pre>{{ entry.bibtex }}</pre>
+{% endcomment %}
+
+<p style="color:red;">
+  <span style="font-weight:bold">
+    {{ entry.author }}, </span>
+  <span>
+    <a {% if entry.url %}href="{{ entry.url }}"{% endif %} >
+      {{ entry.title }} </a> </span> </p>

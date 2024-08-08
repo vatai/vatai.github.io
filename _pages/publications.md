@@ -110,4 +110,4 @@ and Computer Science](http://ceur-ws.org/Vol-2046/) Eger, Hungary, May
 
 {% cite dubey2023tool %}
 
-{% bibliography %}
+{% bibliography --template paper %}

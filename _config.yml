@@ -274,9 +274,6 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
-scholar:
-  style: modern-language-association
-
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
