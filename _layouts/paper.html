@@ -6,7 +6,6 @@
 {% if entry.abstract %}
 <p>{{ entry.abstract }}</p>
 {% endif %}
-<pre>{{ entry.bibtex }}</pre>
 {% endcomment %}
 
 <p style="color:red;">
@@ -14,4 +13,11 @@
     {{ entry.author }}, </span>
   <span>
     <a {% if entry.url %}href="{{ entry.url }}"{% endif %} >
-      {{ entry.title }} </a> </span> </p>
+      {{ entry.title }} </a> </span>
+  {% if entry.type == "article" %}
+  <span style="color:green"> {{ entry.journal }}</span>
+  {% else if entry.type == "inproceedings" %}
+  <span style="color:blue"> {{ entry.booktitle }}</span>
+  {% endif %}
+  <pre>{{ entry.bibtex }}</pre>
+</p>
