@@ -2,7 +2,11 @@
 title: Publications
 layout: single
 permalink: /publications
+bibliography: ../_site/assets/my_pub.bib
+output: html_document
 ---
+
+[@dubey2023tool]
 
 ## Papers
 Jens Domke, Emil Vatai, Balazs Gerofi, Yuetsu Kodama, Mohamed Wahib,
