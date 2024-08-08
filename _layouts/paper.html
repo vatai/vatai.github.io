@@ -1,5 +1,6 @@
 ---
 ---
+
 {% comment %}
 {{ reference }}
 
@@ -8,16 +9,35 @@
 {% endif %}
 {% endcomment %}
 
-<p style="color:red;">
+<p>
   <span style="font-weight:bold">
-    {{ entry.author }}, </span>
+    {{ entry.author }},
+  </span>
   <span>
-    <a {% if entry.url %}href="{{ entry.url }}"{% endif %} >
-      {{ entry.title }} </a> </span>
+    <a
+      {% if entry.url %}
+      href="{{ entry.url }}"
+      {% endif %}
+      >{{ entry.title }}</a>,
+  </span>
   {% if entry.type == "article" %}
-  <span style="color:green"> {{ entry.journal }}</span>
+  <span style="font-style:italic">{{ entry.journal }}</span>,
   {% else if entry.type == "inproceedings" %}
-  <span style="color:blue"> {{ entry.booktitle }}</span>
+  <span style="font-style:italic">{{ entry.booktitle }}</span>,
+  {% else %}
+  <span style="color:red">{{ reference }}</span>,
   {% endif %}
-  <pre>{{ entry.bibtex }}</pre>
+  <span class="tooltip">
+    <button
+      onclick="copyBibtex('{{ entry.key }}')"
+      onmouseout="outFunc('{{ entry.key }}')">
+      <span class="tooltiptext" id="{{ entry.key }}_tooltip">
+        Copy to clipboard
+      </span>
+      BibTex
+    </button> 
+  </span>
+  <pre id="{{ entry.key }}" style="display:none">{{ entry.bibtex }}</pre>
 </p>
+
+

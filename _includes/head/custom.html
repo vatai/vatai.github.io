@@ -1,21 +1,37 @@
 {% if page.usemathjax %}
 <script type="text/javascript" async
- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 <script type="text/x-mathjax-config">
-   MathJax.Hub.Config({
-     extensions: ["tex2jax.js"],
-     jax: ["input/TeX", "output/HTML-CSS"],
-     tex2jax: {
-       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-       processEscapes: true
-     },
-     "HTML-CSS": { availableFonts: ["TeX"] }
-   });
+  MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] }
+  });
 </script>
 {% endif %}
+
+<script type="text/javascript">
+  function copyBibtex(clicked_id) {
+      var pre_obj = document.getElementById(clicked_id);
+      var copyText = pre_obj.innerHTML;
+      navigator.clipboard.writeText(copyText);
+
+      var tooltip = document.getElementById(clicked_id + "_tooltip");
+      tooltip.innerHTML = "Copied: BibTex entry";
+  }
+
+  function outFunc(clicked_id) {
+      var tooltip = document.getElementById(clicked_id + "_tooltip");
+      tooltip.innerHTML = "Copy to clipboard";
+  }
+</script>
 
 <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic" rel="stylesheet" type="text/css">
 
