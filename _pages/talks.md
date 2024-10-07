@@ -4,7 +4,7 @@ layout: single
 permalink: /talks
 ---
 
-- 2024-10-08 [**DOE/MEXT at Livermore**](): [Enabling AI-based Automated Code Generation with Guaranteed Correctness](https://raw.githubusercontent.com/vatai/talk-202410-tadashi/refs/heads/main/202410-tadashi.pdf)
+- 2024-10-08 [**DOE/MEXT at Livermore**](): [Enabling AI-based Automated Code Generation with Guaranteed Correctness](assets/talks/202410-tadashi.pdf)
 
 - 2023-06-26: [**PASC'23**](https://pasc23.pasc-conference.org/): [Generating optimal HPC code with ML](assets/talks/2023pasc.pdf)
 
