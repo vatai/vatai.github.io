@@ -71,15 +71,15 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-acm_id: # your dl.acm.org/profile/id
+acm_id: https://dl.acm.org/profile/99659487728 # your dl.acm.org/profile/id
 blogger_url: # your blogger URL
 bluesky_url: # your bluesky URL
-dblp_url: # your DBLP profile url
-discord_id: # your discord id (18-digit unique numerical identifier)
-facebook_id: # your facebook id
+dblp_url: https://dblp.org/pid/255/2019.html # your DBLP profile url
+discord_id: 152143948549324801 # your discord id (18-digit unique numerical identifier)
+facebook_id: emil.vatai # your facebook id
 flickr_id: # your flickr id
-github_username: # your GitHub user name
-gitlab_username: # your GitLab user name
+github_username: vatai # your GitHub user name
+gitlab_username: vatai # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 inspirehep_id: 1010907 # Inspire HEP author ID
 instagram_id: # your instagram id
