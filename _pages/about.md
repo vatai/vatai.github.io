@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: # Research HPC :desktop_computer:, ML
+subtitle: Emil VATAI
 profile:
   align: right
   image: VATAI_Emil_profile_pic.jpg
