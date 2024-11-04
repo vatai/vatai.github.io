@@ -5,7 +5,7 @@ permalink: /
 subtitle: # Research HPC :desktop_computer:, ML
 profile:
   align: right
-  image: prof_pic.jpg
+  image: VATAI_Emil_profile_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: #
 news: true # includes a list of news items
