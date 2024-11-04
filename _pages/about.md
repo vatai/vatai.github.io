@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Research scientist at [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/), [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html)
+
+<!-- <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc. -->
 
 profile:
   align: right
