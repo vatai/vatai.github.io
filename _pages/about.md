@@ -5,7 +5,7 @@ permalink: /
 subtitle: # Research HPC :desktop_computer:, ML
 profile:
   align: right
-  image: prof_pic.jpg
+  image: VATAI_Emil_profile_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Nihonbashi 1-chome Mitsui Building, 15th floor,</p>
