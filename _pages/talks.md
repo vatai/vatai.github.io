@@ -12,7 +12,7 @@ nav_order: 6
 
 - 2022-09-28: [**14th JLESC**](https://publish.illinois.edu/14th-jlesc-workshop/): [Outlook on generating optimal HPC code with ML](/assets/talks/2022jlesc.pdf)
 
-- 2022-12-04: [**SEST2022**](https://sest2022.wixsite.com/website-1): [RadicalPy: radical pair spin dynamics for the masses](/assets/talks/SEST2022.pdf) Talk given by Lewis M. Antill.
+- 2022-12-04: [**SEST2022**](https://sest2022.wixsite.com/website-1): [RadicalPy: radical pair spin dynamics for the masses](/assets/talks/SEST2022.pdf) Talk given by [**Lewis M. Antill**](https://lmantill.github.io/).
 
 - 2014-05-23: [**10th MaCS**](https://www.cs.ubbcluj.ro/~macs/2014/call_for_papers.htm) The largest known Cunningham chain of length 3 of the first kind
 
