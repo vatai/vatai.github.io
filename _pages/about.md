@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: Emil VATAI
 profile:
   align: right
-  image: prof_pic.jpg
+  image: VATAI_Emil_profile_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Nihonbashi 1-chome Mitsui Building, 15th floor,</p>
+    <p>1-4-1 Nihonbashi,</p>
+    <p>Chuo-ku, Tokyo</p>
+    <p>103-0027, Japan</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+## short BIO
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Dr. Emil Vatai is a research scientist at the [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html) in the [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/). He was previously a JSPS fellow at the University of Tokyo, and before that he was a lecturer at Eötvös Loránd University, Faculty of Informatics, Budapest from where he also received his Ph.D. in computer science.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## professional services:
+
+- Program Committee member:
+
+  - Benchmarking in the Data Center: Expanding to the Cloud [BID2022](https://parallel.computer/)
+
+  - Workshop on Insights from Negative Results in NLP [Insight2024](https://insights-workshop.github.io/2024/pc/), [Insight2023](https://insights-workshop.github.io/2023/pc/), [Insight2022](https://insights-workshop.github.io/2022/pc/)
+
+- Reviewer: American Mathematical Society (AMS): Mathematical Reviews
+
+- Organiser: 11th Joint Conference on Mathematics and Computer, Science Eger, Hungary, May 20-22, 2016
+
+- Editor: Proceedings of the [11th Joint Conference on Mathematics and Computer Science](http://ceur-ws.org/Vol-2046/) Eger, Hungary, May 20-22, 2016
