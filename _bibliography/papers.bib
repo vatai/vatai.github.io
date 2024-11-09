@@ -1,115 +1,74 @@
----
----
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{antill2024radicalpy,
+  title = {{{RadicalPy}}: {{A Tool}} for {{Spin Dynamics Simulations}}},
+  shorttitle = {{{RadicalPy}}},
+  author = {Antill, Lewis M. and Vatai, Emil},
+  year = {2024},
+  month = oct,
+  journal = {Journal of Chemical Theory and Computation},
+  publisher = {American Chemical Society},
+  issn = {1549-9618},
+  doi = {10.1021/acs.jctc.4c00887},
+  urldate = {2024-11-09},
+  abstract = {Radical pairs (electron--hole pairs, polaron pairs) are transient reaction intermediates that are found and exploited in all areas of science, from the hard realm of physics in the form of organic semiconductors, spintronics, quantum computing, and solar cells to the soft domain of chemistry and biology under the guise of chemical reactions in solution, biomimetic systems, and quantum biology. Quantitative analysis of radical pair phenomena has historically been successful by a few select groups. With this in mind, we present an intuitive open-source framework in the Python programming language that provides classical, semiclassical, and quantum simulation methodologies. A radical pair kinetic rate equation solver, Monte Carlo-based spin dephasing rate estimations, and molecule database functionalities are implemented. We introduce the kine-quantum method, a new approach that amalgamates classical rate equations, semiclassical, and quantum techniques. This method resolves the prohibitively large memory requirement issues of quantum approaches while achieving higher accuracy, and it also offers wavelength-resolved simulations, producing time- and wavelength-resolved magnetic field effect simulations. Model examples illustrate the versatility and ease of use of the software, including the new approach applied to the magnetosensitive absorption and fluorescence of flavin adenine dinucleotide photochemistry, spin--spin interaction estimation from molecular dynamics simulations on radical pairs inside reverse micelles, radical pair anisotropy inside proteins, and triplet exciton pairs in anthracene crystals. The intuitive interface also allows this software to be used as a teaching or learning aid for those interested in the field of spin chemistry. Furthermore, the software aims to be modular and extensible, with the aim to standardize how spin dynamics simulations are performed.},
+  file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Antill and Vatai - 2024 - RadicalPy A Tool for Spin Dynamics Simulations.pdf}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@article{domke2023locusa,
+  title = {At the {{Locus}} of {{Performance}}: {{Quantifying}} the {{Effects}} of {{Copious 3D-Stacked Cache}} on {{HPC Workloads}}},
+  shorttitle = {At the {{Locus}} of {{Performance}}},
+  author = {Domke, Jens and Vatai, Emil and Gerofi, Balazs and Kodama, Yuetsu and Wahib, Mohamed and Podobas, Artur and Mittal, Sparsh and Peric{\`a}s, Miquel and Zhang, Lingqi and Chen, Peng and Drozd, Aleksandr and Matsuoka, Satoshi},
+  year = {2023},
+  month = dec,
+  journal = {ACM Trans. Archit. Code Optim.},
+  volume = {20},
+  number = {4},
+  pages = {57:1--57:26},
+  issn = {1544-3566},
+  doi = {10.1145/3629520},
+  urldate = {2024-11-09},
+  abstract = {Over the last three decades, innovations in the memory subsystem were primarily targeted at overcoming the data movement bottleneck. In this paper, we focus on a specific market trend in memory technology: 3D-stacked memory and caches. We investigate the impact of extending the on-chip memory capabilities in future HPC-focused processors, particularly by 3D-stacked SRAM. First, we propose a method oblivious to the memory subsystem to gauge the upper-bound in performance improvements when data movement costs are eliminated. Then, using the gem5 simulator, we model two variants of a hypothetical LARge Cache processor (LARC), fabricated in 1.5\&nbsp;nm and enriched with high-capacity 3D-stacked cache. With a volume of experiments involving a broad set of proxy-applications and benchmarks, we aim to reveal how HPC CPU performance will evolve, and conclude an average boost of 9.56{\texttimes} for cache-sensitive HPC applications, on a per-chip basis. Additionally, we exhaustively document our methodological exploration to motivate HPC centers to drive their own technological agenda through enhanced co-design.},
+  file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Domke et al. - 2023 - At the Locus of Performance Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads.pdf}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@article{dubey2023tool,
+  title = {A Tool and a Methodology to Use Macros for Abstracting Variations in Code for Different Computational Demands},
+  author = {Dubey, Anshu and Lee, Youngjun and Klosterman, Tom and Vatai, Emil},
+  year = {2023},
+  month = jul,
+  journal = {Future Generation Computer Systems},
+  issn = {0167-739X},
+  doi = {10.1016/j.future.2023.07.014},
+  urldate = {2023-07-21},
+  abstract = {Scientific software used on high-performance computing platforms is in a phase of transformation because of the combined increase in the heterogeneity and complexity of models and hardware platforms. Having separate implementations for different platforms can easily lead to combinatorial explosions; therefore, the computational science community has been looking for mechanisms to express code through abstractions that can be specialized for different platforms. Most existing approaches use template meta-programming in C++, and are, therefore language specific. We have developed a tool that uses customized expansion of macros to mimic some of C++ behaviour in other languages. It enables unification of any code variants that may be necessary to run efficiently on different target architectures and different computational environments through use of macros with multiple alternative definitions and ability to arbitrate on definition selection for expansion. Combined with two other tools, a custom runtime, and a user specified recipe translator, our custom macroprocessor becomes a part of an overall performance portability solution that does not depend on any specific programming language. We also use macros as code-shorthand that lets code snippets become building blocks that allow variations in control flow to explore performance options. We demonstrate use of macros in Flash-X, a multiphysics multicomponent code with many Fortran legacy components derived from an earlier community code FLASH.},
+  copyright = {All rights reserved},
+  langid = {english},
+  keywords = {Heterogeneous computing,Implementation variants,Multiphysics,Performance portability,Program assembly,Scientific software},
+  file = {/home/vatai/Sync/zotero-data/storage/B84AUS4K/S0167739X23002649.html}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{prabhu2024scalability,
+  title = {On the {{Scalability}} of {{Computing Genomic Diversity Using SparkLeBLAST}}: {{A Feasibility Study}}},
+  author = {Prabhu, Ritvik and Moussad, Bernard and Youssef, Karim and Vatai, Emil and Feng, Wu-chun},
+  year = {2024},
+  abstract = {Studying the genomic diversity of viruses can help us understand how viruses evolve and how that evolution can impact human health. Rather than use a laborious and tedious wet-lab approach to conduct a genomic diversity study, we take a computational approach, using the ubiquitous NCBI BLAST and our parallel and distributed SparkLeBLAST, across 53 patients ({$\sim$}40,000,000 query sequences) on Fugaku, the world's fastest homogeneous supercomputer with 158,976 nodes, where each code contains a 48-core A64FX processor and 32 GB RAM.},
+  langid = {english},
+  file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Prabhu et al. - On the Scalability of Computing Genomic Diversity Using SparkLeBLAST A Feasibility Study.pdf}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{vatai2020diamond,
+  title = {Diamond Matrix Powers Kernels},
+  booktitle = {Proceedings of the {{International Conference}} on {{High Performance Computing}} in {{Asia-Pacific Region}}},
+  author = {Vatai, Emil and Singhal, Utsav and Suda, Reiji},
+  year = {2020},
+  month = jan,
+  series = {{{HPCAsia2020}}},
+  pages = {102--113},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3368474.3368494},
+  urldate = {2022-03-24},
+  abstract = {Matrix powers kernel calculates the vectors Akv, for k = 1, 2,..., m and they are the heart of various scientific computations, including communication avoiding iterative solvers. In this paper we propose diamond matrix powers kernel - DMPK, which has the purpose to apply the "diamond tiling" stencil algorithm to general matrices. It can also be considered as an extension of the PA1 and PA2 algorithms, introduced by Demmel et al. Our approach enables us to control the balance between the amount of communication avoidance and redundant computation inherently present in communication avoiding algorithms. We present a proof of concept implementation of the algorithm using MPI routines. The experiments we performed show that the control of the amount of computation and communication is achievable, and with more thorough optimisations, DMPK is a promising alternative to existing MPK approaches.},
+  copyright = {All rights reserved},
+  isbn = {978-1-4503-7236-7},
+  file = {/home/vatai/Sync/zotero-data/pdfs/vatai2020diamond_matrix_powers_kernels.pdf}
 }
