@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Continuous benchmarking on supercomputers"
 date: 2022-05-18 20:12:00 +0900
 categories: programming
