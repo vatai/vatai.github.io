@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Polyhedral compilation: part 1"
 categories: math compsci polyhedral
 usemathjax: true

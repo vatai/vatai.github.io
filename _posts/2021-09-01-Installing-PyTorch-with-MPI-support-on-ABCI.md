@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Installing PyTorch with MPI support on ABCI"
 date: 2021-09-01 17:00:00 +0900
 categories: tutorial MPI ABCI

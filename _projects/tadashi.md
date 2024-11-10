@@ -2,7 +2,7 @@
 layout: page
 title: Tadashi
 description: Enabling AI-Based Automated Code Generation With Guaranteed Correctness
-# img: assets/img/12.jpg
+img: assets/img/sampling.png
 importance: 1
 category: work
 related_publications: true
