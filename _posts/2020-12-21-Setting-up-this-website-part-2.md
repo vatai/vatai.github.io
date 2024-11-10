@@ -1,6 +1,8 @@
 ---
+layout: post
 title: "How to set up a website like this part 2"
 date: 2020-12-21 22:00:00 +0900
+description: "Old post about setting up Minimal Mistakes Jekyll theme (which I'm not using anymore)"
 categories: tutorial
 ---
 
