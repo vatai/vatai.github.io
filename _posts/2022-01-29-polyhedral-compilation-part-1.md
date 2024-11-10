@@ -1,5 +1,6 @@
 ---
 layout: post
+giscus_comments: true
 title: "Polyhedral compilation: part 1"
 categories: math compsci polyhedral
 usemathjax: true

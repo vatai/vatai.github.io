@@ -1,5 +1,6 @@
 ---
 layout: post
+giscus_comments: true
 title: "How to set up a website like this"
 date: 2020-12-06 21:32:00 +0900
 description: "Old post about setting up Minimal Mistakes Jekyll theme (which I'm not using anymore)"
