@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I switched to [al-folio](https://github.com/alshedivat/al-folio) Jekyll template.  Migration is still in progress.
+I switched to [al-folio](https://github.com/alshedivat/al-folio) Jekyll template. Migration is still in progress.
