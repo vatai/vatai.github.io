@@ -27,11 +27,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-## Short BIO
+## short BIO
 
 Dr. Emil Vatai is a research scientist at the [High Performance Artificial Intelligence Systems Research Team](https://www.riken.jp/en/research/labs/r-ccs/high_perf_ai_sys/index.html) in the [RIKEN](https://www.riken.jp/) [Center for Computational Science](https://www.r-ccs.riken.jp/en/). He was previously a JSPS fellow at the University of Tokyo, and before that he was a lecturer at Eötvös Loránd University, Faculty of Informatics, Budapest from where he also received his Ph.D. in computer science.
 
-## Professional services:
+## professional services:
 
 - Program Committee member:
 
