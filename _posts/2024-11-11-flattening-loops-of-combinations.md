@@ -36,4 +36,84 @@ $$
 \end{align}
 $$
 
-This reminds me of division with a reminder, where $$a = q b + r$$ and $$q = \lfloor a / b \rfloor$$
+Because $$\lambda \mapsto j(\lambda) = \lfloor \sqrt{1/4 + 2 \lambda} + 1/2 \rfloor$$ is monotonically increasing (non-decreasing), returning the $$\lfloor \cdot \rfloor$$ means that $$j$$ is the largest possible integer such that $$\lambda = i + \frac{j(j - 1)}{2}$$ for a non-negative integer $$i$$.
+
+According to {% cite dash2021scaling alhajri2020identifying %} this flattened $$\lambda$$ loop corresponds to the following $$i$$ and $$j$$ loop:
+
+```python
+N = 5
+count = 0
+for i in range(N):
+    for j in range(i+1, N):
+        count += 1
+        print(count, ":", i,j)
+```
+
+```
+1 : 0 1
+2 : 0 2
+3 : 0 3
+4 : 0 4
+5 : 1 2
+6 : 1 3
+7 : 1 4
+8 : 2 3
+9 : 2 4
+10 : 3 4
+```
+
+If we implement the flattened loop we see that this is only true in the sense that the set of visited combination is the same, however, the order is different.
+
+```python
+import math
+
+N = 5
+Nc2 = 10
+count = 0
+for L in reversed(range(Nc2)):
+    j = math.floor(math.sqrt(0.25 + 2*L) + 0.5)
+    i = L - j*(j-1)//2
+    count += 1
+    print(count, ":", i, j)
+```
+
+```
+1 : 3 4
+2 : 2 4
+3 : 1 4
+4 : 0 4
+5 : 2 3
+6 : 1 3
+7 : 0 3
+8 : 1 2
+9 : 0 2
+10 : 0 1
+```
+
+So to generate the combinations in the same order as the initial $$i$$, $$j$$ loops, we need to modify the code as follows:
+
+```python
+import math
+
+N = 5
+Nc2 = 10
+count = 0
+for L in reversed(range(Nc2)):
+    j = math.floor(math.sqrt(0.25 + 2*L) + 0.5)
+    i = L - j*(j-1)//2
+    count += 1
+    print(count, ":", N - 1 - j, N - 1 - i)
+```
+
+```
+1 : 0 1
+2 : 0 2
+3 : 0 3
+4 : 0 4
+5 : 1 2
+6 : 1 3
+7 : 1 4
+8 : 2 3
+9 : 2 4
+10 : 3 4
+```
