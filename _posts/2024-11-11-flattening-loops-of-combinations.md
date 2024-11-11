@@ -21,7 +21,7 @@ Let's try to derive those formulas.
 
 It is easy to spot the $$S_{j-1} := \sum_{t=1}^{j-1} t = \frac{j (j - 1)}{2}$$ formula for the sum of all positive integers going up to $$j-1$$. Which leads us to:
 
-$$ \lambda = i + \frac{j(j - 1)}{2} = i + \sum_{t=1}^{j-1} t$$
+$$\lambda = i + \frac{j(j - 1)}{2} = i + \sum_{t=1}^{j-1} t$$
 
 The same $$S_{j-1}$$ formula is also present in the expression for $$j$$ (we begin by removing the $$\lfloor \cdot \rfloor$$):
 
