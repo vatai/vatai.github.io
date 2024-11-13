@@ -117,3 +117,29 @@ for L in reversed(range(Nc2)):
 9 : 2 4
 10 : 3 4
 ```
+
+Or alternatively, if we want to modify the original $$i$$, $$j$$ loop to match the $$\lambda$$ loop and the mathematical derivation:
+
+
+```python
+N = 5
+count = 0
+for j in reversed(range(N)):
+    for i in reversed(range(0, j)):
+        count += 1
+        print(count, ":", i, j)
+```
+
+```
+1 : 3 4
+2 : 2 4
+3 : 1 4
+4 : 0 4
+5 : 2 3
+6 : 1 3
+7 : 0 3
+8 : 1 2
+9 : 0 2
+10 : 0 1
+```
+
