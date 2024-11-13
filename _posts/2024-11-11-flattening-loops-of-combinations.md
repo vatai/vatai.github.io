@@ -70,7 +70,7 @@ import math
 N = 5
 Nc2 = 10
 count = 0
-for L in reversed(range(Nc2)):
+for L in range(Nc2):
     j = math.floor(math.sqrt(0.25 + 2*L) + 0.5)
     i = L - j*(j-1)//2
     count += 1
@@ -78,16 +78,16 @@ for L in reversed(range(Nc2)):
 ```
 
 ```
-1 : 3 4
-2 : 2 4
-3 : 1 4
-4 : 0 4
-5 : 2 3
-6 : 1 3
-7 : 0 3
-8 : 1 2
-9 : 0 2
-10 : 0 1
+1 : 0 1
+2 : 0 2
+3 : 1 2
+4 : 0 3
+5 : 1 3
+6 : 2 3
+7 : 0 4
+8 : 1 4
+9 : 2 4
+10 : 3 4
 ```
 
 So to generate the combinations in the same order as the initial $$i$$, $$j$$ loops, we need to modify the code as follows:
@@ -124,22 +124,22 @@ Or alternatively, if we want to modify the original $$i$$, $$j$$ loop to match t
 ```python
 N = 5
 count = 0
-for j in reversed(range(N)):
-    for i in reversed(range(0, j)):
+for j in range(N):
+    for i in range(0, j):
         count += 1
         print(count, ":", i, j)
 ```
 
 ```
-1 : 3 4
-2 : 2 4
-3 : 1 4
-4 : 0 4
-5 : 2 3
-6 : 1 3
-7 : 0 3
-8 : 1 2
-9 : 0 2
-10 : 0 1
+1 : 0 1
+2 : 0 2
+3 : 1 2
+4 : 0 3
+5 : 1 3
+6 : 2 3
+7 : 0 4
+8 : 1 4
+9 : 2 4
+10 : 3 4
 ```
 
