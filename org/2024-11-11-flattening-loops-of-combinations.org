@@ -24,6 +24,34 @@
 10 : 3 4
 #+end_example
 
+* N=5: lambda loop
+#+begin_src python
+  import math
+
+  N = 5
+  Nc2 = 10
+  count = 0
+  for L in range(Nc2):
+      j = math.floor(math.sqrt(0.25 + 2*L) + 0.5)
+      i = L - j*(j-1)//2
+      count += 1
+      print(count, ":", i, j)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+1 : 0 1
+2 : 0 2
+3 : 1 2
+4 : 0 3
+5 : 1 3
+6 : 2 3
+7 : 0 4
+8 : 1 4
+9 : 2 4
+10 : 3 4
+#+end_example
+
 * N=5: modified lambda loop
 #+begin_src python :results output
   import math
@@ -52,65 +80,45 @@
 10 : 3 4
 #+end_example
 
-* N=5: lambda loop
-#+begin_src python
-  import math
-
-  N = 5
-  Nc2 = 10
-  count = 0
-  for L in reversed(range(Nc2)):
-      j = math.floor(math.sqrt(0.25 + 2*L) + 0.5)
-      i = L - j*(j-1)//2
-      count += 1
-      print(count, ":", i, j)
-#+end_src
-
-#+RESULTS:
-#+begin_example
-1 : 3 4
-2 : 2 4
-3 : 1 4
-4 : 0 4
-5 : 2 3
-6 : 1 3
-7 : 0 3
-8 : 1 2
-9 : 0 2
-10 : 0 1
-#+end_example
-
 * N=5: modified i, j loop
 #+begin_src python
   N = 5
   count = 0
-  for j in reversed(range(N)):
-      for i in reversed(range(0, j)):
+  for j in range(N):
+      for i in range(0, j):
           count += 1
           print(count, ":", i, j)
 #+end_src
 
 #+RESULTS:
 #+begin_example
-1 : 3 4
-2 : 2 4
-3 : 1 4
-4 : 0 4
-5 : 2 3
-6 : 1 3
-7 : 0 3
-8 : 1 2
-9 : 0 2
-10 : 0 1
+1 : 0 1
+2 : 0 2
+3 : 1 2
+4 : 0 3
+5 : 1 3
+6 : 2 3
+7 : 0 4
+8 : 1 4
+9 : 2 4
+10 : 3 4
 #+end_example
 
 * Drawing
 
 \begin{tikzpicture}
+% GRAY
 \foreach \i in {0,1,2,...,5}
-  \foreach \j in {0,1,2,...,5}
+  \foreach \j in {0,1,2,...,3}
     \node at (\i, \j) [draw, lightgray, circle]{};
-\foreach \x [evaluate=\x as \xx using int(\x + 1)] in {0,1,2,3}
-  \foreach \y in {1,...,\xx}
-    \node at (\x, \y) [draw, red, circle]{};
+% RED
+\foreach \j [evaluate=\j as \jj using int(\j-1)] in {1,2,3,4}
+  \foreach \i in {\jj,...,0}
+    \node at (\j, \i) [fill, red, circle]{};
+\foreach \i in {0,1} \node at (5,\i) [fill, red, circle]{};
+\node at (-1,-1) [anchor=east]{$\lambda=\frac{j(j-1)}{2}+i=10+1$}
+\node at (-1,1) [draw]{$i=1$};
+\node at (5,-1) [draw]{$j=5$};
+\foreach \i in {0,2,3} \node at (-1,\i) {$\i$};
+\foreach \j in {0,1,...,4} \node at (\j,-1) {$\j$};
 \end{tikzpicture}
