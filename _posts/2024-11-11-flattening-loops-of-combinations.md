@@ -1,7 +1,7 @@
 ---
 layout: post
 giscus_comments: true
-title: "[DRAFT] Flattening loops of combinations"
+title: "Flattening loops of combinations"
 date: 2024-11-11 09:00:00 +0900
 categories: programming
 related_publications: true
@@ -114,7 +114,6 @@ for L in reversed(range(Nc2)):
 ```
 
 Or alternatively, if we want to modify the original $$i$$, $$j$$ loop to match the $$\lambda$$ loop and the mathematical derivation:
-
 
 ```python
 N = 5
