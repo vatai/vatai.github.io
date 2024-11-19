@@ -110,15 +110,16 @@ A simplified (ergo very conservative) dependency analysis (there are
 programs which can perform such analysis) could yield two
 dependencies:
 
-- $$\mathscr{R}_{1, 2} = \\{ \bigl( i', (i, j) \bigr) : i' = i \\}$$
+- $$\mathscr{R}_{1, 2} = \{ \bigl( i', (i, j) \bigr) : i' = i \}$$
   describes the dependency between $$S_1$$ and $$S_2$$ which requires for
   the initialisation in $$S_1$$ (`a[i] = 0.0`) to precede (all instances
   of) statement $$S_2$$ when the two statements share the same value for
   the loop variable $$i$$ (hence $$i' = i$$).
-- $$\mathscr{R}_{2, 2} = \\{ \bigl( (i', j'), (i, j) : i' = i \land j'
-  < j \\}$$ describes the dependency of $$S_2$$ on itself, which
-  requires, for a given $$i$$ ($$i' = i$$) the earlier instances of (in
-  $$j$$) are executed before the later instances (hence $$j' < j$$).
+- $$\mathscr{R}_{2, 2} = \{ \bigl( (i', j'), (i, j) : i' = i \land j' < j \}$$
+  describes the dependency of $$S_2$$ on itself, which
+  requires, for a given $$i$$ ($$i' = i$$) the earlier instances of
+  (in $$j$$) are executed before the later instances (hence $$j' <
+  j$$).
 
 This dependency analysis is **very** coarse and/or conservative (read
 poor), we'll discuss a simple data flow dependency later (which is
@@ -209,9 +210,8 @@ $$1 \le k \le p_ e$$ and $$i'_ {p_ e} < i_ {p_ e}$$ where $$\vec{i'} =
 
 In the example, both edges of the GDG have depth 1:
 
-- $$\mathscr{R}_{1, 2} = \\{ \bigl( i', (i, j) \bigr) : i' = i \\}$$
-- $$\mathscr{R}_{2, 2} = \\{ \bigl( (i', j'), (i, j) : i' = i \land j'
-  < j \\}$$
+- $$\mathscr{R}_{1, 2} = \{ \bigl( i', (i, j) \bigr) : i' = i \}$$,
+- $$\mathscr{R}_{2, 2} = \{ \bigl( (i', j'), (i, j) : i' = i \land j' < j \}$$.
 
 In both cases the $$i'=i$$ part implies depth $$p_e \ge 1$$ and the rest
 ensures $$p _e \le 1$$.
