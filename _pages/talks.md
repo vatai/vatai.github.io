@@ -8,6 +8,8 @@ nav_order: 6
 
 - 2024-10-08 [**DOE/MEXT at Livermore**](): [Enabling AI-based Automated Code Generation with Guaranteed Correctness](/assets/talks/202410-tadashi.pdf)
 
+- 2024-03-26: [**Qutip 2024 Developers workshop (Wako, JP)**](https://qutip2024.wordpress.com/): "Development of Radicalpy and the lessons learned"
+
 - 2023-06-26: [**PASC'23**](https://pasc23.pasc-conference.org/): [Generating optimal HPC code with ML](/assets/talks/2023pasc.pdf)
 
 - 2022-09-28: [**14th JLESC**](https://publish.illinois.edu/14th-jlesc-workshop/): [Outlook on generating optimal HPC code with ML](/assets/talks/2022jlesc.pdf)
