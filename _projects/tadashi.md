@@ -5,6 +5,8 @@ description: Enabling AI-Based Automated Code Generation With Guaranteed Correct
 img: assets/img/publication_preview/proj-tadashi-sampling.png
 importance: 1
 category: work
+github: https://github.com/vatai/tadashi/
+github_stars: true
 related_publications: true
 ---
 
