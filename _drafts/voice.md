@@ -8,14 +8,14 @@ To generate an audio file with piper-tts, run
 To speak, run
 
     echo "Hello world" | piper-tts --model "$model" --output-raw | aplay -r 22050 -f S16_LE -t raw -
-    
+
 # ################################################################ SPEECH-DISPATCHER
 
 To use piper and its voices as system speech dispatcher, install one of the packages
 in the "piper-voices" group. Then, open
 
     /etc/speech-dispatcher/speechd.conf
-    
+
 and paste at the end the following:
 
     AddModule        "piper-generic" "sd_generic" "piper-generic.conf"
