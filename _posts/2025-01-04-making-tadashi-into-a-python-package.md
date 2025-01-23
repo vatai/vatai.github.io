@@ -40,26 +40,6 @@ The SWIG implementation has the following advantages:
 
 ---
 
-# Motivation: make Tadashi easier to install
-
-It would be nice to be able to just `pip install tadashi` and have everything working. To have everything working, two things need to happen:
-
-- build the C/C++ code and
-- tell Python where it can find the binaries (.so files).
-
-The first component is a somewhat problematic, in the sense that it probably prevents the efficient distribution of precompiled binaries as a wheel, which in turn means it'd be more reasonable to settle down for a `pip install <github-url>` (which I think is perfectly acceptable).
-
-# Towards a pip package
-
-## SWIG
-
-Implementing SWIG was on the first step to create a clean pip package.
-The main reason to use SWIG was that it automatically generates the
-python bindings, i.e. Python function prototypes based on the C/C++
-header files.  Additionally, it is explicitly supported by
-`cmake-build-extension`, the package which calls CMake to build the
-binaries.
-
 - Python package
 - cmake-build-extension
 
