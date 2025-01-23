@@ -40,7 +40,10 @@ The SWIG implementation has the following advantages:
 ## Building a Python package
 
 To the best of my knowledge, the way to do python packages is to write
-a `pyproject.toml` file.
+a `pyproject.toml` file. However, `pyproject.toml` does not support
+build extensions and they must be configured in `setup.py`.  The
+`cmake-build-extension` build extension invokes CMake as part of the
+build process of the wheel.
 
 ---
 
