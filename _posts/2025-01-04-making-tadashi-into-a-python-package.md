@@ -34,7 +34,9 @@ The SWIG implementation has the following advantages:
   source of truth (well, technically two, since the function
   prototypes in .h and .cc need to be synced manually, but the
   compiler catches any discrepancies).
-- The 
+- SWIG generates the wrapper Python file in the same directory as the
+  .so file (as part of the build process), eliminating the need to
+  manually specify the path to the .so.
 
 ---
 
