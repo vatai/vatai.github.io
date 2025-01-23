@@ -22,10 +22,9 @@ allow python to find both the python files and the binary .so files.
 First thing to clean up was implementing SWIG instead the ad-hoc CDLL
 approach currently used to call the C/C++ functions from Python. CDLL
 takes the path of the .so file, which is hard-coded in the Python
-files (hence the ad-hoc character of the implementation). Also, the
-arguments and return values of the functions of the .so files which
-are exposed to Python need to be copied from the .h files manually
-with CDLL.
+files (hence the ad-hoc character of the implementation). CDLL also
+requires the arguments and return values of the functions exposed to
+Python from the .so files need to be copied from the .h files manually.
 
 The SWIG implementation has the following advantages:
 
@@ -37,6 +36,11 @@ The SWIG implementation has the following advantages:
 - SWIG generates the wrapper Python file in the same directory as the
   .so file (as part of the build process), eliminating the need to
   manually specify the path to the .so.
+
+## Building a Python package
+
+To the best of my knowledge, the way to do python packages is to write
+a `pyproject.toml` file.
 
 ---
 
