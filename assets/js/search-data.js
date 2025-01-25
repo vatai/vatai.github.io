@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-a-post-with-image-galleries",
+        },{id: "post-making-tadashi-into-a-python-package",
+      
+        title: "Making Tadashi into a Python package",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/making-tadashi-into-a-python-package/";
+        
+      },
+    },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
