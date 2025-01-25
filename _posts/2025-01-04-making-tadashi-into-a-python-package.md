@@ -45,6 +45,10 @@ build extensions and they must be configured in `setup.py`.  The
 `cmake-build-extension` build extension invokes CMake as part of the
 build process of the wheel.
 
+TODO
+
+- double check
+
 ---
 
 - Python package
