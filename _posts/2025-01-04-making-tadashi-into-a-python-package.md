@@ -9,7 +9,6 @@ related_publications: true
 tikzjax: true
 ---
 
-
 # The current situation
 
 Currently, to run Tadashi, you need to compile some .so files first
@@ -41,7 +40,7 @@ The SWIG implementation has the following advantages:
 
 To the best of my knowledge, the way to do python packages is to write
 a `pyproject.toml` file. However, `pyproject.toml` does not support
-build extensions and they must be configured in `setup.py`.  The
+build extensions and they must be configured in `setup.py`. The
 `cmake-build-extension` build extension invokes CMake as part of the
 build process of the wheel.
 
