@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-making-tadashi-into-a-python-package",
+        },{id: "post-mpi4py-under-slurm",
+      
+        title: "MPI4py under Slurm",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2025/mpi4py-with-slurm/";
+        
+      },
+    },{id: "post-making-tadashi-into-a-python-package",
       
         title: "Making Tadashi into a Python package",
       
