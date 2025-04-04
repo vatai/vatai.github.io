@@ -125,6 +125,17 @@ ninja.data = [{
             window.location.href = "/blog/2021/Installing-PyTorch-with-MPI-support-on-ABCI/";
           
         },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
       },{id: "post-how-to-set-up-a-website-like-this-part-2",
         
           title: "How to set up a website like this part 2",
