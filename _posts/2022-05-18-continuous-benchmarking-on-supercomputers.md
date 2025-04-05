@@ -6,7 +6,16 @@ date: 2022-05-18 20:12:00 +0900
 categories: programming
 ---
 
-A paper [Towards Continuous Benchmarking: An Automated Performance Evaluation Framework for High Performance Software](https://doi.org/10.1145/3324989.3325719) by Anzt, H. et al. describes the posibilities of _continuous benchmarking_ (CB), however it doesn't give direct instructions how to implement it. Looking at the source code is always a possibility, but the `yaml` files there aren't really documented (which is no surprises since they are pretty self documenting). Still, I hope this post will help people who unfamiliar with _Continuous X_ approaches (where X can be integration, development, benchmarking etc).
+The [paper](https://doi.org/10.1145/3324989.3325719) *"Towards
+Continuous Benchmarking: An Automated Performance Evaluation Framework
+for High Performance Software"*, by Anzt, H. et al. describes the
+posibilities of _continuous benchmarking_ (CB), however it doesn't
+give direct instructions how to implement it. Looking at the source
+code is always a possibility, but the `yaml` files there aren't really
+documented (which is no surprises since they are pretty self
+documenting). Still, I hope this post will help people who unfamiliar
+with _Continuous X_ approaches (where X can be integration,
+development, benchmarking etc).
 
 # Overview
 
