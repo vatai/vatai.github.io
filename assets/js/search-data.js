@@ -180,11 +180,21 @@ ninja.data = [{
           section: "News",},{id: "news-the-migration-to-al-folio-is-mostly-done",
           title: 'The migration to al-folio is mostly done.',
           description: "",
-          section: "News",},{id: "projects-tadashi",
+          section: "News",},{id: "projects-radicalpy",
+          title: 'RadicalPy',
+          description: "An intuitive open-source framework specific to radical pair spin dynamics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/radicalpy/";
+            },},{id: "projects-tadashi",
           title: 'Tadashi',
           description: "Enabling AI-Based Automated Code Generation With Guaranteed Correctness",
           section: "Projects",handler: () => {
               window.location.href = "/projects/tadashi/";
+            },},{id: "projects-data-locality-for-sparse-matrices-via-advanced-optimisations-in-large-scale-scientific-programs",
+          title: 'Data locality for sparse matrices via advanced optimisations in large-scale scientific programs',
+          description: "Enabling AI-Based Automated Code Generation With Guaranteed Correctness",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/wakate/";
             },},{
         id: 'social-acm',
         title: 'ACM DL',
