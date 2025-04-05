@@ -135,14 +135,14 @@ command of the supercomputer scheduler to submit the `sub.sh` script.
 
 The top bar of a GitHub repository has an "Actions" page.
 
-![Actions button](/assets/images/actions.png "Actions button")
+![Actions button](/assets/img/2022-05-18-continuous-benchmarking-on-supercomputers/actions.png "Actions button")
 
 This page lists the workflows which were executed for the given
 repository. Clicking on a workflow, brings up a list of jobs defined
 for that workflow, and clicking on a job brings up the steps of that
 job. Clicking on a step expands it and displays the
 
-![Observing actions](/assets/images/observing.png "Observing actions")
+![Observing actions](/assets/img/2022-05-18-continuous-benchmarking-on-supercomputers/observing.png "Observing actions")
 
 # Security
 
