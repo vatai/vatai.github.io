@@ -6,9 +6,9 @@ date: 2022-05-18 20:12:00 +0900
 categories: programming
 ---
 
-The [paper](https://doi.org/10.1145/3324989.3325719) *"Towards
+The [paper](https://doi.org/10.1145/3324989.3325719) _"Towards
 Continuous Benchmarking: An Automated Performance Evaluation Framework
-for High Performance Software"*, by Anzt, H. et al. describes the
+for High Performance Software"_, by Anzt, H. et al. describes the
 posibilities of _continuous benchmarking_ (CB), however it doesn't
 give direct instructions how to implement it. Looking at the source
 code is always a possibility, but the `yaml` files there aren't really
