@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-mpi4py-under-slurm",
+        },{id: "post-scoping-snap",
+        
+          title: "SCoPing SNAP",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/scoping-snap/";
+          
+        },
+      },{id: "post-mpi4py-under-slurm",
         
           title: "MPI4py under Slurm",
         
