@@ -9,6 +9,6 @@ related_publications: true
 tikzjax: true
 ---
 
-# SCoPing SNAP
+# [draft] SCoPing SNAP
 
 This post describes my (ultimately failed) attempts to run [Tadashi](/projects/tadashi) {% cite vatai2024tadashi %} on [SNAP](https://github.com/lanl/SNAP).
