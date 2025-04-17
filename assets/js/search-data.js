@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-scoping-snap",
+        },{id: "post-draft-scoping-snap",
         
-          title: "SCoPing SNAP",
+          title: "[draft] SCoPing SNAP",
         
         description: "",
         section: "Posts",
