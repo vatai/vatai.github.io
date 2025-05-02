@@ -22,3 +22,4 @@ It's based on broader research trying to define what makes a good paper (and "fi
 https://www2.sigsoft.org/EmpiricalStandards/about/
 Anyways, it really helps me read + understand + evaluate papers more effectively!
 Unfortunately, some of the questions don't really match HPC, so adapting it to HPC could be worthwhile :)
+    
