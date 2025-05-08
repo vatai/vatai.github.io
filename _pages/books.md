@@ -12,12 +12,16 @@ collection: books
 
 # Resources
 
-## Theresa's review checklist (TODO: clean up)
+## Short reads
 
-https://www2.sigsoft.org/EmpiricalStandards/tools/
-It's based on broader research trying to define what makes a good paper (and "fixing peer review"):
-https://www2.sigsoft.org/EmpiricalStandards/about/
+- [How to slow down scientific progress](https://blog.rootsofprogress.org/szilard-on-slowing-science), According to Leo Szilard
+
+- [The importance of stupidity in scientific research](https://journals.biologists.com/jcs/article/121/11/1771/30038/The-importance-of-stupidity-in-scientific-research), an essay by Martin A. Schwartz
+
+## Theresa's review checklist
+
+[Empirical Standards Checklist Generator](https://www2.sigsoft.org/EmpiricalStandards/tools/) based on [broader research](https://www2.sigsoft.org/EmpiricalStandards/about/) trying to define what makes a good paper (and "fixing peer review").
 Anyways, it really helps me read + understand + evaluate papers more effectively!
 Unfortunately, some of the questions don't really match HPC, so adapting it to HPC could be worthwhile :)
 
-# Books that I am reading, have read, or will read
+# Books that I am reading, have read, or will read (WIP, I'm not reading the godfather)
