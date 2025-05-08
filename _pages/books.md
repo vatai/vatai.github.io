@@ -21,7 +21,9 @@ collection: books
 ## Theresa's review checklist
 
 [Empirical Standards Checklist Generator](https://www2.sigsoft.org/EmpiricalStandards/tools/) based on [broader research](https://www2.sigsoft.org/EmpiricalStandards/about/) trying to define what makes a good paper (and "fixing peer review").
-Anyways, it really helps me read + understand + evaluate papers more effectively!
-Unfortunately, some of the questions don't really match HPC, so adapting it to HPC could be worthwhile :)
+
+Theresa says:
+> Anyways, it really helps me read + understand + evaluate papers more effectively!
+> Unfortunately, some of the questions don't really match HPC, so adapting it to HPC could be worthwhile :)
 
 # Books that I am reading, have read, or will read (WIP, I'm not reading the godfather)
