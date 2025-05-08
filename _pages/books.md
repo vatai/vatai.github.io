@@ -23,6 +23,7 @@ collection: books
 [Empirical Standards Checklist Generator](https://www2.sigsoft.org/EmpiricalStandards/tools/) based on [broader research](https://www2.sigsoft.org/EmpiricalStandards/about/) trying to define what makes a good paper (and "fixing peer review").
 
 Theresa says:
+
 > Anyways, it really helps me read + understand + evaluate papers more effectively!
 > Unfortunately, some of the questions don't really match HPC, so adapting it to HPC could be worthwhile :)
 
