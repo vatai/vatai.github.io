@@ -62,6 +62,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/scoping-snap/";
           
         },
+      },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
       },{id: "post-mpi4py-under-slurm",
         
           title: "MPI4py under Slurm",
@@ -192,6 +203,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2020/My-first-post/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
           
         },
       },{id: "books-the-godfather",
