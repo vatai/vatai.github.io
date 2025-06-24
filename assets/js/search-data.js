@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-draft-scoping-snap",
+        },{id: "post-draft-scop-detection",
+        
+          title: "[draft] SCoP detection",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/scop-detection/";
+          
+        },
+      },{id: "post-draft-scoping-snap",
         
           title: "[draft] SCoPing SNAP",
         
