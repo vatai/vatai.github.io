@@ -24,7 +24,7 @@ This post describes my (ultimately failed) attempts to run [Tadashi](/projects/t
 
 ## SCoP finding utilities: `scop_detector` and `scops_in_dir`
 
-Tadashi relies on ISL and more accurately PET {% cite verdoolaege2012polyhedral %} to extract the SCoP from a source file.  It is not hard to write a utility which exclusively does this and instead of any serious polyhedral compilation it just gives a rough (or complete if time/space allows it)
+Tadashi relies on ISL and more accurately PET {% cite verdoolaege2012polyhedral %} to extract the SCoP from a source file. It is not hard to write a utility which exclusively does this and instead of any serious polyhedral compilation it just gives a rough (or complete if time/space allows it)
 
 # Old stuff
 
@@ -37,7 +37,5 @@ SNAP was one of the first apps which looked promising to extract SCoPs from!
 `scop_detector` showed a deep schedule tree indicating multiple nested loops, which was promising, but it also printed an error which I saw for the first time saying "data dependent conditions not supported".
 The error message was coming from code copied from [PPCG](https://repo.or.cz/ppcg.git) {% cite verdoolaege2013polyhedral %}, which was copied as part of the dead code elimination algorithm.
 The code revealed a loop with a boundary being a product of two parameters.
-It was a lapse of 
 It seemed that product can be calculated as a new SCoP parameter (before the SCoP).
 However, after the attempt to fix this issue the error still persisted.
-
