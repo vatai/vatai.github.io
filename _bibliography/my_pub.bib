@@ -8,8 +8,10 @@
   publisher = {American Chemical Society},
   issn = {1549-9618},
   doi = {10.1021/acs.jctc.4c00887},
+  url = {https://doi.org/10.1021/acs.jctc.4c00887},
   urldate = {2024-11-09},
   abstract = {Radical pairs (electron--hole pairs, polaron pairs) are transient reaction intermediates that are found and exploited in all areas of science, from the hard realm of physics in the form of organic semiconductors, spintronics, quantum computing, and solar cells to the soft domain of chemistry and biology under the guise of chemical reactions in solution, biomimetic systems, and quantum biology. Quantitative analysis of radical pair phenomena has historically been successful by a few select groups. With this in mind, we present an intuitive open-source framework in the Python programming language that provides classical, semiclassical, and quantum simulation methodologies. A radical pair kinetic rate equation solver, Monte Carlo-based spin dephasing rate estimations, and molecule database functionalities are implemented. We introduce the kine-quantum method, a new approach that amalgamates classical rate equations, semiclassical, and quantum techniques. This method resolves the prohibitively large memory requirement issues of quantum approaches while achieving higher accuracy, and it also offers wavelength-resolved simulations, producing time- and wavelength-resolved magnetic field effect simulations. Model examples illustrate the versatility and ease of use of the software, including the new approach applied to the magnetosensitive absorption and fluorescence of flavin adenine dinucleotide photochemistry, spin--spin interaction estimation from molecular dynamics simulations on radical pairs inside reverse micelles, radical pair anisotropy inside proteins, and triplet exciton pairs in anthracene crystals. The intuitive interface also allows this software to be used as a teaching or learning aid for those interested in the field of spin chemistry. Furthermore, the software aims to be modular and extensible, with the aim to standardize how spin dynamics simulations are performed.},
+  copyright = {All rights reserved},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Antill and Vatai - 2024 - RadicalPy A Tool for Spin Dynamics Simulations.pdf}
 }
 
@@ -23,8 +25,10 @@
   pages = {1056--1065},
   publisher = {IEEE Computer Society},
   doi = {10.1109/IPDPS49936.2021.00114},
+  url = {https://www.computer.org/csdl/proceedings-article/ipdps/2021/406600b056/1uOw4VaLZx6},
   urldate = {2024-11-09},
   abstract = {Matrix engines or units, in different forms and affinities, are becoming a reality in modern processors; CPUs and otherwise. The current and dominant algorithmic approach to Deep Learning merits the commercial investments in these units, and deduced from the No. 1 benchmark in supercomputing, namely High Performance Linpack, one would expect an awakened enthusiasm by the HPC community, too. Hence, our goal is to identify the practical added benefits for HPC and machine learning applications by having access to matrix engines. For this purpose, we perform an in-depth survey of software stacks, proxy applications and benchmarks, and historical batch job records. We provide a cost-benefit analysis of matrix engines, both asymptotically and in conjunction with state-of-the-art processors. While our empirical data will temper the enthusiasm, we also outline opportunities to ``misuse'' these dense matrix-multiplication engines if they come for free.},
+  copyright = {All rights reserved},
   isbn = {978-1-6654-4066-0},
   langid = {english},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Domke et al. - 2021 - Matrix Engines for High Performance Computing A Paragon of Performance or Grasping at Straws.pdf}
@@ -42,8 +46,10 @@
   pages = {57:1--57:26},
   issn = {1544-3566},
   doi = {10.1145/3629520},
+  url = {https://dl.acm.org/doi/10.1145/3629520},
   urldate = {2024-11-09},
   abstract = {Over the last three decades, innovations in the memory subsystem were primarily targeted at overcoming the data movement bottleneck. In this paper, we focus on a specific market trend in memory technology: 3D-stacked memory and caches. We investigate the impact of extending the on-chip memory capabilities in future HPC-focused processors, particularly by 3D-stacked SRAM. First, we propose a method oblivious to the memory subsystem to gauge the upper-bound in performance improvements when data movement costs are eliminated. Then, using the gem5 simulator, we model two variants of a hypothetical LARge Cache processor (LARC), fabricated in 1.5\&nbsp;nm and enriched with high-capacity 3D-stacked cache. With a volume of experiments involving a broad set of proxy-applications and benchmarks, we aim to reveal how HPC CPU performance will evolve, and conclude an average boost of 9.56{\texttimes} for cache-sensitive HPC applications, on a per-chip basis. Additionally, we exhaustively document our methodological exploration to motivate HPC centers to drive their own technological agenda through enhanced co-design.},
+  copyright = {All rights reserved},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Domke et al. - 2023 - At the Locus of Performance Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads.pdf}
 }
 
@@ -55,6 +61,7 @@
   journal = {Future Generation Computer Systems},
   issn = {0167-739X},
   doi = {10.1016/j.future.2023.07.014},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167739X23002649},
   urldate = {2023-07-21},
   abstract = {Scientific software used on high-performance computing platforms is in a phase of transformation because of the combined increase in the heterogeneity and complexity of models and hardware platforms. Having separate implementations for different platforms can easily lead to combinatorial explosions; therefore, the computational science community has been looking for mechanisms to express code through abstractions that can be specialized for different platforms. Most existing approaches use template meta-programming in C++, and are, therefore language specific. We have developed a tool that uses customized expansion of macros to mimic some of C++ behaviour in other languages. It enables unification of any code variants that may be necessary to run efficiently on different target architectures and different computational environments through use of macros with multiple alternative definitions and ability to arbitrate on definition selection for expansion. Combined with two other tools, a custom runtime, and a user specified recipe translator, our custom macroprocessor becomes a part of an overall performance portability solution that does not depend on any specific programming language. We also use macros as code-shorthand that lets code snippets become building blocks that allow variations in control flow to explore performance options. We demonstrate use of macros in Flash-X, a multiphysics multicomponent code with many Fortran legacy components derived from an earlier community code FLASH.},
   copyright = {All rights reserved},
@@ -72,6 +79,7 @@
   number = {4},
   pages = {457--462},
   abstract = {Cunningham chains of length n of the first kind are n long sequences of prime numbers p1, p2, . . . , pn so that pi+1 = 2pi + 1 (for 1 {$\leq$} i {$<$} n). In [3] we have devised a plan to find large Cunningham chains of the first kind of length 3 where the primes are of the form pi+1 = (h0 + cx) {$\cdot$} 2e+i - 1 for some integer x with h0 = 5 775, c = 30 030 and e = 34 944. The project was executed on the non-uniform memory access (NUMA) supercomputer of NIIF in Pe{\textasciiacute}cs, Hungary. In this paper we report on the obtained results and discuss the implementation details. The search consisted of two stages: sieving and the Fermat test. The sieving stage was implemented in a concurrent manner using lockfree queues, while the Fermat test was trivially parallel. On the 27th of April, 2014 we have found the largest known Cunningham chain of length 3 of the first kind which consists of the numbers 5110664609396115 {$\cdot$} 234944+j - 1 for j = 0, 1, 2.},
+  copyright = {All rights reserved},
   langid = {english},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Farkas et al. - The largest known Cunningham chain of length 3 of the ﬁrst kind.pdf}
 }
@@ -81,7 +89,8 @@
   booktitle = {8th {{Joint Conference}} on {{Math}} and {{Computer Science MaCS}} 2010},
   author = {J{\'a}rai, Antal and Vatai, Emil},
   year = {2010},
-  pages = {249--256}
+  pages = {249--256},
+  copyright = {All rights reserved}
 }
 
 @article{jarai2011cachea,
@@ -92,6 +101,7 @@
   volume = {3},
   number = {2},
   pages = {205--223},
+  copyright = {All rights reserved},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/1111.pdf}
 }
 
@@ -99,7 +109,8 @@
   title = {{{POSTER}}: {{ORCHA}}: {{A Performance Portability System For Flash-X}} --- {{A Multiphysics Application Software}}},
   author = {Lee, Youngjun and Kwiecinski, Wesley and Weide, Klaus and Rudi, Johann and O'Neal, Jared and Vatai, Emil and Wahib, Mohamed and Klosterman, Tom and Dubey, Anshu},
   year = {2024},
-  address = {Atlanta, Georgia}
+  address = {Atlanta, Georgia},
+  copyright = {All rights reserved}
 }
 
 @inproceedings{nguyen2022whya,
@@ -112,8 +123,10 @@
   pages = {1085--1096},
   issn = {1530-2075},
   doi = {10.1109/IPDPS53621.2022.00109},
+  url = {https://ieeexplore.ieee.org/document/9820654},
   urldate = {2024-11-09},
   abstract = {Stochastic gradient descent (SGD) is the most prevalent algorithm for training Deep Neural Networks (DNN). SGD iterates the input data set in each training epoch processing data samples in a random access fashion. Because this puts enormous pressure on the I/O subsystem, the most common approach to distributed SGD in HPC environments is to replicate the entire dataset to node local SSDs. However, due to rapidly growing data set sizes this approach has become increasingly infeasible. Surprisingly, the questions of why and to what extent random access is required have not received a lot of attention in the literature from an empirical standpoint. In this paper, we revisit data shuffling in DL workloads to investigate the viability of partitioning the dataset among workers and performing only a partial distributed exchange of samples in each training epoch. Through extensive experiments on up to 2,048 GPUs of ABCI and 4,096 compute nodes of Fugaku, we demonstrate that in practice validation accuracy of global shuffling can be maintained when carefully tuning the partial distributed exchange. We provide a solution implemented in PyTorch that enables users to control the proposed data exchange scheme.},
+  copyright = {All rights reserved},
   keywords = {Costs,Data Shuffling,Deep learning,Distributed databases,Distributed Deep Learning,Distributed processing,I/O,Neural networks,Stochastic processes,Training},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Nguyen et al. - 2022 - Why Globally Re-shuffle Revisiting Data Shuffling in Large Scale Deep Learning.pdf;/home/vatai/Sync/zotero-data/storage/IXLIKN32/9820654.html}
 }
@@ -124,6 +137,7 @@
   author = {Prabhu, Ritvik and Moussad, Bernard and Youssef, Karim and Vatai, Emil and Feng, Wu-chun},
   year = {2024},
   abstract = {Studying the genomic diversity of viruses can help us understand how viruses evolve and how that evolution can impact human health. Rather than use a laborious and tedious wet-lab approach to conduct a genomic diversity study, we take a computational approach, using the ubiquitous NCBI BLAST and our parallel and distributed SparkLeBLAST, across 53 patients ({$\sim$}40,000,000 query sequences) on Fugaku, the world's fastest homogeneous supercomputer with 158,976 nodes, where each code contains a 48-core A64FX processor and 32 GB RAM.},
+  copyright = {All rights reserved},
   langid = {english},
   note = {Outstanding Student Paper Award :trophy:},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Prabhu et al. - On the Scalability of Computing Genomic Diversity Using SparkLeBLAST A Feasibility Study.pdf}
@@ -134,7 +148,8 @@
   booktitle = {{{IEEE Cluster}} 2024},
   author = {{Rin Iwai} and {Emil Vatai} and {Jens Domke} and {Yukinori Sato}},
   year = {2024},
-  address = {Kobe, Japan}
+  address = {Kobe, Japan},
+  copyright = {All rights reserved}
 }
 
 @inproceedings{vatai2010poster,
@@ -142,7 +157,8 @@
   booktitle = {Hallgat{\'o}k a Kutat{\'a}sban, {{Tudom{\'a}nyos}} El{\H o}ad{\'a}ssorozat},
   author = {Vatai, Emil},
   year = {2010},
-  address = {Budapest, Hungary}
+  address = {Budapest, Hungary},
+  copyright = {All rights reserved}
 }
 
 @article{vatai2013inverse,
@@ -152,6 +168,7 @@
   journal = {Annales Universitatis Scientiarum Budapestinensis de Rolando E{\"o}tv{\"o}s nominatae Sectio Computatorica},
   volume = {41},
   pages = {355--360},
+  copyright = {All rights reserved},
   file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Vatai - 2013 - Inverse sieve.pdf}
 }
 
@@ -160,7 +177,8 @@
   booktitle = {4th {{International Symposium}} on {{Research}} and {{Education}} of {{Computational Science}} ({{RECS}})},
   author = {Vatai, Emil and Singhal, Utsav and Reiji, Suda},
   year = {2019},
-  address = {Tokyo, Japan}
+  address = {Tokyo, Japan},
+  copyright = {All rights reserved}
 }
 
 @inproceedings{vatai2020diamond,
@@ -174,6 +192,7 @@
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
   doi = {10.1145/3368474.3368494},
+  url = {https://doi.org/10.1145/3368474.3368494},
   urldate = {2022-03-24},
   abstract = {Matrix powers kernel calculates the vectors Akv, for k = 1, 2,..., m and they are the heart of various scientific computations, including communication avoiding iterative solvers. In this paper we propose diamond matrix powers kernel - DMPK, which has the purpose to apply the "diamond tiling" stencil algorithm to general matrices. It can also be considered as an extension of the PA1 and PA2 algorithms, introduced by Demmel et al. Our approach enables us to control the balance between the amount of communication avoidance and redundant computation inherently present in communication avoiding algorithms. We present a proof of concept implementation of the algorithm using MPI routines. The experiments we performed show that the control of the amount of computation and communication is achievable, and with more thorough optimisations, DMPK is a promising alternative to existing MPK approaches.},
   copyright = {All rights reserved},
@@ -186,25 +205,8 @@
   booktitle = {{{IEEE Symposium}} on {{Low-Power}} and {{High-Speed Chips}} and {{Systems}} ({{COOL Chips}} 26)},
   author = {Vatai, Emil and Domke, Jens and Gerofi, Balazs and Kodama, Yuetsu and Wahib, Mohamed and Podobas, Artur and Mittal, Sparsh and Peric{\`a}s, Miquel and Zhang, Lingqi and Chen, Peng and Drozd, Aleksandr and Matsuoka, Satoshi},
   year = {2023},
-  address = {Tokyo, Japan}
-}
-
-@misc{vatai2024tadashi,
-  title = {Tadashi: {{Enabling AI-Based Automated Code Generation With Guaranteed Correctness}}},
-  shorttitle = {Tadashi},
-  author = {Vatai, Emil and Drozd, Aleksandr and Ivanov, Ivan R. and Ren, Yinghao and Wahib, Mohamed},
-  year = {2024},
-  month = oct,
-  number = {arXiv:2410.03210},
-  eprint = {2410.03210},
-  publisher = {arXiv},
-  doi = {10.48550/arXiv.2410.03210},
-  urldate = {2024-11-09},
-  abstract = {Frameworks and DSLs auto-generating code have traditionally relied on human experts developing them to have in place rigorous methods to assure the legality of the applied code transformations. Machine Learning (ML) is gaining wider adoption as a means to auto-generate code optimised for the hardware target. However, ML solutions, and in particular black-box DNNs, provide no such guarantees on legality. In this paper we propose a library, Tadashi, which leverages the polyhedral model to empower researchers seeking to curate datasets crucial for applying ML in code-generation. Tadashi provides the ability to reliably and practically check the legality of candidate transformations on polyhedral schedules applied on a baseline reference code. We provide a proof that our library guarantees the legality of generated transformations, and demonstrate its lightweight practical cost. Tadashi is available at https://github.com/vatai/tadashi/.},
-  archiveprefix = {arXiv},
-  preview = {proj-tadashi-sampling.png},
-  keywords = {Computer Science - Machine Learning},
-  file = {/home/vatai/Sync/zotero-data/pdfs/my_pub/Vatai et al. - 2024 - Tadashi Enabling AI-Based Automated Code Generation With Guaranteed Correctness.pdf;/home/vatai/Sync/zotero-data/storage/V2PELCSE/2410.html}
+  address = {Tokyo, Japan},
+  copyright = {All rights reserved}
 }
 
 @inproceedings{vatai2025poster,
@@ -212,5 +214,27 @@
   booktitle = {{{HiPeac}}},
   author = {Vatai, Emil and Drozd, Aleksandr and Ivanov, Ivan R. and {Yinghao Ren} and Batista, Joao E. and Wahib, Mohamed},
   year = {2025},
-  address = {Barcelona}
+  address = {Barcelona},
+  copyright = {All rights reserved}
+}
+
+@misc{vatai2025tadashi,
+  title = {Tadashi: {{Enabling AI-Based Automated Code Generation With Guaranteed Correctness}}},
+  shorttitle = {Tadashi},
+  author = {Vatai, Emil and Drozd, Aleksandr and Ivanov, Ivan R. and Batista, Joao E. and Ren, Yinghao and Wahib, Mohamed},
+  year = {2025},
+  month = jun,
+  number = {arXiv:2410.03210},
+  eprint = {2410.03210},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2410.03210},
+  url = {http://arxiv.org/abs/2410.03210},
+  urldate = {2025-06-24},
+  abstract = {Frameworks and domain-specific languages for auto-generating code have traditionally depended on human experts to implement rigorous methods ensuring the legality of code transformations. Recently, machine learning (ML) has gained traction for generating code optimized for specific hardware targets. However, ML approaches-particularly black-box neural networks-offer no guarantees on the correctness or legality of the transformations they produce. To address this gap, we introduce Tadashi, an end-to-end system that leverages the polyhedral model to support researchers in curating datasets critical for ML-based code generation. Tadashi provides an end-to-end system capable of applying, verifying, and evaluating candidate transformations on polyhedral schedules with both reliability and practicality. We formally prove that Tadashi guarantees the legality of generated transformations, demonstrate its low runtime overhead, and showcase its broad applicability. Tadashi available at https://github.com/vatai/tadashi/.},
+  archiveprefix = {arXiv},
+  copyright = {All rights reserved},
+  keywords = {Computer Science - Machine Learning},
+  note = {Comment: Submitted to SC25},
+  file = {/home/vatai/Sync/zotero-data/pdfs/Vatai et al. - 2025 - Tadashi Enabling AI-Based Automated Code Generation With Guaranteed Correctness.pdf;/home/vatai/Sync/zotero-data/storage/2AUNWSR8/2410.html}
 }
