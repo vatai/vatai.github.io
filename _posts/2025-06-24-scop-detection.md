@@ -16,3 +16,4 @@ In the efforts to run [Tadashi](/projects/tadashi) {% cite vatai2025tadashi %} o
 ## SCoP detection in Tadashi
 
 Tadashi extracts SCoPs from source files using PET {% cite verdoolaege2012polyhedral %}.
+The entry point of PET is the `pet_transform_C_source()` function, which processes each SCoP by executing a callback function it passed to `pet_transform_C_source()` as a parameter.
