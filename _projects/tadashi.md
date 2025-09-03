@@ -10,7 +10,7 @@ github_stars: true
 related_publications: true
 ---
 
-- Preprint: {% cite vatai2024tadashi %}.
+- Preprint: {% cite vatai2025tadashi %}.
 - Github repo: [https://github.com/vatai/tadashi/]()
 
 <div class="row">
