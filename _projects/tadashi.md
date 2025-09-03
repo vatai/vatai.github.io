@@ -11,7 +11,7 @@ related_publications: true
 ---
 
 - Preprint: {% cite vatai2025tadashi %}.
-- Github repo: [https://github.com/vatai/tadashi/]()
+- [Github repo](https://github.com/vatai/tadashi/)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
