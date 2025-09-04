@@ -34,6 +34,7 @@ Dr. Emil Vatai is a research scientist at the [High Performance Artificial Intel
 ## professional services:
 
 - Program Committee member:
+
   - Benchmarking in the Data Center: Expanding to the Cloud [BID2022](https://parallel.computer/)
 
   - Workshop on Insights from Negative Results in NLP [Insight2024](https://insights-workshop.github.io/2024/pc/), [Insight2023](https://insights-workshop.github.io/2023/pc/), [Insight2022](https://insights-workshop.github.io/2022/pc/)
