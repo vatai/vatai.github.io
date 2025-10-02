@@ -6,4 +6,6 @@ description: "Looks like there has been a mistake. Nothing exists here."
 language: "hu"
 ---
 
-foobar
+<!-- Local Variables: -->
+<!-- jinx-languages: "hu_HU" -->
+<!-- End: -->
