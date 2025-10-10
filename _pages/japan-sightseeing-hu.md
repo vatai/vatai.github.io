@@ -50,6 +50,8 @@ E-SIMet javaslok nyilvan.
 
 ## Tokyo
 
+[Térkép](https://www.google.com/maps/d/edit?mid=1N_FWZmjtQw28P4pv7oBwrg78fbKmHkNg&usp=sharing)
+
 > - mi az amit minden képp érdemes megnézni Tokióban és mi az amit jobb ha kihagyunk? ( bocsi a kérdésért de három napot leszünk Tokióban és elég nehéz szelektálni) … itt hozzáteném hogy három tinilány lesz velünk így az ő érdeklődésüknek próbálnánk megfelelni… anime, karaoke, just dance vagy mi…
 
 Igen, ez egy nehez kerdes :) Talan a "csaszari palotat nyugodtan ki lehet hagyni" a leg egyszerubb resze... szep meg minden... de valojaban nem olyan erdekes - iszonyu nagy part es sok ido bejarni... de nincs semmi "konkret" ott amit meg kellene nezni...
