@@ -24,12 +24,18 @@ Volt valami hogy Suica kartyat mar nem lehet kivaltani... uj telefonokkal tan le
 
 Tokyoban 3 nagy (+ szamtalan kicsi) ceg uzemelteti a tomegkozlekedest: JR, Metro, Toei (+ szamtalan kisebb ceg). Szerencsere Suica/Pasmo tokeletesen mukodik mindenhol es nem kell rajta gondolkodni (es orszag szerte, azaz Kyoto, Osakaban is mukodik). Ezt csak azert mondom mert nem teljesen intuitiv pl hogy miert kell egyik atszallasnal lecsippantani a kartyat a masiknal meg nem (valasz: ha csak vonatot valtasz ugyan azon a cegen belul, akkor nem kell lecsippantani... ha mas cegnek a vonatara valtasz akkor kell csippantani).
 
-Asszem "JR pass"-nak hivjak a olcso turista berletet amivel varosok kozott lehet utazni. En szemlyszerint nem csinaltam/hasznaltam (mert nem turistakent jottem ki - es ugy nem csinalhattam), de tudomasom szerint a JR Pass nagyon jo. Shinkansen-re is elvileg hasznalhato illetve az osszes JR jaratra (ami eleg sokat lefed a Tokyoi tomegkozlekedesbol).
-
-Nem tom hogy all a JR pass manapsag. Regen tutijo volt... de ugy hallotam manapsag hogy nem eri meg.
-
 Sok minden ki van irva angolul is - ezen nem kell aggodni. Google Maps-et javaslom. Vonat alomasok es menetrendek kicsit bonyolultak tudnak lenni (foleg tokyoban), amikre erdemes odafigyelni (google maps-en) hogy - melyik Platformrol/vaganyrol indul (ha van valami kanji elotte, akkor az is "resze" a platform nevenek) - mikor indul - mi a vegalomas/cel allomasa a vonatnak.
 Ha ezek stimmelnek, akkor kisebb a valoszinusege hogy rosz vonatra szaltok.
+
+### Berletek
+
+2025ben egy ismerősöm vett valami olyan vonat jegyet, hogy "repülőtér--varos + 1 napos bérlet" egyben (persze van több napos is). Nem néztem utalna.
+
+#### Regebbi info: JR Pass
+
+Asszem "JR pass"-nak hivjak a olcso turista berletet amivel varosok kozott lehet utazni. En szemlyszerint nem csinaltam/hasznaltam (mert nem turistakent jottem ki - es ugy nem csinálhattam), de tudomasom szerint a JR Pass nagyon jo. Shinkansen-re is elvileg használható illetve az osszes JR jaratra (ami eleg sokat lefed a Tokyoi tömeg-közlekedésből).
+
+Nem tom hogy all a JR pass manapsag. Regen tutijo volt... de ugy hallotam manapsag hogy nem eri meg.
 
 # Penz (ez is fontos!!!)
 
