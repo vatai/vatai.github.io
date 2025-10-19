@@ -82,6 +82,8 @@ Osaka szerintem nem olyan nagyon erdekes (a kastely szep), viszont az egesz Kans
 
 # Kaja
 
+Random [kaja térkép](https://maps.app.goo.gl/8mEDavbvPHLskW469). Néhány helyen voltam, néhány helyre akartam menni.
+
 Kobeban (Osaka-hoz kozel) van erdekes kinai negyed meg brutal jo steak (kobe beef). Ha van ra penzetek, van egy kis helyi kobe beef/wagyu etterem, https://goo.gl/maps/YUv5mtxqjg3cJpHE6 A kaja eleg draga itt, de megeri (ne a legdragabbat 10000jpy vegyetek - tul zsiros, hanem ami annak a felebe kerul 4000-5000jpy). https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/139681/139681798.jpg?token=3bfb3bb&api=v2
 
 A Tokyo, Meguro sushi hely amit emlegettem ez: https://goo.gl/maps/hYAd6RjkEffWFeCh6, Ez ilyen futoszalag szushi. Szerintem tecceni fog. Ott a "draga de megeri" a 3 szelet zsiros tonhal 530jpy-ert ami igy nez ki: https://katumidori.co.jp/wp-content/uploads/2018/09/0ba60db9cc1d7758d57dda908b1a4827-1.jpg
