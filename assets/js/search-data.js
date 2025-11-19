@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-draft-scop-detection",
+        },{id: "post-cibuildwheel-is-da-bomb",
+        
+          title: "CIBuildWheel is DA BOMB!",
+        
+        description: "A day of figuring out how to package Tadashi",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/cibuildwheel-is-da-bomb/";
+          
+        },
+      },{id: "post-draft-scop-detection",
         
           title: "[draft] SCoP detection",
         
