@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <pre><code class="language-mermaid">sequenceDiagram
+  ml_model.py-&gt;&gt;PETApp: source
+  PETApp-&gt;&gt;BaseApp: puplate_scops()
+  ml_model.py-&gt;&gt;Ctadashi: transform()
+  Ctadashi-&gt;&gt;BaseApp: new state
+  ml_model.py-&gt;&gt;Ctadashi: transform()
+  Ctadashi-&gt;&gt;BaseApp: new state
+  ml_model.py-&gt;&gt;Ctadashi: transform()
+  Ctadashi-&gt;&gt;BaseApp: new state
+  ml_model.py--&gt;&gt;BaseApp: reset()
+  BaseApp--&gt;&gt;BaseApp: restore state
+  ml_model.py-&gt;&gt;PETApp: generate_code()
+  BaseApp-)PETApp: scops[]
+  PETApp-&gt;&gt;tapp: new_source.c generate_code()
+</code></pre> </body></html>
