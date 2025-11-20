@@ -6,4 +6,4 @@ related_posts: true
 tag: tadashi
 ---
 
-I made some progress on streamlining the installation of [Tadashi](/projects/tadashi).
+I made some progress on streamlining the installation of [Tadashi](/projects/tadashi). Read [the blog post](/blog/2025/cibuildwheel-is-da-bomb/).

@@ -31,7 +31,7 @@ Before going "all in" to apply this to Tadashi, I made a PoC repo (called [Compl
 
 ## The goals
 
-I originally intended cover (a simplified version of) everything including uploading binary packages to PyPI, and test `pip install cpwe`, but then I realised I can do things locally: When I saw all the wheels (`.whl` files) created by CIBuildWheel, I realised PyPI most likely just stores these `.whl` files and `pip install cpwe` probably just selects the appropriate `.whl` file, downloads it, and installs it, which can also simulated locally with `pip install the_appropriate_wheel.whl`!
+I originally intended to cover (a simplified version of) everything including uploading binary packages to PyPI, and test `pip install cpwe`, but then I realised I can do things locally: When I saw all the wheels (`.whl` files) created by CIBuildWheel, I realised PyPI most likely just stores these `.whl` files and `pip install cpwe` probably just selects the appropriate `.whl` file, downloads it, and installs it, which can also simulated locally with `pip install the_appropriate_wheel.whl`!
 
 One goal was to **set up GitHub actions to generate all the wheels automatically**. This was easy to achieve following the [CIBuildWheel docs](https://cibuildwheel.pypa.io/en/stable/ci-services/) and also easy to verify, bacause the example in the docs uploaded all the wheels as [artifacts](https://github.com/vatai/complicated-project-with-extension/actions/runs/19494788268). These wheels would then be uploaded via GH actions (using twine) to PyPI, something I already implemented in [another project](/projects/radicalpy).
 
