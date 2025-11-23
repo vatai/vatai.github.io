@@ -51,15 +51,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-tadashi-with-cython",
+        },{id: "post-",
         
-          title: "Tadashi with Cython",
+          title: "",
         
-        description: "Plans about how to port Tadashi to Cython",
+        description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/tadashi-with-cython/";
+            window.location.href = "/blog/2025/2025-11-20-tadashi-with-cython/";
           
         },
       },{id: "post-cibuildwheel-is-da-bomb",
