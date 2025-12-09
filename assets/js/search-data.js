@@ -194,6 +194,17 @@ ninja.data = [{
             window.location.href = "/blog/2021/Installing-PyTorch-with-MPI-support-on-ABCI/";
           
         },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
       },{id: "post-a-distill-style-blog-post",
         
           title: "a distill-style blog post",
@@ -284,6 +295,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://dl.acm.org/profile/99659487728/", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
         },
       },{
         id: 'social-dblp',
