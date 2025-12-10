@@ -62,28 +62,6 @@ ninja.data = [{
             window.location.href = "/blog/2025/cibuildwheel-is-da-bomb/";
           
         },
-      },{id: "post-draft-scop-detection",
-        
-          title: "[draft] SCoP detection",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/scop-detection/";
-          
-        },
-      },{id: "post-draft-scoping-snap",
-        
-          title: "[draft] SCoPing SNAP",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/scoping-snap/";
-          
-        },
       },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
@@ -126,17 +104,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-draft-flattening-loops-of-combinations-again",
-        
-          title: "[DRAFT] Flattening loops of combinations, again!?",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/flattening-loops-again/";
           
         },
       },{id: "post-flattening-loops-of-combinations",
