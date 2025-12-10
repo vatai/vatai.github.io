@@ -1,7 +1,7 @@
 ---
 layout: post
 giscus_comments: true
-title: DRAFT: Tadashi with Cython
+title: draft Tadashi with Cython
 date: 2025-11-20 21:00:00 +0900
 tag: tadashi
 categories: programming
