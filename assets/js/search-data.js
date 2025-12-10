@@ -51,18 +51,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/2025-11-20-tadashi-with-cython/";
-          
-        },
-      },{id: "post-cibuildwheel-is-da-bomb",
+        },{id: "post-cibuildwheel-is-da-bomb",
         
           title: "CIBuildWheel is DA BOMB!",
         
