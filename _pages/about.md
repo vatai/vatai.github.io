@@ -35,11 +35,21 @@ Dr. Emil Vatai is a research scientist at the [High Performance Artificial Intel
 
 - Program Committee member:
 
-  - Benchmarking in the Data Center: Expanding to the Cloud [BID2022](https://parallel.computer/)
+  - Benchmarking in the Data Center: Expanding to the Cloud [BID2023](https://parallel.computer/ppopp2023.html), [BID2022](https://parallel.computer/ppopp2022.html)
 
   - Workshop on Insights from Negative Results in NLP [Insight2024](https://insights-workshop.github.io/2024/pc/), [Insight2023](https://insights-workshop.github.io/2023/pc/), [Insight2022](https://insights-workshop.github.io/2022/pc/)
 
-- Reviewer: American Mathematical Society (AMS): Mathematical Reviews
+  - SIAM Conference on Parallel Processing for Scientific Computing [PP22](https://siag-sc.org/siampp24-cfp.html)
+
+  - The SupercomputingAsia/HPCAsia [SCA/HPCAsia 2026](https://www.sca-hpcasia2026.jp/submit/posters.html)
+
+- Reviewer:
+
+  - American Mathematical Society (AMS): Mathematical Reviews
+
+  - International Conference on Artificial Neural Networks [ICANN2021](http://www.biblio.cerist.dz/hrbdonf5214/ouvrages/000000000620518000001_2.pdf)
+
+  - International Conference on Parallel Processing [ICPP2022](https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3545008)
 
 - Organiser: 11th Joint Conference on Mathematics and Computer, Science Eger, Hungary, May 20-22, 2016
 
