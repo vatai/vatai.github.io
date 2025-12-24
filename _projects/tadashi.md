@@ -22,4 +22,4 @@ related_publications: true
     Overview of Tadashi: The <code>input.c</code> file (top left), is transformed to the <code>output.c</code> file (top right) by the <code>train.py</code> script (bottom middle).
 </div>
 
-Tadashi can be isntalled from [PyPI](https://test.pypi.org/project/tadashi/).
+Tadashi can be isntalled from [PyPI](https://pypi.org/project/tadashi/).
