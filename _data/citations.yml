@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2025-12-10'
+  last_updated: '2025-12-29'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -82,7 +82,7 @@ papers:
     title: 'On the Scalability of Computing Genomic Diversity Using SparkLeBLAST: A Feasibility Study'
     year: '2024'
   uADLYWAAAAAJ:k_IJM867U9cC:
-    citations: 5
+    citations: 6
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:mB3voiENLucC:
