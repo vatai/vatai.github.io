@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-07'
+  last_updated: '2026-01-19'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -18,7 +18,7 @@ papers:
     title: 'SAFE: Improving LLM Systems using Sentence-Level In-generation Attribution'
     year: Unknown Year
   uADLYWAAAAAJ:HDshCWvjkbEC:
-    citations: 51
+    citations: 52
     title: Why globally re-shuffle? Revisiting data shuffling in large scale deep learning
     year: '2022'
   uADLYWAAAAAJ:IWHjjKOFINEC:
@@ -45,12 +45,8 @@ papers:
     citations: 1
     title: 'Think Before You Attribute: Improving the Performance of LLMs Attribution Systems'
     year: '2025'
-  uADLYWAAAAAJ:O3NaXMp0MMsC:
-    citations: 0
-    title: "Nagyhat\xE9konys\xE1gu sz\xE1m\u0131t\xE1sok: faktoriz\xE1l\xE1s"
-    year: '2009'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
-    citations: 10
+    citations: 11
     title: 'At the locus of performance: A case study in enhancing CPUs with copious 3D-stacked cache'
     year: '2022'
   uADLYWAAAAAJ:TFP_iSt0sucC:
@@ -86,7 +82,7 @@ papers:
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:mB3voiENLucC:
-    citations: 51
+    citations: 53
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
     year: '2021'
   uADLYWAAAAAJ:maZDTaKrznsC:
