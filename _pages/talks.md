@@ -8,17 +8,17 @@ nav_order: 6
 
 - 2026-01-23 **CEA Riken workshop 2026**: [TADASHI: Enabling ML to explore transformations with guaranteed correctness](../assets/talks/20260123-cea-tadashi.pdf)
 
-- 2025-06-17 [**PASC'25**](https://pasc25.pasc-conference.org/): [TADASHI: Enabling ML with Correct Code Transformations](/assets/talks/2025pasc.pdf)
+- 2025-06-17 [**PASC'25**](https://pasc25.pasc-conference.org/): [TADASHI: Enabling ML with Correct Code Transformations](../assets/talks/2025pasc.pdf)
 
-- 2024-10-08 **DOE/MEXT at Livermore**: [Enabling AI-based Automated Code Generation with Guaranteed Correctness](/assets/talks/202410-tadashi.pdf)
+- 2024-10-08 **DOE/MEXT at Livermore**: [Enabling AI-based Automated Code Generation with Guaranteed Correctness](../assets/talks/202410-tadashi.pdf)
 
 - 2024-03-26: [**Qutip 2024 Developers workshop (Wako, JP)**](https://qutip2024.wordpress.com/): "Development of Radicalpy and the lessons learned"
 
-- 2023-06-26: [**PASC'23**](https://pasc23.pasc-conference.org/): [Generating optimal HPC code with ML](/assets/talks/2023pasc.pdf)
+- 2023-06-26: [**PASC'23**](https://pasc23.pasc-conference.org/): [Generating optimal HPC code with ML](../assets/talks/2023pasc.pdf)
 
-- 2022-09-28: [**14th JLESC**](https://publish.illinois.edu/14th-jlesc-workshop/): [Outlook on generating optimal HPC code with ML](/assets/talks/2022jlesc.pdf)
+- 2022-09-28: [**14th JLESC**](https://publish.illinois.edu/14th-jlesc-workshop/): [Outlook on generating optimal HPC code with ML](../assets/talks/2022jlesc.pdf)
 
-- 2022-12-04: [**SEST2022**](https://sest2022.wixsite.com/website-1): [RadicalPy: radical pair spin dynamics for the masses](/assets/talks/SEST2022.pdf) Talk given by [**Lewis M. Antill**](https://lmantill.github.io/).
+- 2022-12-04: [**SEST2022**](https://sest2022.wixsite.com/website-1): [RadicalPy: radical pair spin dynamics for the masses](../assets/talks/SEST2022.pdf) Talk given by [**Lewis M. Antill**](https://lmantill.github.io/).
 
 - 2014-05-23: [**10th MaCS**](https://www.cs.ubbcluj.ro/~macs/2014/call_for_papers.htm) The largest known Cunningham chain of length 3 of the first kind
 
