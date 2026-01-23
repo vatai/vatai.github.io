@@ -6,9 +6,11 @@ nav: true
 nav_order: 6
 ---
 
+- 2026-01-23 **CEA Riken workshop 2026**: [TADASHI: Enabling ML to explore transformations with guaranteed correctness](../assets/talks/20260123-cea-tadashi.pdf)
+
 - 2025-06-17 [**PASC'25**](https://pasc25.pasc-conference.org/): [TADASHI: Enabling ML with Correct Code Transformations](/assets/talks/2025pasc.pdf)
 
-- 2024-10-08 [**DOE/MEXT at Livermore**](): [Enabling AI-based Automated Code Generation with Guaranteed Correctness](/assets/talks/202410-tadashi.pdf)
+- 2024-10-08 **DOE/MEXT at Livermore**: [Enabling AI-based Automated Code Generation with Guaranteed Correctness](/assets/talks/202410-tadashi.pdf)
 
 - 2024-03-26: [**Qutip 2024 Developers workshop (Wako, JP)**](https://qutip2024.wordpress.com/): "Development of Radicalpy and the lessons learned"
 
