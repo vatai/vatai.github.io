@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-26'
+  last_updated: '2026-02-02'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -46,7 +46,7 @@ papers:
     title: 'Think Before You Attribute: Improving the Performance of LLMs Attribution Systems'
     year: '2025'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
-    citations: 11
+    citations: 12
     title: 'At the locus of performance: A case study in enhancing CPUs with copious 3D-stacked cache'
     year: '2022'
   uADLYWAAAAAJ:RGFaLdJalmkC:
@@ -86,7 +86,7 @@ papers:
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:mB3voiENLucC:
-    citations: 56
+    citations: 57
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
     year: '2021'
   uADLYWAAAAAJ:maZDTaKrznsC:
