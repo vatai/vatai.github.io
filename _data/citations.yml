@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-06'
+  last_updated: '2026-02-16'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -54,7 +54,7 @@ papers:
     title: Prototyping an Autotuning Framework for Program Optimization Using Exo Language
     year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
-    citations: 3
+    citations: 2
     title: 'Tadashi: Enabling AI-Based Automated Code Generation With Guaranteed Correctness'
     year: '2024'
   uADLYWAAAAAJ:UeHWp8X0CEIC:
@@ -96,7 +96,7 @@ papers:
   uADLYWAAAAAJ:r0BpntZqJG4C:
     citations: 9
     title: A tool and a methodology to use macros for abstracting variations in code for different computational demands
-    year: '2025'
+    year: '2023'
   uADLYWAAAAAJ:u5HHmVD_uO8C:
     citations: 8
     title: Cache optimized linear sieve
