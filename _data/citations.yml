@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-16'
+  last_updated: '2026-02-23'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -16,9 +16,9 @@ papers:
   uADLYWAAAAAJ:GnPB-g6toBAC:
     citations: 0
     title: 'SAFE: Improving LLM Systems using Sentence-Level In-generation Attribution'
-    year: Unknown Year
+    year: '2025'
   uADLYWAAAAAJ:HDshCWvjkbEC:
-    citations: 53
+    citations: 54
     title: Why globally re-shuffle? Revisiting data shuffling in large scale deep learning
     year: '2022'
   uADLYWAAAAAJ:IWHjjKOFINEC:
@@ -33,6 +33,10 @@ papers:
     citations: 0
     title: Simulation-Based Inference with Uncertainty Quantification using Generative Models in Quantum Chromodynamics
     year: Unknown Year
+  uADLYWAAAAAJ:J_g5lzvAfSwC:
+    citations: 0
+    title: Discrete mathematics I.
+    year: '2016'
   uADLYWAAAAAJ:L8Ckcad2t8MC:
     citations: 0
     title: "Numbers, Functions, Equations 2013 (NFE\u201913)"
@@ -45,17 +49,21 @@ papers:
     citations: 1
     title: 'Think Before You Attribute: Improving the Performance of LLMs Attribution Systems'
     year: '2025'
+  uADLYWAAAAAJ:NaGl4SEjCO4C:
+    citations: 0
+    title: "Nagyhat\xE9konys\xE1gu sz\xE1m\u0131t\xE1sok: faktoriz\xE1l\xE1s"
+    year: '2009'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
     citations: 12
-    title: 'At the locus of performance: A case study in enhancing CPUs with copious 3D-stacked cache'
-    year: '2022'
+    title: 'At the locus of performance: Quantifying the effects of copious 3d-stacked cache on hpc workloads'
+    year: '2023'
   uADLYWAAAAAJ:RGFaLdJalmkC:
     citations: 0
     title: Prototyping an Autotuning Framework for Program Optimization Using Exo Language
     year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
-    citations: 2
-    title: 'Tadashi: Enabling AI-Based Automated Code Generation With Guaranteed Correctness'
+    citations: 3
+    title: 'Tadashi: Enabling ai-based automated code generation with guaranteed correctness'
     year: '2024'
   uADLYWAAAAAJ:UeHWp8X0CEIC:
     citations: 0
@@ -82,11 +90,11 @@ papers:
     title: 'On the Scalability of Computing Genomic Diversity Using SparkLeBLAST: A Feasibility Study'
     year: '2024'
   uADLYWAAAAAJ:k_IJM867U9cC:
-    citations: 7
+    citations: 9
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:mB3voiENLucC:
-    citations: 57
+    citations: 58
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
     year: '2021'
   uADLYWAAAAAJ:maZDTaKrznsC:
@@ -96,7 +104,7 @@ papers:
   uADLYWAAAAAJ:r0BpntZqJG4C:
     citations: 9
     title: A tool and a methodology to use macros for abstracting variations in code for different computational demands
-    year: '2023'
+    year: '2025'
   uADLYWAAAAAJ:u5HHmVD_uO8C:
     citations: 8
     title: Cache optimized linear sieve
