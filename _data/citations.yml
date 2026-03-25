@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-11'
+  last_updated: '2026-03-25'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -61,6 +61,10 @@ papers:
     citations: 0
     title: Prototyping an Autotuning Framework for Program Optimization Using Exo Language
     year: '2026'
+  uADLYWAAAAAJ:RYcK_YlVTxYC:
+    citations: 0
+    title: 'Looking for (Genomic) Needles in a Haystack: Sparsity-Driven Search for Identifying Correlated Genetic Mutations in Cancer'
+    year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
     citations: 3
     title: 'Tadashi: Enabling ai-based automated code generation with guaranteed correctness'
@@ -94,7 +98,7 @@ papers:
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:mB3voiENLucC:
-    citations: 59
+    citations: 60
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
     year: '2021'
   uADLYWAAAAAJ:maZDTaKrznsC:
