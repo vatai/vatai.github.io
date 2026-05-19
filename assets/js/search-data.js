@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-cibuildwheel-is-da-bomb",
+        },{id: "post-my-bag-of-latex-tips-and-tricks",
+        
+          title: "My bag of LaTeX tips and tricks",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/my-bag-of-latex-tips-and-tricks/";
+          
+        },
+      },{id: "post-cibuildwheel-is-da-bomb",
         
           title: "CIBuildWheel is DA BOMB!",
         
