@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-06'
+  last_updated: '2026-05-20'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -14,7 +14,7 @@ papers:
     title: Graphical Ray Casting Representation of Directed Acyclic Graph in Critical Path Detection
     year: '2025'
   uADLYWAAAAAJ:GnPB-g6toBAC:
-    citations: 0
+    citations: 1
     title: 'SAFE: Improving LLM Systems using Sentence-Level In-generation Attribution'
     year: '2025'
   uADLYWAAAAAJ:HDshCWvjkbEC:
@@ -54,7 +54,7 @@ papers:
     title: "Nagyhat\xE9konys\xE1gu sz\xE1m\u0131t\xE1sok: faktoriz\xE1l\xE1s"
     year: '2009'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
-    citations: 12
+    citations: 13
     title: 'At the locus of performance: Quantifying the effects of copious 3d-stacked cache on hpc workloads'
     year: '2023'
   uADLYWAAAAAJ:RGFaLdJalmkC:
@@ -97,6 +97,10 @@ papers:
     citations: 11
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
+  uADLYWAAAAAJ:lSLTfruPkqcC:
+    citations: 0
+    title: 'EvoTADASHI: Genetic Programming for High-Performance Code Optimization'
+    year: '2026'
   uADLYWAAAAAJ:mB3voiENLucC:
     citations: 61
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
@@ -106,7 +110,7 @@ papers:
     title: Evaluation of Vectorization Methods on Arm SVE Using the Exo Language
     year: '2024'
   uADLYWAAAAAJ:r0BpntZqJG4C:
-    citations: 9
+    citations: 10
     title: A tool and a methodology to use macros for abstracting variations in code for different computational demands
     year: '2025'
   uADLYWAAAAAJ:u5HHmVD_uO8C:
