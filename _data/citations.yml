@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-20'
+  last_updated: '2026-06-08'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -54,7 +54,7 @@ papers:
     title: "Nagyhat\xE9konys\xE1gu sz\xE1m\u0131t\xE1sok: faktoriz\xE1l\xE1s"
     year: '2009'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
-    citations: 13
+    citations: 14
     title: 'At the locus of performance: Quantifying the effects of copious 3d-stacked cache on hpc workloads'
     year: '2023'
   uADLYWAAAAAJ:RGFaLdJalmkC:
@@ -62,11 +62,11 @@ papers:
     title: Prototyping an Autotuning Framework for Program Optimization Using Exo Language
     year: '2026'
   uADLYWAAAAAJ:RYcK_YlVTxYC:
-    citations: 0
+    citations: 1
     title: 'Looking for (Genomic) Needles in a Haystack: Sparsity-Driven Search for Identifying Correlated Genetic Mutations in Cancer'
     year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
-    citations: 3
+    citations: 4
     title: 'Tadashi: Enabling ai-based automated code generation with guaranteed correctness'
     year: '2024'
   uADLYWAAAAAJ:UeHWp8X0CEIC:
