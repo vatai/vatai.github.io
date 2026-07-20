@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-13'
+  last_updated: '2026-07-20'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -22,7 +22,7 @@ papers:
     title: Why globally re-shuffle? Revisiting data shuffling in large scale deep learning
     year: '2022'
   uADLYWAAAAAJ:IWHjjKOFINEC:
-    citations: 2
+    citations: 3
     title: Diamond matrix powers kernels
     year: '2020'
   uADLYWAAAAAJ:IjCSPb-OGe4C:
@@ -63,7 +63,7 @@ papers:
     year: '2026'
   uADLYWAAAAAJ:RYcK_YlVTxYC:
     citations: 1
-    title: 'Looking for (Genomic) Needles in a Haystack: Sparsity-Driven Search for Identifying Correlated Genetic Mutations in Cancer'
+    title: 'Looking for (genomic) needles in a haystack: Sparsity-driven search for identifying correlated genetic mutations in cancer'
     year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
     citations: 4
@@ -94,7 +94,7 @@ papers:
     title: 'On the Scalability of Computing Genomic Diversity Using SparkLeBLAST: A Feasibility Study'
     year: '2024'
   uADLYWAAAAAJ:k_IJM867U9cC:
-    citations: 11
+    citations: 12
     title: 'RadicalPy: a tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:lSLTfruPkqcC:
