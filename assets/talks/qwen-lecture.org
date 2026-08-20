@@ -260,7 +260,7 @@ The stack
          ├───────────────────┤
          │ vLLM, sglang      │
          ├───────────────────┤
-         │ ray, mp           │
+         │ ray, (mp)         │
          └───────────────────┘
 #+end_example
 - Ray: communication
@@ -275,7 +275,7 @@ The stack
   - https://gradientflow.com/ai-inference-nvidia-dynamo-ray-serve/
 
 - Supercomputers (HPC) vs Cloud
-  - Kuberneties vs Slurm
+  - Slurm vs Kuberneties
 
 * Variations in the speed and stability of communication
 
@@ -294,14 +294,14 @@ What to do with *bottleneck* (~MPI_barrier~ and ~MPI_allreduce~)?
 Maybe worth mentioning:
 
 - MPI *communicators*,
-- *MPI+X*,
+- *MPI+OpenMP*,
 - CUDA *streams*,
 - CUDA *graphs*.
 
 * Cannot use administrator privileges
  You don't need ~sudo~ in "98%" of cases.
 
-** ~set_env~
+** ~set_env~ ~/usr/local~
 
 #+begin_src bash
     function set_env ()
@@ -363,8 +363,8 @@ Maybe worth mentioning:
 ** Spack! https://spack.io/
 
 #+begin_src bash
-  spack install zsh
-  spack load zsh # same as set_env/module load
+  spack install OpenFOAM
+  spack load OpenFOAM # same as set_env/module load
 
 #+end_src
 
@@ -383,7 +383,7 @@ Maybe worth mentioning:
   - Build an image (~.sif~ file in curdir)
   - "no containers", just the foreground process
     #+begin_src bash
-      mpirun singularity image.sif
+      mpirun singularity run image.sif
 
     #+end_src
 
