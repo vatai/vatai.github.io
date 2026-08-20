@@ -1,0 +1,441 @@
+#+title: 2026 APAC HPC-AI Competition - AI Track
+#+author: Emil VATAI <emil.vatai@riken.jp>
+* About me
+
+- Personal website: https://vatai.github.io/
+
+- RIKEN - 理化学研究所
+  - Center for Computational Science
+  - 計算科学センター
+    - High Performance Artificial Intelligence Systems Research Team
+    - 高性能人工知能システム研究チーム
+
+- *Fugaku* - 富岳 (2020)
+  - *ARM CPU* only
+    - No GPU, designed started befor AI boom
+
+- *Rikyu* (2026)
+  - GB200 *ARM CPU*
+    - 4GPU per Node
+
+* Lecture Goals
+** Competition goal
+
+- Maximizing *inference throughput*
+- for *Qwen* LLMs
+- deployed on *GPU* infrastructure
+- with a *disaggregated prefill‑decode* architecture.
+
+** Student questions
+
+*Practical knowledge:*
+- Charasteristics of inference frameworks
+- Optimize bottleneck
+- Advanced topics about CUDA and MPI.
+- Cannot use administrator privileges
+- Variations in the speed and stability of communication
+- Qwen3 model architecture
+
+* TL;DR of today
+
+Supercomputers/software is difficult.
+
+Overview/system view more important than fine details.
+
+** Look at metrics
+- Throughput optimization is
+  - maximizing batching + concurrency
+  - without violating TTFT/TPOT latency targets or exhausting KV-cache memory
+
+* The basics
+** Transformer
+#+begin_example
+                     ┌───────────────────────────┐
+                     │ Output layer, Heads,      │
+                     │ and Loss                  │
+                     └─────────────▲─────────────┘
+        ┌──────────────────────────┴──────────────┐
+        │              TRANSFORMER LAYER      × L │
+        │              ┌───────────────┐          │
+        │        ┌────►│      Add      │          │
+        │        │     └───────▲───────┘          │
+        │        │     ╔═══════┴═════════╗        │
+        │        │     ║    !!!MLP!!!    ║        │
+        │        │     ║   ┌────┴────┐   ║        │
+        │        │     ║   │ MLP 4H→H│   ║        │
+        │        │     ║   └────▲────┘   ║        │
+        │        │     ║   ┌────┴────┐   ║        │
+        │        │     ║   │  GeLU   │   ║        │
+        │        │     ║   └────▲────┘   ║        │
+        │        │     ║   ┌────┴────┐   ║        │
+        │        │     ║   │ MLP H→4H│   ║        │
+        │        │     ║   └────▲────┘   ║        │
+        │        │     ╚════════┼════════╝        │
+        │        │      ┌───────┴───────┐         │
+        │        └──────│  Layer Norm   │         │
+        │               └───────▲───────┘         │
+        │               ┌───────┴───────┐         │
+        │        ┌─────►│      Add      │         │
+        │        │      └───────▲───────┘         │
+        │        │      ╔═══════┴══════════════╗  │
+        │        │      ║   !!!Attention!!!    ║  │
+        │        │      ║ ┌────────▲─────────┐ ║  │
+        │        │      ║ │ Self Attention & │ ║  │
+        │        │      ║ │Attention Dropout │ ║  │
+        │        │      ║ └────────▲─────────┘ ║  │
+        │        │      ╚══════════╬═══════════╝  │
+        │        │         ┌───────┴───────┐      │
+        │        │         │  Layer Norm   │      │
+        │        │         └───────▲───────┘      │
+        │        └─────────────────┤              │
+        └──────────────────────────┼──────────────┘
+                     ┌─────────────┴─────────────┐
+                     │ Input Embeddings          │
+                     │ (tokens, positions, ...)  │
+                     └───────────────────────────┘
+#+end_example
+** Qwen architecture
+
+- Dense models and MoE
+  - Qwen3-*235B*-*A22B*
+*** Attention
+**** Multi-Head Attention (MHA)
+#+begin_example
+MHA
+
+Q:  Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7
+K:  K0 K1 K2 K3 K4 K5 K6 K7
+V:  V0 V1 V2 V3 V4 V5 V6 V7
+
+     8 query heads
+     8 KV heads
+#+end_example
+**** Grouped Query Attention (GQA)
+#+begin_example
+GQA
+
+Q:  Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7
+      \ /     \ /     \ /     \ /
+K:     K0      K1      K2      K3
+V:     V0      V1      V2      V3
+
+     8 query heads
+     4 KV heads
+#+end_example
+**** Multi-Query Attention (MQA
+#+begin_example
+MQA
+
+Q:  Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7
+      \  \  \  |  /  /  /  /
+K:             K0
+V:             V0
+
+     8 query heads
+     1 KV head
+#+end_example
+* Different type of parallelism: DP, TP, PP, EP, CP
+
+- Data parallelism
+- Tensor parallelism
+- Pipeline parallelism
+- Expert parallelism
+- Context parallelism
+
+** Tensor Parallel
+*** The problem:
+#+begin_example
+                         TWO-LAYER MLP
+
+        X                W1                 W2                Y
+   ┌───────────┐   ┌──────────┐   ┌───────────┐   ┌─────────┐
+   │ ■ ■ ■ ■ ■ │ × │ ░░░░░░░░ │ × │ ▓▓▓▓▓▓▓▓▓ │ = │ ■ ■ ■ ■ │
+   │ ■ ■ ■ ■ ■ │   │ ░░░░░░░░ │   │ ▓▓▓▓▓▓▓▓▓ │   │ ■ ■ ■ ■ │
+   └───────────┘   │ ░░░░░░░░ │   │ ▓▓▓▓▓▓▓▓▓ │   └─────────┘
+                   │ ░░░░░░░░ │   │ ▓▓▓▓▓▓▓▓▓ │
+                   └──────────┘   └───────────┘
+  (             tmp            )
+#+end_example
+*** The solution:
+#+begin_example
+ GPU 1
+        X                 W1         L/R tmp
+   ┌───────────┐   ┌─────┬─────┐   ┌─────┬─────┐
+   │ ■ ■ ■ ■ ■ │ × │ ░░░ │     │ = │ L▒▒ │     │
+   │ ■ ■ ■ ■ ■ │   │ ░░░ │     │   │ ▒▒▒ │     │
+   └───────────┘   │ ░░░ │     │   └─────┴─────┘
+                   │ ░░░ │     │
+                   └─────┴─────┘
+GPU 2               column-wise
+   ┌───────────┐   ┌─────┬─────┐   ┌─────┬─────┐
+   │ ■ ■ ■ ■ ■ │ × │     │ ░░░ │ = │     │ R▒▒ │
+   │ ■ ■ ■ ■ ■ │   │     │ ░░░ │   │     │ ▒▒▒ │
+   └───────────┘   │     │ ░░░ │   └─────┴─────┘
+                   │     │ ░░░ │
+                   └─────┴─────┘
+─ ─ ─ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ GPU 1                  W2         Y (half sum)
+   ┌─────┬─────┐   ┌───────────┐   ┌───────────┐
+   │ L▒▒ │     │ × │ ▓▓▓▓▓▓▓▓▓ │ = │ xxxxxxxxx │
+   │ ▒▒▒ │     │   │ ▓▓▓▓▓▓▓▓▓ │   │ xxxxxxxxx │
+   └─────┴─────┘   ├───────────┤   └───────────┘            Y
+                   │           │          |           ┌─────────┐
+                   │           │         (+) ───────► │ ■ ■ ■ ■ │
+ GPU 2             └───────────┘          |           │ ■ ■ ■ ■ │
+   ┌─────┬─────┐   ┌───────────┐   ┌───────────┐      └─────────┘
+   │     │ R▒▒ │ × │           │ = │ xxxxxxxxx │
+   │     │ ▒▒▒ │   │           │   │ xxxxxxxxx │
+   └─────┴─────┘   ├───────────┤   └───────────┘
+                   │ ▓▓▓▓▓▓▓▓▓ │
+                   │ ▓▓▓▓▓▓▓▓▓ │
+                   └───────────┘
+           Column-wise TP  →  Row-wise TP  →  Reduce/Add
+#+end_example
+
+* Disaggregated prefill‑decode architecture: Practical Considerations and Trade-offs
+
+- $\operatorname{softmax}(QK^\top) V$
+
+** PREFILL — Setp 1
+#+begin_example
+              (Q * K^T) * V   —   computation with KV caching
+
+     Queries           Keys^T               Values             Results
+
+   4 x 64            64 x 4                4 x 64              4 x 64
+┌──────────────┐   ┌───────┐            ┌──────────────┐   ┌──────────────┐
+│--------------│   │ │ │ │ │            │--------------│   │--------------│
+│--------------│ x │ │ │ │ │ -> (4x4) x │--------------│ = │--------------│
+│--------------│   │ │ │ │ │            │--------------│   │--------------│
+└──────────────┘   └───────┘            └──────────────┘   └──────────────┘
+                         │                      │
+                         │ cache K              │ cache V
+                         ▼                      ▼
+                  ┌────────────────────────────────────────┐
+                  │              KV CACHE                  │
+                  └────────────────────────────────────────┘
+#+end_example
+
+** DECODE — Step N
+#+begin_example
+                       restore K               restore V
+                           │                       │
+                           ▼                       ▼
+        Query            Keys^T                 Values             Result
+
+      1 x 64            64 x 5                  5 x 64              1 x 64
+
+   ┌──────────────┐   ┌─────────┐            ┌───────────┐   ┌──────────────┐
+   │░░Current░Q░░░│ x │K│K│K│K│░│ -> (1x5) x │VVVVVVVVVVV│ = │    result    │
+   └──────────────┘   │K│K│K│K│░│            │VVVVVVVVVVV│   └──────────────┘
+                      │K│K│K│K│░│            │VVVVVVVVVVV│
+                      │K│K│K│K│░│            │VVVVVVVVVVV│
+                      └─────────┘            │░░░░░░░░░░░│
+                                             └───────────┘
+                       cached new              cached new
+                         K     ░                  V    ░
+
+   K/V = restored from KV cache
+   ░░░ = computed for the new token
+#+end_example
+
+** From: [[https://www.emergentmind.com/topics/prefill-decode-p-d-disaggregated-architectures][www.emergentmind.com]]
+
+Common operational trade-offs in P/D architectures include:
+
+- *Communication vs. Interference*: While disaggregation eliminates prefill/decode interference, it introduces potentially costly KVCache transfers. Hybrid and partially-disaggregated strategies (EcoServe, semi-PD, TaiChi) attempt to balance these competing demands by using temporal disaggregation or intra-instance resource splits (Du et al., 25 Apr 2025, Hong et al., 28 Apr 2025, Wang et al., 4 Aug 2025).
+
+- *Granularity of Partitioning*: Finer-grained (SM-level, chunked pipelining, micro-request splitting) approaches allow more dynamic adaptation but increase scheduler complexity and may reduce hardware efficiency at very high concurrency.
+
+- *Adaptive and Predictive Scheduling*: Early rejection, SLO-aware token budgeting, and dynamic pooling (Arrow, HyperFlexis) are most effective when accurate performance models are available for queueing, memory, and transfer overheads (Wu et al., 17 May 2025, Yousefijamarani et al., 21 Aug 2025). Metric-driven autoscaling policies based on empirically validated signals (decode TPS) are necessary for efficient cloud deployment at scale (Li et al., 27 Aug 2025).
+
+- *Storage and Weight Duplication*: Disaggregated computation with unified storage (semi-PD) avoids weight replication and storage imbalance, achieving both low overhead and high request capacity (Hong et al., 28 Apr 2025).
+
+* Charasteristics of inference frameworks
+
+The stack
+#+begin_example
+         ┌───────────────────┐
+         │ ray serve, dynamo │
+         ├───────────────────┤
+         │ vLLM, sglang      │
+         ├───────────────────┤
+         │ ray, mp           │
+         └───────────────────┘
+#+end_example
+- Ray: communication
+- SGLang & vllm
+  - https://recipes.vllm.ai/moonshotai/Kimi-K3
+
+- AI-Dynamo
+  - similar to ~ray sever~
+  - aiconfigurator
+  - Nvidia says it's the "OS" of LLM inference
+    - it looks more like a GUI/WM to me
+  - https://gradientflow.com/ai-inference-nvidia-dynamo-ray-serve/
+
+- Supercomputers (HPC) vs Cloud
+  - Kuberneties vs Slurm
+
+* Variations in the speed and stability of communication
+
+Find out the source.
+
+Use more data.
+
+* Optimize bottleneck & Advanced topics about CUDA and MPI.
+
+What to do with *bottleneck* (~MPI_barrier~ and ~MPI_allreduce~)?
+
+*Advanced topics*: You probably don't need to.
+- It takes a lot of time to "get them right".
+- Getting the "right parameters" should give more advantage.
+
+Maybe worth mentioning:
+
+- MPI *communicators*,
+- *MPI+X*,
+- CUDA *streams*,
+- CUDA *graphs*.
+
+* Cannot use administrator privileges
+ You don't need ~sudo~ in "98%" of cases.
+
+** ~set_env~
+
+#+begin_src bash
+    function set_env ()
+    {
+        export PATH="$1/bin${PATH:+:${PATH}}"
+        export PATH="$1/bin64${PATH:+:${PATH}}"
+        export LD_LIBRARY_PATH="$1/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+        export LIBRARY_PATH="$1/lib${LIBRARY_PATH:+:${LIBRARY_PATH}}"
+        export LD_LIBRARY_PATH="$1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+        export LIBRARY_PATH="$1/lib64${LIBRARY_PATH:+:${LIBRARY_PATH}}"
+        export C_INCLUDE_PATH="$1/include${C_INCLUDE_PATH:+:${C_INCLUDE_PATH}}"
+        export CPLUS_INCLUDE_PATH="$1/include${CPLUS_INCLUDE_PATH:+:${CPLUS_INCLUDE_PATH}}"
+        export MAN_PATH="$1/man${MAN_PATH:+:${MAN_PATH}}"
+    }
+    ./configure --prefix $HOME/opt
+    make install
+    set_env $HOME/opt
+#+end_src
+
+** ~module~
+
+~cat $HOME/.modules/LLVM/21.1.8~
+
+#+begin_src tcl
+  #%Module1.0
+  ##
+  ## LLVM Environment Module
+  ##
+
+  proc ModulesHelp { } {
+      puts stderr "This module sets up the environment for LLVM (v21.1.8)"
+  }
+
+  module-whatis "Loads LLVM (v21.1.8)"
+
+  # Set a conflict to prevent loading other GCC versions simultaneously
+  conflict llvm
+
+  # Prepend the custom paths to system variables
+  set prefix $::env(HOME)/opt/LLVM/llvmorg-21.1.8
+  prepend-path PATH $prefix/bin
+  prepend-path PATH $prefix/bin64
+  prepend-path LIBRARY_PATH $prefix/lib
+  prepend-path LIBRARY_PATH $prefix/lib64
+  prepend-path LD_LIBRARY_PATH $prefix/lib
+  prepend-path LD_LIBRARY_PATH $prefix/lib64
+  prepend-path C_INCLUDE_PATH $prefix/include
+  prepend-path CPLUS_INCLUDE_PATH $prefix/include
+  prepend-path MAN_PATH $prefix/man
+#+end_src
+
+#+begin_src bash
+  module use ${HOME}/.modules
+  module avail
+  module load LLVM/21.1.8
+  # module unload LLVM/21.1.8
+#+end_src
+
+** Spack! https://spack.io/
+
+#+begin_src bash
+  spack install zsh
+  spack load zsh # same as set_env/module load
+
+#+end_src
+
+** Containers
+
+- ~docker~
+  - Image receipt (Dockerfile)
+  - Build image (stored in ~/var/lib/docker/...~)
+  - Container (running instance of an image) managed by docker service
+  - needs ~sudo~
+
+- ~podman~ = ~docker~ without ~sudo~
+
+- ~singularity~ / ~apptainer~
+  - Image receipt (~.def~)
+  - Build an image (~.sif~ file in curdir)
+  - "no containers", just the foreground process
+    #+begin_src bash
+      mpirun singularity image.sif
+
+    #+end_src
+
+* Results from today
+- 4 gpus
+
+| num seq:       | 250 | 2000 |
+| compute:       | 30s | 140s |
+| communication: | 5s  | 140s |
+| total:         | 30s | 300s |
+
+* COMMENT
+* COMMENT
+* COMMENT Todos
+** [#B] Run QWEN with vllm
+SCHEDULED: <2026-08-06 木 20:05>
+** [#B] Run QWEN with sglang
+SCHEDULED: <2026-08-06 木 20:05>
+** [#B] Run with dynamo (both backends
+SCHEDULED: <2026-08-06 木 20:05>
+* COMMENT My notes
+** Website [[https://www.hpcadvisorycouncil.com/events/2026/APAC-AI-HPC/benchmarking.php][link]]
+* COMMENT Notes from students
+** Suggestions
+*** from Kisarazu-Big-Branch
+
+I'm the team leader from Kisarazu-Big-Branch.
+Since we are almost independent of our coach, I'll share the progress/knowledge about LLMs.
+Though ourself study session, our team members have in-depth knowledge about transformer architecture. Also, the latest technologies for LLM inference and latest Qwen-specific architecture.
+Furthermore, We've already succeeded in serving with SGL and Dynamo-SGL.
+As a knowledge of HPC, our team has 3 members very good at HPC, parallel processing, and hardware acceleration.
+We are confident that our team has strong knowledge and technical skills. (edited)
+
+As an idea of lecture, what I wanna get is not about theoretical knowledge, but technical experience.
+For example, we can choose an inference framework in this year's AI task. Thus, how about teaching us the charasteristics of inference frameworks? i.e., SGL, vLLM, Dynamo
+
+*** from Tokyo Rapids
+
+Our team is interested in the following topics:
+
+How should we optimize when we find that MPI_BARRIER or MPI_ALLREDUCE is a bottleneck?
+Even if we can identify it by profiling, the way to improve it is often not obvious. We want to know specific approaches depending on the types of bottlenecks.
+
+Advanced topics about CUDA and MPI.
+How should we deal with missing metrics in an environment where we cannot use administrator privileges on supercomputer nodes?
+How do you analyze when there are variations in the speed and stability of communication between nodes?
+
+** Systems
+
+- Kyushu University Genkai,
+- HPC-AI Advisory Council Iris
+- NCI Gadi, (competition) [[https://nci.org.au/infrastructure/hpc-systems][- link]]
+- NSCC Singapore ASPIRE2A/2A+, and (competition) - [[https://www.nscc.sg/aspire-2a-plus/][link]]
+- Firmus AI Cloud (competition)
+
