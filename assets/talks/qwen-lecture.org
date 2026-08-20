@@ -114,7 +114,7 @@ V:  V0 V1 V2 V3 V4 V5 V6 V7
 #+begin_example
 GQA
 
-Q:  Q0 Q1 Q2 Q3 Q4 Q5 Q6 Q7
+Q:   Q0 Q1   Q2 Q3   Q4 Q5   Q6 Q7
       \ /     \ /     \ /     \ /
 K:     K0      K1      K2      K3
 V:     V0      V1      V2      V3
