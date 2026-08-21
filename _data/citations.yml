@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-24'
+  last_updated: '2026-08-21'
 papers:
   uADLYWAAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -18,7 +18,7 @@ papers:
     title: 'SAFE: Improving LLM Systems using Sentence-Level In-generation Attribution'
     year: '2025'
   uADLYWAAAAAJ:HDshCWvjkbEC:
-    citations: 57
+    citations: 58
     title: Why globally re-shuffle? Revisiting data shuffling in large scale deep learning
     year: '2022'
   uADLYWAAAAAJ:IWHjjKOFINEC:
@@ -47,26 +47,26 @@ papers:
     year: Unknown Year
   uADLYWAAAAAJ:NMxIlDl6LWMC:
     citations: 1
-    title: 'Think Before You Attribute: Improving the Performance of LLMs Attribution Systems'
+    title: 'Think before you attribute: Improving the performance of llms attribution systems'
     year: '2025'
   uADLYWAAAAAJ:NaGl4SEjCO4C:
     citations: 0
     title: "Nagyhat\xE9konys\xE1gu sz\xE1m\u0131t\xE1sok: faktoriz\xE1l\xE1s"
     year: '2009'
   uADLYWAAAAAJ:R3hNpaxXUhUC:
-    citations: 15
-    title: 'At the locus of performance: Quantifying the effects of copious 3d-stacked cache on hpc workloads'
+    citations: 16
+    title: 'At the locus of performance: quantifying the effects of copious 3D-stacked cache on HPC workloads'
     year: '2023'
   uADLYWAAAAAJ:RGFaLdJalmkC:
-    citations: 0
+    citations: 1
     title: Prototyping an Autotuning Framework for Program Optimization Using Exo Language
     year: '2026'
   uADLYWAAAAAJ:RYcK_YlVTxYC:
-    citations: 1
+    citations: 2
     title: 'Looking for (genomic) needles in a haystack: Sparsity-driven search for identifying correlated genetic mutations in cancer'
     year: '2026'
   uADLYWAAAAAJ:TFP_iSt0sucC:
-    citations: 4
+    citations: 6
     title: 'Tadashi: Enabling ai-based automated code generation with guaranteed correctness'
     year: '2024'
   uADLYWAAAAAJ:UeHWp8X0CEIC:
@@ -95,18 +95,18 @@ papers:
     year: '2024'
   uADLYWAAAAAJ:k_IJM867U9cC:
     citations: 13
-    title: 'RadicalPy: a tool for spin dynamics simulations'
+    title: 'RadicalPy: A tool for spin dynamics simulations'
     year: '2024'
   uADLYWAAAAAJ:lSLTfruPkqcC:
     citations: 0
     title: 'EvoTADASHI: Genetic Programming for High-Performance Code Optimization'
     year: '2026'
   uADLYWAAAAAJ:mB3voiENLucC:
-    citations: 61
+    citations: 60
     title: 'Matrix engines for high performance computing: A paragon of performance or grasping at straws?'
     year: '2021'
   uADLYWAAAAAJ:maZDTaKrznsC:
-    citations: 0
+    citations: 1
     title: Evaluation of Vectorization Methods on Arm SVE Using the Exo Language
     year: '2024'
   uADLYWAAAAAJ:r0BpntZqJG4C:
