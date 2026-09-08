@@ -327,7 +327,7 @@ ninja.data = [{
         title: 'Mastodon',
         section: 'Socials',
         handler: () => {
-          window.open("https://https://mast.hpc.social/@vatai", "_blank");
+          window.open("https://mast.hpc.social/@vatai", "_blank");
         },
       },{
         id: 'social-orcid',
