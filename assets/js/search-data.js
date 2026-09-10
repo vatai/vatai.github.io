@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/talks/";
           },
-        },{id: "post-my-bag-of-latex-tips-and-tricks",
+        },{id: "post-why-you-can-39-t-just-remove-openmp-pragmas",
+        
+          title: "Why you can&#39;t just remove OpenMP pragmas",
+        
+        description: "A HeCBench kernel where the pragmas are the program, not a decoration on it",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/why-you-cant-just-remove-openmp-pragmas/";
+          
+        },
+      },{id: "post-my-bag-of-latex-tips-and-tricks",
         
           title: "My bag of LaTeX tips and tricks",
         
