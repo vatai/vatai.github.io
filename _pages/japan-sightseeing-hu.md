@@ -2,7 +2,7 @@
 layout: page
 permalink: /japan-sightseeing-hu.html
 title: "Japán látnivalók"
-description: "Looks like there has been a mistake. Nothing exists here."
+description: "Többen már felkerestek ezzel, ezért csináltam ezt a weblapot."
 language: "hu"
 ---
 
@@ -43,14 +43,14 @@ Mar emlegettem hogy keszpenzre valszeg szukseg lesz. Ez kicsit macera... nagyon 
 
 Normalis mastercard/visa-t elfogadnak csomo helyen de nem mindenhol... (pl tomegkozlekedes ^ ^)
 
-A helyzet folyamatosan javul!
+A helyzet folyamatosan javul! Pl most (2026) csomo helyen latok Google Pay logot, szoval ha mobilodon van bankkartya, az sok helyen menni fog.
 
 # Internet
 
+E-SIMet javaslok.
+
 - Van applikacio amivel egy gombnyomasra tudtok wifire csatlakozni (pl allomasokon) [link](https://play.google.com/store/apps/details?id=com.nttbp.jw2&hl=en&gl=US)
 - Erdemes kolcsonozni hordozhato "pocket wifi"-t is.
-
-E-SIMet javaslok nyilvan.
 
 # Latnivalok
 
@@ -60,7 +60,7 @@ E-SIMet javaslok nyilvan.
 
 > - mi az amit minden képp érdemes megnézni Tokióban és mi az amit jobb ha kihagyunk? ( bocsi a kérdésért de három napot leszünk Tokióban és elég nehéz szelektálni) … itt hozzáteném hogy három tinilány lesz velünk így az ő érdeklődésüknek próbálnánk megfelelni… anime, karaoke, just dance vagy mi…
 
-Igen, ez egy nehez kerdes :) Talan a "csaszari palotat nyugodtan ki lehet hagyni" a leg egyszerubb resze... szep meg minden... de valojaban nem olyan erdekes - iszonyu nagy part es sok ido bejarni... de nincs semmi "konkret" ott amit meg kellene nezni...
+Igen, ez egy nehez kerdes :) Talan a "csaszari palotat nyugodtan ki lehet hagyni" a leg egyszerubb resze... szep meg minden... de valojaban nem olyan erdekes - iszonyu nagy park es sok ido bejarni... de nincs semmi "konkret" ott amit meg kellene nezni...
 
 A masik amit biztosra mondhatok az a Yamanote vonal (vonat ami korbe jarja Tokyot) nyugati oldalan talalhato megallok. Nekem az jott be hogy felmegyek Shinjuku-ig, ott fel lehet menni ingyen egy lelatoba (Tokyo Metropolitan Government Building observation room) es szepen lasan elindulok delre: Harajuku (bevasarlo utca), Meiji Jingu (az nagyon szep), Shibuya (nagy utkeresztezodes) es akkor le Meguro allomashoz (ott tudok egy nagyon profi kaitenzushi ettermet).
 
@@ -68,11 +68,11 @@ Asakusa, Edo muzeum, Hokusai muzeum, sumo arena (ryogoku) hasonloan jo kombinaci
 
 A TeamLab kiallitas valami hihetetlen jo fel/harmad napos program: https://planets.teamlab.art/tokyo/
 
-Vegul hozzam kozel van Odaiba, ez ilyen turistas hely, nem keves anime beutessel (Digimon nem egy epizodja itt tortenik, life size Gundam, Gunam Base, Jump shop). Este szep, szoval szerintem keso delutanra erdemes betervezni.
+Vegul ahol par evig laktunk: Odaiba, ez ilyen turistas hely, nem keves anime beutessel (Digimon nem egy epizodja itt tortenik, life size Gundam, Gunam Base, Jump shop). Este szep, szoval szerintem keso delutanra erdemes betervezni.
 
 Karaoke/Just dance sok helyen van (amugy inkabb a "taiko no tatsujin"-t ajanlom :)). Melyik anime? Anime itt minden hol van. Szoval ha konret kivansag van, akkor arra lehet ra tudok keresni. BookOffban lehet semmi penzert hasznalt mangakat venni. Elvileg az Anime "mekkaja" Akihabara (eredetileg elektronikai negyed volt, es meg most is ott a Yodobashi Akiba brutal nagy elektronikai aruhaz)
 
-Tokyo tower + a szentelyek korulotte is erdekes latvanyossag. Sky Tree-ben meg nem voltunk, de ar/erte aranya nem tul vonzo...
+Tokyo tower + a szentelyek korulotte is erdekes latvanyossag. Sky Tree-ben meg nem voltunk, de ar/ertek aranya nem tul vonzo...
 
 ## Mas varosok
 
@@ -84,23 +84,21 @@ Osaka szerintem nem olyan nagyon erdekes (a kastely szep), viszont az egesz Kans
 
 Random [kaja térkép](https://maps.app.goo.gl/8mEDavbvPHLskW469). Néhány helyen voltam, néhány helyre akartam menni.
 
-Kobeban (Osaka-hoz kozel) van erdekes kinai negyed meg brutal jo steak (kobe beef). Ha van ra penzetek, van egy kis helyi kobe beef/wagyu etterem, https://goo.gl/maps/YUv5mtxqjg3cJpHE6 A kaja eleg draga itt, de megeri (ne a legdragabbat 10000jpy vegyetek - tul zsiros, hanem ami annak a felebe kerul 4000-5000jpy). https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/139681/139681798.jpg?token=3bfb3bb&api=v2
+Kobeban (Osaka-hoz kozel) van erdekes kinai negyed meg brutal jo steak (kobe beef). Ha van ra penzetek, van egy kis helyi kobe beef/wagyu etterem, [link](https://goo.gl/maps/YUv5mtxqjg3cJpHE6) A kaja eleg draga itt, de megeri (ne a legdragabbat 10000jpy vegyetek - tul zsiros, hanem ami annak a felebe kerul 4000-5000jpy). [link](https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/139681/139681798.jpg?token=3bfb3bb&api=v2)
 
-A Tokyo, Meguro sushi hely amit emlegettem ez: https://goo.gl/maps/hYAd6RjkEffWFeCh6, Ez ilyen futoszalag szushi. Szerintem tecceni fog. Ott a "draga de megeri" a 3 szelet zsiros tonhal 530jpy-ert ami igy nez ki: https://katumidori.co.jp/wp-content/uploads/2018/09/0ba60db9cc1d7758d57dda908b1a4827-1.jpg
+A Tokyo, Meguro sushi hely amit emlegettem ez: [link](https://goo.gl/maps/hYAd6RjkEffWFeCh6), Ez ilyen futoszalag szushi. Szerintem tecceni fog. Ott a "draga de megeri" a 3 szelet zsiros tonhal 530jpy-ert ami igy nez ki: [link](https://katumidori.co.jp/wp-content/uploads/2018/09/0ba60db9cc1d7758d57dda908b1a4827-1.jpg)
 
 Ez ket kedvenc "draga de megeri" ajanlasom. Most par olcsobb opcio:
 
 - Olcso es jo helyek a Yoshinoya es Sukuya "gyors ettermek" (a gyudon es goma=szezammagos salata dresszing nagyon finom).
 - Kombin-ben (=conviniece store, pl lawson, 7eleven, FamilyMart) mindig lehet onigirit venni - jo uzsinak.
-- [Zsenialis udon](https://goo.gl/maps/pLfz6Nt1tbhTA5ZW8) (teszta levesben), ajanlatom kis adag niku-udon + 2 tempura a kovetkezo kis etteremben
+- [Zsenialis udon](https://goo.gl/maps/pLfz6Nt1tbhTA5ZW8) (teszta levesben), ajanlatom kis adag niku-udon + 2 tempura ebben a kis etteremben
 - [Zsenialis tsukemen](https://goo.gl/maps/oEtqbSybsnUmCGyM6) (a ramen-nak a martogatos verzioja) (ez ilyen 1000jpy per fo)
 - vegul Saizeriya olasz etteremlanc (ha majd hianyoznak az otthoni izek... mint pl a kenyer).
 
 Altalaban a menuk ugy vannak hogy az elejen van a "jo cucc". Ha akartok kerdezni akkor az "osusume" (marmint oszuszume) azt jelenti hogy "javaslat" azaz "mit javasolnak?".
 
 ---
-
-A revolutot csinaljatok meg gyors ha birjatok es rendeljetek meg a kartyat.
 
 Ha van kerdesetek szoljatok. Vagyok viberen, telegramon, facebookon mindenhol (is) elerheto vagyok...
 
