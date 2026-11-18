@@ -12,7 +12,42 @@
   urldate = {2024-11-09},
   abstract = {Radical pairs (electron--hole pairs, polaron pairs) are transient reaction intermediates that are found and exploited in all areas of science, from the hard realm of physics in the form of organic semiconductors, spintronics, quantum computing, and solar cells to the soft domain of chemistry and biology under the guise of chemical reactions in solution, biomimetic systems, and quantum biology. Quantitative analysis of radical pair phenomena has historically been successful by a few select groups. With this in mind, we present an intuitive open-source framework in the Python programming language that provides classical, semiclassical, and quantum simulation methodologies. A radical pair kinetic rate equation solver, Monte Carlo-based spin dephasing rate estimations, and molecule database functionalities are implemented. We introduce the kine-quantum method, a new approach that amalgamates classical rate equations, semiclassical, and quantum techniques. This method resolves the prohibitively large memory requirement issues of quantum approaches while achieving higher accuracy, and it also offers wavelength-resolved simulations, producing time- and wavelength-resolved magnetic field effect simulations. Model examples illustrate the versatility and ease of use of the software, including the new approach applied to the magnetosensitive absorption and fluorescence of flavin adenine dinucleotide photochemistry, spin--spin interaction estimation from molecular dynamics simulations on radical pairs inside reverse micelles, radical pair anisotropy inside proteins, and triplet exciton pairs in anthracene crystals. The intuitive interface also allows this software to be used as a teaching or learning aid for those interested in the field of spin chemistry. Furthermore, the software aims to be modular and extensible, with the aim to standardize how spin dynamics simulations are performed.},
   copyright = {All rights reserved},
-  file = {/home/vatai/Sync/zotero-pdfs/Antill and Vatai - 2024 - RadicalPy A Tool for Spin Dynamics Simulations.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/antill2024RadicalPy.pdf}
+}
+
+@inproceedings{bai2026robust,
+  title = {Robust {{Score-Bounded Search}} for {{Multi-Hit Carcinogenic Gene Combination Identification}}},
+  booktitle = {{{SC26}}: {{International Conference}} for {{High Performance Computing}}, {{Networking}}, {{Storage}} and {{Analysis}}},
+  author = {Bai, Zhengyang and Vatai, Emil and Prabhu, Ritvik and Moussad, Bernard and Zhuang, Chen and Feng, Wu-chun and Wahib, Mohamed},
+  year = 2026,
+  month = nov,
+  pages = {1149--1161},
+  publisher = {IEEE Computer Society},
+  doi = {10.1109/SC51908.2026.00075},
+  url = {https://www.computer.org/csdl/proceedings-article/sc/2026/478900b136/2lkuAcWKmZO},
+  urldate = {2026-11-18},
+  abstract = {Cancer arises from combinations of somatic mutations (hits), and identifying these combinations is critical for understanding carcinogenesis and enabling targeted therapies. This task can be formulated as a weighted set cover problem, yet exhaustive enumeration leads to exponential search space growth as the number of hits increases, limiting prior enumeration-based work to at most 5-hit combinations even on large-scale supercomputers. We propose a novel algorithm that decomposes higher-order combinations through a shortest addition chain and formulates sample coverage computation as matrix multiplication. It employs a robust score-bounded search strategy that eliminates unpromising candidates without evaluation, while guaranteeing that the best-scoring combination is never discarded. Experiments show our method visits less than one-millionth of prior search spaces, identifies 4-hit combinations in about 5 seconds on a single GPU, outperforms thousand-node supercomputers by orders of magnitude, and extends practical reach of enumeration-based cancer screening from 5-hit to 9-hit combinations.},
+  isbn = {979-8-3195-4789-7},
+  langid = {english}
+}
+
+@misc{batista2026accelerating,
+  title = {Accelerating {{Long-Context Decoding}} in {{Large-Scale Hybrid LLMs Without Retraining}}},
+  author = {Batista, Jo{\~a}o Eduardo and Vatai, Emil and Wahib, Mohamed},
+  year = 2026,
+  month = nov,
+  number = {arXiv:2611.06133},
+  eprint = {2611.06133},
+  primaryclass = {cs.CL},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2611.06133},
+  url = {http://arxiv.org/abs/2611.06133},
+  urldate = {2026-11-18},
+  abstract = {The full-attention layers of large language models (LLMs) make every generated token more expensive than the previous one, slowing models down on long-context tasks. Hybrid models reduce this cost by replacing most full-attention layers with linear-attention layers, but the first still dominate decoding at long contexts. We accelerate these remaining layers without any training or weight changes using combined sparse attention: each layer attends to a sliding window of recent tokens, a pinned prefix, and a fixed budget of most relevant tokens in the context. The window size and budget are found on a per-layer basis using a multi-objective search algorithm. Across six hybrid models from three families, from 4B to 397B parameters, the selected configurations preserve their baseline model's accuracy on 21 long-context datasets. Decoding 64k/256k tokens becomes up to 1.26x/2.22x faster on Qwen3.5-4B, 1.20x/2.23x on Qwen3.5-122B-A10B, and 1.16x/2.06x on Ornith-1.0-397B.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Performance},
+  note = {Comment: 19 pages (main body: 10 pages, references: 3 pages, appendix: 6 pages), 8 figures, 6 tables},
+  file = {/home/vatai/Sync/zotero-pdfs/batista2026Accelerating.pdf;/home/vatai/.zotero/data/storage/UJN4QYCK/2611.html}
 }
 
 @inproceedings{batista2026evotadashi,
@@ -30,7 +65,7 @@
   isbn = {978-3-032-23604-3},
   langid = {english},
   keywords = {Code Correctness,Code Transformation,Evolutionary Computation,Genetic Programming,High Performance Computing,Polyhedral Model},
-  file = {/home/vatai/Sync/zotero-pdfs/proj-current/Codegen/Batista et al. - 2026 - EvoTADASHI Genetic Programming for High-Performance Code Optimization.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/proj-current/codegen/batista2026EvoTADASHI.pdf}
 }
 
 @inproceedings{domke2021matrixa,
@@ -49,7 +84,7 @@
   copyright = {All rights reserved},
   isbn = {978-1-6654-4066-0},
   langid = {english},
-  file = {/home/vatai/Sync/zotero-pdfs/Domke et al. - 2021 - Matrix Engines for High Performance Computing A Paragon of Performance or Grasping at Straws.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/domke2021Matrix.pdf}
 }
 
 @article{domke2023locus,
@@ -68,7 +103,7 @@
   urldate = {2024-11-09},
   abstract = {Over the last three decades, innovations in the memory subsystem were primarily targeted at overcoming the data movement bottleneck. In this paper, we focus on a specific market trend in memory technology: 3D-stacked memory and caches. We investigate the impact of extending the on-chip memory capabilities in future HPC-focused processors, particularly by 3D-stacked SRAM. First, we propose a method oblivious to the memory subsystem to gauge the upper-bound in performance improvements when data movement costs are eliminated. Then, using the gem5 simulator, we model two variants of a hypothetical LARge Cache processor (LARC), fabricated in 1.5~nm and enriched with high-capacity 3D-stacked cache. With a volume of experiments involving a broad set of proxy-applications and benchmarks, we aim to reveal how HPC CPU performance will evolve, and conclude an average boost of 9.56\texttimes{} for cache-sensitive HPC applications, on a per-chip basis. Additionally, we exhaustively document our methodological exploration to motivate HPC centers to drive their own technological agenda through enhanced co-design.},
   langid = {english},
-  file = {/home/vatai/Sync/zotero-pdfs/Domke et al. - 2023 - At the Locus of Performance Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/domke2023At.pdf}
 }
 
 @article{dubey2023tool,
@@ -99,7 +134,7 @@
   abstract = {Cunningham chains of length n of the first kind are n long sequences of prime numbers p1, p2, . . . , pn so that pi+1 = 2pi + 1 (for 1 {$\leq$} i {$<$} n). In [3] we have devised a plan to find large Cunningham chains of the first kind of length 3 where the primes are of the form pi+1 = (h0 + cx) {$\cdot$} 2e+i - 1 for some integer x with h0 = 5 775, c = 30 030 and e = 34 944. The project was executed on the non-uniform memory access (NUMA) supercomputer of NIIF in Pe\textasciiacute cs, Hungary. In this paper we report on the obtained results and discuss the implementation details. The search consisted of two stages: sieving and the Fermat test. The sieving stage was implemented in a concurrent manner using lockfree queues, while the Fermat test was trivially parallel. On the 27th of April, 2014 we have found the largest known Cunningham chain of length 3 of the first kind which consists of the numbers 5110664609396115 {$\cdot$} 234944+j - 1 for j = 0, 1, 2.},
   copyright = {All rights reserved},
   langid = {english},
-  file = {/home/vatai/Sync/zotero-pdfs/Farkas et al. - 2014 - The largest known Cunningham chain of length 3 of the ﬁrst kind.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/farkas2014The.pdf}
 }
 
 @inproceedings{iwai2026prototyping,
@@ -117,7 +152,7 @@
   urldate = {2026-01-25},
   abstract = {Vectorization and loop transformation are important but labor-intensive process for achieving high performance in numerical computations. In this work, we develop a tool "ExoAutoTuner" that helps semi-automate and optimize those processes by automatically refactoring optimization parameters such as unrolling and tiling sizes in matrix multiplication operations. Coupled with the Exo language for program description, the tool bridges high-level user-defined optimization process to low-level hardware-specific instructions. We perform evaluation experiments on the Fujitsu A64FX processor, which drives the supercomputer Fugaku. The results show the effectiveness of the proposed method, which significantly reduces the execution time for matrix multiplication operations. Our ExoAutoTuner can expand the possibilities of optimization using new instruction sets and contribute to increasing the efficiency and productivity of program development for unknown hardware.},
   isbn = {979-8-4007-2328-5},
-  file = {/home/vatai/Sync/zotero-pdfs/Iwai et al. - 2026 - Prototyping an Autotuning Framework for Program Optimization Using Exo Language.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/iwai2026Prototyping.pdf}
 }
 
 @inproceedings{jarai2010cache,
@@ -138,7 +173,7 @@
   number = {2},
   pages = {205--223},
   copyright = {All rights reserved},
-  file = {/home/vatai/Sync/zotero-pdfs/Járai and Vatai - 2011 - Cache optimized linear sieve.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/járai2011Cache.pdf}
 }
 
 @inproceedings{joaoeduardobatista2026poster,
@@ -160,8 +195,8 @@
 }
 
 @inproceedings{nguyen2022why,
-  title = {Why {{Globally Re-shuffle}}? {{Revisiting Data Shuffling}} in {{Large Scale Deep Learning}}},
-  shorttitle = {Why {{Globally Re-shuffle}}?},
+  title = {Why {{Globally Re}}-Shuffle? {{Revisiting Data Shuffling}} in {{Large Scale Deep Learning}}},
+  shorttitle = {Why {{Globally Re}}-Shuffle?},
   booktitle = {2022 {{IEEE International Parallel}} and {{Distributed Processing Symposium}} ({{IPDPS}})},
   author = {Nguyen, Truong Thao and Trahay, Francois and Domke, Jens and Drozd, Aleksandr and Vatai, Emil and Liao, Jianwei and Wahib, Mohamed and Gerofi, Balazs},
   year = 2022,
@@ -177,7 +212,7 @@
   isbn = {978-1-6654-8106-9},
   langid = {english},
   keywords = {Costs,Data Shuffling,Deep learning,Distributed databases,Distributed Deep Learning,Distributed processing,I/O,Neural networks,Stochastic processes,Training},
-  file = {/home/vatai/Sync/zotero-pdfs/Nguyen et al. - 2022 - Why Globally Re-shuffle Revisiting Data Shuffling in Large Scale Deep Learning.pdf;/home/vatai/.zotero/data/storage/IXLIKN32/9820654.html}
+  file = {/home/vatai/Sync/zotero-pdfs/nguyen2022Why.pdf;/home/vatai/.zotero/data/storage/IXLIKN32/9820654.html}
 }
 
 @inproceedings{prabhu2024scalability,
@@ -189,7 +224,7 @@
   copyright = {All rights reserved},
   langid = {english},
   note = {Outstanding Student Paper Award :trophy:},
-  file = {/home/vatai/Sync/zotero-pdfs/Prabhu et al. - 2024 - On the Scalability of Computing Genomic Diversity Using SparkLeBLAST A Feasibility Study.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/prabhu2024On.pdf}
 }
 
 @inproceedings{prabhu2026looking,
@@ -206,7 +241,7 @@
   urldate = {2026-08-26},
   abstract = {Cancer typically arises not from a single genetic mutation (i.e., hit) but from multi-hit combinations that accumulate within cells. However, enumerating multi-hit combinations becomes exponentially more expensive computationally as the number of candidate hit gene combinations grow, i.e., where 20,000 is the number of genes in the human genome and h is the number of hits. To address this challenge, we present an algorithmic framework, called Pruned Depth-First Search (P-DFS) that leverages the high sparsity in tumor mutation data to prune large portions of the search space. Specifically, P-DFS (the main contribution of this paper) - a pruning technique that exploits sparsity to drastically reduce the otherwise exponential h-hit search space for candidate combinations used by Weighted Set Cover - which is grounded in a depth-first search backtracking technique, prunes infeasible gene subsets early, while a standard greedy weighted set cover (WSC) formulation systematically scores and selects the most discriminative combinations.By intertwining these ideas with optimized bitwise operations and a scalable distributed algorithm on high-performance computing clusters, our algorithm can achieve {$\approx$} 90 - 98\% reduction in visited combinations for 4-hits, and roughly a 183\texttimes{} speedup over the exhaustive set cover approach (which is algorithmically NP-complete) measured on 147,456 ranks. In doing so, our method can feasibly handle four-hit and even higher-order gene hits, achieving both speed and resource efficiency.},
   keywords = {Algorithms,Cancer,cancer genomics,combinatorial optimization,depth-first search,Indexes,Indexing,load balancing,Manuals,mpi,multi-hit mutation combinations,Radio access networks,Ranking (statistics),Regional area networks,somatic mutations,sparsity-aware pruning,Timing,Tumors,weighted set cover,work stealing},
-  file = {/home/vatai/Sync/zotero-pdfs/Prabhu et al. - 2026 - Looking for (Genomic) Needles in a Haystack Sparsity-Driven Search for Identifying Correlated Genet.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/prabhu2026Looking.pdf}
 }
 
 @inproceedings{riniwai2024poster,
@@ -235,7 +270,7 @@
   volume = {41},
   pages = {355--360},
   copyright = {All rights reserved},
-  file = {/home/vatai/Sync/zotero-pdfs/Vatai - 2013 - Inverse sieve.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/vatai2013Inverse.pdf}
 }
 
 @inproceedings{vatai2019poster,
@@ -263,7 +298,7 @@
   abstract = {Matrix powers kernel calculates the vectors Akv, for k = 1, 2,..., m and they are the heart of various scientific computations, including communication avoiding iterative solvers. In this paper we propose diamond matrix powers kernel - DMPK, which has the purpose to apply the "diamond tiling" stencil algorithm to general matrices. It can also be considered as an extension of the PA1 and PA2 algorithms, introduced by Demmel et al. Our approach enables us to control the balance between the amount of communication avoidance and redundant computation inherently present in communication avoiding algorithms. We present a proof of concept implementation of the algorithm using MPI routines. The experiments we performed show that the control of the amount of computation and communication is achievable, and with more thorough optimisations, DMPK is a promising alternative to existing MPK approaches.},
   copyright = {All rights reserved},
   isbn = {978-1-4503-7236-7},
-  file = {/home/vatai/Sync/zotero-pdfs/Vatai et al. - 2020 - Diamond matrix powers kernels.pdf}
+  file = {/home/vatai/Sync/zotero-pdfs/vatai2020Diamond.pdf}
 }
 
 @inproceedings{vatai2023poster,
@@ -276,7 +311,7 @@
 }
 
 @inproceedings{vatai2025poster,
-  title = {{{POSTER}}: {{Tadashi}}: {{Enabling AI-based Automated Code Generation}} with {{Guaranteed Correctness}}},
+  title = {{{POSTER}}: {{Tadashi}}: {{Enabling AI}}-Based {{Automated Code Generation}} with {{Guaranteed Correctness}}},
   booktitle = {{{HiPeac}}},
   author = {Vatai, Emil and Drozd, Aleksandr and Ivanov, Ivan R. and {Yinghao Ren} and Batista, Joao E. and Wahib, Mohamed},
   year = 2025,
@@ -302,5 +337,5 @@
   copyright = {All rights reserved},
   keywords = {Computer Science - Machine Learning},
   note = {Comment: Submitted to SC25},
-  file = {/home/vatai/Sync/zotero-pdfs/proj-current/Codegen/Vatai et al. - 2025 - Tadashi Enabling AI-Based Automated Code Generation With Guaranteed Correctness.pdf;/home/vatai/.zotero/data/storage/2AUNWSR8/2410.html}
+  file = {/home/vatai/Sync/zotero-pdfs/proj-current/codegen/vatai2025Tadashi.pdf;/home/vatai/.zotero/data/storage/2AUNWSR8/2410.html}
 }
