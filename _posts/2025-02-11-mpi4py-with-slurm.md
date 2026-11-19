@@ -65,7 +65,7 @@ more precisely the
 [`MPIPoolExecutor`](https://mpi4py.readthedocs.io/en/stable/mpi4py.futures.html#mpipoolexecutor),
 also uses `MPI_Comm_spawn` under the hood. So it was a bit
 disappointing when I realised [OpenMPI doesn't support
-`MPI_Comm_spawn`](). However, MPICH, which does support
+`MPI_Comm_spawn`](<>). However, MPICH, which does support
 `MPI_Comm_spawn`, was also available on the cluster and I just needed
 to recompile MPI4py with MPICH loaded to use it.
 

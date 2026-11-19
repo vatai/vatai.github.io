@@ -11,7 +11,7 @@ related_publications: true
 ---
 
 - Preprint: {% cite antill2024radicalpy %}.
-- Github repo: [https://github.com/Spin-Chemistry-Labs/radicalpy/]()
+- Github repo: [https://github.com/Spin-Chemistry-Labs/radicalpy/](<>)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
